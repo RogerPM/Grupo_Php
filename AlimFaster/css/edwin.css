@@ -1,0 +1,23 @@
+body{ font-size: 12px;}
+.titulo{ color:#FFFF00; font-size:12px; font-family: Arial,sans-serif; text-align: center;}
+.home{ background-image: url(../img/home.png)}
+.mifondo{ background-image:url(../img/copa.png); background-size:cover; background-position:bottom; position:relative;}
+
+.izquierda{ position:absolute; left:0; bottom:0;}
+.derecha{ position:absolute; right:0; bottom:0; background-color:green !important;}
+
+
+.clear{ clear:left;} 
+.logo{ text-align: center; margin:0;}
+.miform{ width:500px; margin:auto;}
+
+
+
+
+
+
+
+
+
+
+
