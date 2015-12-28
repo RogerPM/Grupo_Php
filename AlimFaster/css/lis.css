@@ -1,0 +1,28 @@
+body{ font-size:12px;}
+
+.izquierda{ position:absolute; left:0; bottom:0;}
+.derecha{ position:absolute; right:0; bottom:0; background-color:green !important;}
+.mifondo{ background-image:url(../img/copa.png); background-size:cover; background-position:bottom; position:relative;}
+.home{ background-image:url(../img/home.png)}
+
+.clear{ clear:left;}
+.left{ width:150px; text-align:left;}
+.left, .cont-mesas{float:left}
+.cont-mesas{width:350px !important;}
+.miform{ width:500px; margin:auto;}
+@media all and (max-width: 900px){
+	.prueba{ background-color:BLUE; display:block;}
+	
+}
+
+
+@media all and (max-width: 600px){
+	.prueba{ background-color:GREEN; display:block;}
+	
+}
+
+
+@media all and (max-width: 250px){
+	
+	.prueba{ background-color:YELLOW; display:block;}
+}
