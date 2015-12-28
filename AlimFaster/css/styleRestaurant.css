@@ -1,0 +1,173 @@
+body{ font-size:12px;}
+
+.izquierda{ position:absolute; left:0; bottom:0;}
+.derecha{ position:absolute; right:0; bottom:0; background-color:green !important;}
+.estiloDiv{margin-left 10px}
+.bordeBoton{padding 2px; border-color:blue !important;}
+.mifondo{ background-image:url(../img/copa.png); background-size:cover; background-position:bottom; position:relative;}
+.home{ background-image:url(../img/home.png)}
+
+.clear{ clear:left;}
+.left{ width:150px; text-align:left;}
+.left, .cont-mesas{float:left}
+.cont-mesas{width:350px !important;}
+.miform{ width:500px; margin:auto;}
+@media all and (max-width: 900px){
+	.prueba{ background-color:BLUE; display:block;}
+	
+}
+
+
+@media all and (max-width: 600px){
+	.prueba{ background-color:GREEN; display:block;}
+	
+}
+
+
+@media all and (max-width: 250px){
+	
+	.prueba{ background-color:YELLOW; display:block;}
+}
+
+
+.gridBoton{
+  padding-top: 30px;
+  padding-bottom: 30px;
+ 
+}
+
+/*Formulario Login*/
+
+.gridBotonForm{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left:32%;
+ 
+}
+
+.objetoFormIngresar{
+	margin-top: 10px;
+	padding: 10px;
+    margin-bottom: 10px;
+  border-radius: 8px;
+  margin-left:20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #4665FB;
+  
+}
+
+.objetoFormRegistrase{
+	margin-top: 10px;
+	padding: 10px;
+    margin-bottom: 10px;
+  border-radius: 8px;
+  margin-left:20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #4665FB;
+  
+}
+
+.objetoFormIngresar:hover {
+    background-color: #4665FB; 
+    color: white;
+}
+
+.objetoFormRegistrase:hover {
+    background-color: #4665FB; 
+    color: white;
+}
+
+.objFormCaja1{
+	  margin-left:40px;
+	  margin-top: 10px;
+	  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.objFormCaja2{
+	  margin-left:15px;
+	  margin-top: 10px;
+	  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+
+/*Formulario de Registro*/
+
+.FormRegistro{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left:32%;
+ 
+}
+
+.tablaForm{
+	border-collapse: separate; 
+	border-spacing: 10px;
+	padding-left:60px;
+	padding-right:60px;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+.objFormCaja{
+	 
+	  margin-top: 3px;
+	  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.objetoFormRegistrar{
+	margin-top: 10px;
+	padding: 10px;
+    margin-bottom: 10px;
+  border-radius: 8px;
+  margin-left:30px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #4665FB;
+  
+}
+
+.objetoFormHome{
+	margin-top: 10px;
+	padding: 10px;
+    margin-bottom: 10px;
+  border-radius: 8px;
+  margin-left:40px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #4665FB;
+  
+}
+
+.objetoFormRegistrar:hover {
+    background-color: #4665FB; 
+    color: white;
+}
+
+.objetoFormHome:hover {
+    background-color: #4665FB; 
+    color: white;
+}
+
+
+
+
+
+.left{
+    float: left;
+    margin:30px 10px 40px 180px;
+}
+
+.center{
+	float: left;
+    margin:30px 10px 40px 180px;
+}
+
+.right{
+	float: left;
+    margin:30px 10px 40px 180px;
+}
