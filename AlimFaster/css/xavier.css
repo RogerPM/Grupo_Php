@@ -1,0 +1,7 @@
+
+.boton-borde {
+  border-top-left-radius: 50px 25px;
+  border-top-right-radius: 50px 25px;
+  border-bottom-left-radius: 15px 30px;
+  border-bottom-right-radius: 15px 30px;
+}
