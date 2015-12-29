@@ -1,10 +1,11 @@
-body{ font-size:12px;}
+body{ 
+background-color: #D5BC98;
+font-size:14px;}
 
 .izquierda{ position:absolute; left:0; bottom:0;}
 .derecha{ position:absolute; right:0; bottom:0; background-color:green !important;}
 .estiloDiv{margin-left 10px}
 .bordeBoton{padding 2px; border-color:blue !important;}
-.mifondo{ background-image:url(../img/copa.png); background-size:cover; background-position:bottom; position:relative;}
 .home{ background-image:url(../img/home.png)}
 
 .clear{ clear:left;}
@@ -31,17 +32,24 @@ body{ font-size:12px;}
 
 
 .gridBoton{
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 70px;
+  padding-bottom: 50px;
+  background-color: #BADAFF;
  
+}
+
+.label{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	
 }
 
 /*Formulario Login*/
 
 .gridBotonForm{
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 70px;
+  padding-bottom: 50px;
   padding-left:32%;
+  background-color: #BADAFF;
  
 }
 
@@ -110,6 +118,8 @@ body{ font-size:12px;}
 	padding-right:60px;
 	padding-top:20px;
 	padding-bottom:20px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size:16px;
 }
 
 .objFormCaja{
@@ -117,6 +127,7 @@ body{ font-size:12px;}
 	  margin-top: 3px;
 	  padding-top: 4px;
   padding-bottom: 4px;
+  background-color: #DEE4EC;
 }
 
 .objetoFormRegistrar{
@@ -154,9 +165,6 @@ body{ font-size:12px;}
 }
 
 
-
-
-
 .left{
     float: left;
     margin:30px 10px 40px 180px;
@@ -170,4 +178,24 @@ body{ font-size:12px;}
 .right{
 	float: left;
     margin:30px 10px 40px 180px;
+}
+
+/*SLIDER BANNER*/
+
+#slider{
+	height: 300px;
+}
+#slider img{
+	display: none;
+}
+#slider img:nth-child(1){
+	display: block;
+}
+
+.footer{
+	color: #ffffff;
+	background-color: #210096;
+	padding-top: 10px;
+	text-align: center;
+	font-family: "Comic Sans MS", cursive, sans-serif;
 }
