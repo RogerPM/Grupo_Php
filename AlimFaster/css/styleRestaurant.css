@@ -1,11 +1,10 @@
-body{ 
-background-color: #D5BC98;
-font-size:14px;}
+body{ font-size:12px;}
 
 .izquierda{ position:absolute; left:0; bottom:0;}
 .derecha{ position:absolute; right:0; bottom:0; background-color:green !important;}
 .estiloDiv{margin-left 10px}
 .bordeBoton{padding 2px; border-color:blue !important;}
+.mifondo{ background-image:url(../img/b1.jpg); background-size:100% 100%; background-position:top; position:relative;}
 .home{ background-image:url(../img/home.png)}
 
 .clear{ clear:left;}
@@ -31,30 +30,22 @@ font-size:14px;}
 }
 
 
+
 .gridBoton{
-  padding-top: 70px;
-  padding-bottom: 50px;
-  background-color: #BADAFF;
+  padding-top: 30px;
+  padding-bottom: 30px;
  
 }
 
-.label{
-	font-family: "Comic Sans MS", cursive, sans-serif;
-	
-}
-
-/*Formulario Login*/
-
 .gridBotonForm{
-  padding-top: 70px;
-  padding-bottom: 50px;
-  padding-left:32%;
-  background-color: #BADAFF;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: AEC4FF;
  
 }
 
 .objetoFormIngresar{
-	margin-top: 10px;
+	margin-top: 50px;
 	padding: 10px;
     margin-bottom: 10px;
   border-radius: 8px;
@@ -66,7 +57,7 @@ font-size:14px;}
 }
 
 .objetoFormRegistrase{
-	margin-top: 10px;
+	margin-top: 50px;
 	padding: 10px;
     margin-bottom: 10px;
   border-radius: 8px;
@@ -101,23 +92,21 @@ font-size:14px;}
   padding-bottom: 7px;
 }
 
-
 /*Formulario de Registro*/
 
 .FormRegistro{
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left:32%;
- 
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .tablaForm{
+	padding-top:50px;
+	padding-left:10px;
+padding-bottom:30;
+padding-right:10px;
+	margin: 0 auto;
 	border-collapse: separate; 
 	border-spacing: 10px;
-	padding-left:60px;
-	padding-right:60px;
-	padding-top:20px;
-	padding-bottom:20px;
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	font-size:16px;
 }
@@ -131,7 +120,7 @@ font-size:14px;}
 }
 
 .objetoFormRegistrar{
-	margin-top: 10px;
+	margin-top: 30px;
 	padding: 10px;
     margin-bottom: 10px;
   border-radius: 8px;
@@ -143,7 +132,7 @@ font-size:14px;}
 }
 
 .objetoFormHome{
-	margin-top: 10px;
+	margin-top: 30px;
 	padding: 10px;
     margin-bottom: 10px;
   border-radius: 8px;
@@ -165,6 +154,7 @@ font-size:14px;}
 }
 
 
+
 .left{
     float: left;
     margin:30px 10px 40px 180px;
@@ -180,19 +170,9 @@ font-size:14px;}
     margin:30px 10px 40px 180px;
 }
 
-/*SLIDER BANNER*/
-
-#slider{
-	height: 300px;
-}
-#slider img{
-	display: none;
-}
-#slider img:nth-child(1){
-	display: block;
-}
-
 .footer{
+	margin-top: 70px;
+	float: bottom;
 	color: #ffffff;
 	background-color: #210096;
 	padding-top: 10px;

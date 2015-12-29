@@ -1,8 +1,8 @@
+<!doctype html>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link href="../css/styleRestaurant.css" rel="stylesheet" type="text/css">
-	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
 	<!--link href="../css/popUp.css" rel="stylesheet" type="text/css"-->
 	<title>Reserva Online - Restaurant</title>
@@ -10,32 +10,13 @@
 
 <body>
 	<!-- boostrap -->
-	<div id="slider">
-	<img src="../img/b1.jpg">
-	<img src="../img/b2.jpg">
-	<img src="../img/b3.jpg">
-	<img src="../img/b4.png">
-	<img src="../img/b5.jpg">
+	<div class="jumbotron mifondo">
 	</div>
-	<script type="text/javascript">
-		var i = 0;
-		$(document).on("ready", main);
 
-		function main(){
-			var control = setInterval(cambiarSlider, 3000);
-		}
-
-		function cambiarSlider(){
-			i++;
-			if(i == $("#slider img").size()){
-				i = 0;
-			}
-			$("#slider img").hide();
-			$("#slider img").eq(i).fadeIn("medium");
-		}
-	</script>
-	<div class="gridBotonForm" width="100%">
-	<table  class="tablaForm" style="border:1px solid #000000;>
+	<!--BOTONES GRANDES -->
+	<div class="jumbotron " width="100%">
+	 <form text-align="center">		
+		<table  class="tablaForm" style="border:1px solid #000000;>
 		<tr>
 			<td>Nombre: </td>
 			<td><input type="text" name="nombre" class="objFormCaja"></td>
@@ -53,6 +34,7 @@
 			<td><input class="objetoFormRegistrase"type="button" value="Registrarse" ></td>
 		</tr>
 		</table>
+		</form>
 	</div>
 
 	<div class="footer">
