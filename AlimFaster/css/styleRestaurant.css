@@ -5,7 +5,7 @@ font-size:14px;}
 .izquierda{ position:absolute; left:0; bottom:0;}
 .derecha{ position:absolute; right:0; bottom:0; background-color:green !important;}
 .estiloDiv{margin-left 10px}
-.bordeBoton{padding 2px; border-color:#752933 !important;}
+.bordeBoton{margin-bottom:5px; padding 2px; border-color:#752933 !important;}
 .listado{padding 2px; border-color:#752933}
 .mifondo{ background-color:#752933}
 .home{ background-image:url(../img/home.png)}
@@ -81,7 +81,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
 	padding-right: 50px;
 	padding-top: 25px;
     padding-bottom: 25px;
-	margin-bottom: 200px;
+	margin-bottom: 150px;
   border-radius: 8px;
   margin-left:20px;
   font-size: 20px;
@@ -112,11 +112,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
     color: white;
 }
 
-.objFormCaja1{
-	  margin-left:40px;
-	  margin-top: 10px;
-	  padding-top: 7px;
-  padding-bottom: 7px;
+.objFormCaja{
+	float:center;
+	width:70px;
+	  margin-left:0px;
+	  padding-top: 3px;
+  padding-bottom: 2px;
+}
+
+.objLabel{
+	  margin-left:0px;
+	  padding-top: 8px;
+  padding-bottom: 3px;
 }
 
 .objFormCaja2{
@@ -253,6 +260,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
     line-height:28px;
     outline:0;
     text-decoration:none;
+	
 }
 
 }

@@ -1085,6 +1085,8 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
 }
 input,
 button,
@@ -1263,10 +1265,9 @@ h6 .small,
 }
 h1,
 .h1 {
-   text-align:center;
-    font-size: 63px;
-	color: #ffffff;
-	font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 36px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #fff;
 }
 h2,
 .h2 {
@@ -1587,14 +1588,13 @@ pre code {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
-  margin-left: 10px;
+  margin-left: auto;
 }
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
-  
-  
+}
 @media (min-width: 992px) {
   .container {
     width: 970px;
@@ -1619,7 +1619,7 @@ pre code {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
-  padding-left: 0px;
+  padding-left: 15px;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -1803,7 +1803,7 @@ pre code {
     width: 50%;
   }
   .col-sm-5 {
-    width: 80%;
+    width: 41.66666667%;
   }
   .col-sm-4 {
     width: 33.33333333%;
@@ -1812,7 +1812,7 @@ pre code {
     width: 25%;
   }
   .col-sm-2 {
-    width: 20%;
+    width: 16.66666667%;
   }
   .col-sm-1 {
     width: 8.33333333%;
@@ -1961,7 +1961,7 @@ pre code {
     width: 50%;
   }
   .col-md-5 {
-    width: 77%;
+    width: 41.66666667%;
   }
   .col-md-4 {
     width: 33.33333333%;
@@ -1970,7 +1970,7 @@ pre code {
     width: 25%;
   }
   .col-md-2 {
-    width: 23%;
+    width: 16.66666667%;
   }
   .col-md-1 {
     width: 8.33333333%;
@@ -2274,8 +2274,7 @@ th {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-	
-  padding: 60px;
+  padding: 30px;
   line-height: 1.42857143;
   vertical-align: top;
   border-top: 1px solid #ddd;
@@ -2465,7 +2464,6 @@ table th[class*="col-"] {
   .table-responsive > .table > tbody > tr > td,
   .table-responsive > .table > tfoot > tr > td {
     white-space: nowrap;
-	
   }
   .table-responsive > .table-bordered {
     border: 0;
@@ -2476,7 +2474,6 @@ table th[class*="col-"] {
   .table-responsive > .table-bordered > thead > tr > td:first-child,
   .table-responsive > .table-bordered > tbody > tr > td:first-child,
   .table-responsive > .table-bordered > tfoot > tr > td:first-child {
-	  
     border-left: 0;
   }
   .table-responsive > .table-bordered > thead > tr > th:last-child,
@@ -2485,7 +2482,6 @@ table th[class*="col-"] {
   .table-responsive > .table-bordered > thead > tr > td:last-child,
   .table-responsive > .table-bordered > tbody > tr > td:last-child,
   .table-responsive > .table-bordered > tfoot > tr > td:last-child {
-	  
     border-right: 0;
   }
   .table-responsive > .table-bordered > tbody > tr:last-child > th,
@@ -4965,13 +4961,13 @@ a.badge:focus {
   margin-left: 3px;
 }
 .jumbotron {
-
-  color: inherit;
+   color: inherit;
   background-color: #eee;
 }
 .jumbotron h1,
 .jumbotron .h1 {
-  color: #ffffff;
+  color: #fff;
+  text-align:center;
 }
 .jumbotron p {
   margin-bottom: 15px;
@@ -5004,8 +5000,6 @@ a.badge:focus {
   .jumbotron .h1 {
 	  text-align:center;
     font-size: 63px;
-	color: #ffffff;
-	font-family: "Comic Sans MS", cursive, sans-serif;
   }
 }
 .thumbnail {
@@ -6434,7 +6428,7 @@ button.close {
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
-  color:  #ffb300;
+  color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
 }
