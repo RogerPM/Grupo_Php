@@ -1,10 +1,13 @@
-body{ font-size:12px;}
+body{ 
+   
+font-size:14px;}
 
 .izquierda{ position:absolute; left:0; bottom:0;}
 .derecha{ position:absolute; right:0; bottom:0; background-color:green !important;}
 .estiloDiv{margin-left 10px}
-.bordeBoton{padding 2px; border-color:blue !important;}
-.mifondo{ background-image:url(../img/b1.jpg); background-size:100% 100%; background-position:top; position:relative;}
+.bordeBoton{padding 2px; border-color:#752933 !important;}
+.listado{padding 2px; border-color:#752933}
+.mifondo{ background-color:#752933}
 .home{ background-image:url(../img/home.png)}
 
 .clear{ clear:left;}
@@ -29,52 +32,83 @@ body{ font-size:12px;}
 	.prueba{ background-color:YELLOW; display:block;}
 }
 
-
-
-.gridBoton{
-  padding-top: 30px;
-  padding-bottom: 30px;
- 
+.bannerSuperior{
+	background-color:#752933;
+	padding-top:30px;
+	padding-bottom:30px;
 }
+
+
+.fondoPantalla{
+	background: rgba(241,231,103,1);
+background: -moz-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(241,231,103,1)), color-stop(100%, rgba(254,182,69,1)));
+background: -webkit-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+background: -o-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+background: -ms-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645', GradientType=1 );
+
+}
+
+.estiloTexto{
+	
+}
+
+.label{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	
+}
+
+/*Formulario Login*/
 
 .gridBotonForm{
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-color: AEC4FF;
+  padding-top: 70px;
+  padding-bottom: 50px;
+  padding-left:32%;
+  background-color: #BADAFF;
  
 }
 
-.objetoFormIngresar{
-	margin-top: 50px;
-	padding: 10px;
-    margin-bottom: 10px;
+.opacidadImg{
+	filter: alpha(opacity=50);
+  opacity: .4;
+}
+
+.objetoFormReservar{
+	margin-top: 10px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 25px;
+    padding-bottom: 25px;
+	margin-bottom: 200px;
   border-radius: 8px;
   margin-left:20px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
-  background-color: #4665FB;
+  background-color: #8E1C1C;
   
 }
 
 .objetoFormRegistrase{
-	margin-top: 50px;
+	margin-top: 10px;
 	padding: 10px;
     margin-bottom: 10px;
   border-radius: 8px;
   margin-left:20px;
   font-size: 16px;
   font-weight: bold;
-  background-color: #4665FB;
+  background-color: #8E1C1C;
   
 }
 
-.objetoFormIngresar:hover {
-    background-color: #4665FB; 
+.objetoFormReservar:hover {
+    background-color: #8E1C1C; 
     color: white;
 }
 
 .objetoFormRegistrase:hover {
-    background-color: #4665FB; 
+    background-color: #8E1C1C; 
     color: white;
 }
 
@@ -92,21 +126,23 @@ body{ font-size:12px;}
   padding-bottom: 7px;
 }
 
+
 /*Formulario de Registro*/
 
 .FormRegistro{
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left:32%;
+ 
 }
 
 .tablaForm{
-	padding-top:50px;
-	padding-left:10px;
-padding-bottom:30;
-padding-right:10px;
-	margin: 0 auto;
 	border-collapse: separate; 
 	border-spacing: 10px;
+	padding-left:60px;
+	padding-right:60px;
+	padding-top:20px;
+	padding-bottom:20px;
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	font-size:16px;
 }
@@ -120,7 +156,7 @@ padding-right:10px;
 }
 
 .objetoFormRegistrar{
-	margin-top: 30px;
+	margin-top: 10px;
 	padding: 10px;
     margin-bottom: 10px;
   border-radius: 8px;
@@ -132,7 +168,7 @@ padding-right:10px;
 }
 
 .objetoFormHome{
-	margin-top: 30px;
+	margin-top: 10px;
 	padding: 10px;
     margin-bottom: 10px;
   border-radius: 8px;
@@ -153,28 +189,132 @@ padding-right:10px;
     color: white;
 }
 
-
-
-.left{
+.imgIzquierda{
     float: left;
     margin:30px 10px 40px 180px;
 }
 
-.center{
+.imgCentro{
 	float: left;
     margin:30px 10px 40px 180px;
 }
 
-.right{
+.imgDerecha{
 	float: left;
     margin:30px 10px 40px 180px;
 }
+
+.bordeDiv{
+	border:2px;
+	border-color: #000000;
+}
+
+/*MENU VERTICAL*/
+
+#nav {
+	margin-top:15px;
+    border:3px solid #3e4547;
+    box-shadow:2px 2px 8px #000000;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+}
+#nav, #nav ul {
+    list-style:none;
+    padding:0;
+    width:200px;
+}
+#nav ul {
+    position:relative;
+    z-index:-1;
+}
+#nav li {
+    position:relative;
+    z-index:100;
+}
+#nav ul li {
+    margin-top:-23px;
+
+    -moz-transition:  0.4s linear 0.4s;
+    -ms-transition: 0.4s linear 0.4s;
+    -o-transition: 0.4s linear 0.4s;
+    -webkit-transition: 0.4s linear 0.4s;
+    transition: 0.4s linear 0.4s;
+}
+#nav li a {
+    background-color:#94393d;
+	border:3px solid #3e4547;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size:22px;
+	padding: 15px;
+    color:#fff;
+    display:block;
+    font-weight:bold;
+    line-height:28px;
+    outline:0;
+    text-decoration:none;
+}
+
+}
+
+#nav li a:hover {
+    background-color:#bcbdc1;
+}
+#nav ul li a {
+    background-color:#eee;
+    border-bottom:1px solid #ccc;
+    color:#000;
+    font-size:11px;
+    line-height:22px;
+}
+#nav ul li a:hover {
+    background-color:#ddd;
+    color:#444;
+}
+#nav ul li a img {
+    background: url("../images/bulb.png") no-repeat;
+    border-width:0px;
+    height:16px;
+    line-height:22px;
+    margin-right:5px;
+    vertical-align:middle;
+    width:16px;
+}
+#nav ul li:nth-child(odd) a img {
+    background:url("../images/bulb2.png") no-repeat;
+}
+#nav a.sub:focus {
+    background:#bcbdc1;
+    outline:0;
+}
+#nav a:focus ~ ul li {
+    margin-top:0;
+
+    -moz-transition:  0.4s linear;
+    -ms-transition: 0.4s linear;
+    -o-transition: 0.4s linears;
+    -webkit-transition: 0.4s linears;
+    transition: 0.4s linear;
+}
+#nav a:focus + img, #nav a:active + img {
+    display:block;
+}
+#nav a.sub:active {
+    background:#bcbdc1;
+    outline:0;
+}
+#nav a:active ~ ul li {
+    margin-top:0;
+}
+#nav ul:hover li {
+    margin-top:0;
+}
+
+/****************/
 
 .footer{
-	margin-top: 70px;
-	float: bottom;
 	color: #ffffff;
-	background-color: #210096;
+	background-color: #752933;
 	padding-top: 10px;
 	text-align: center;
 	font-family: "Comic Sans MS", cursive, sans-serif;
