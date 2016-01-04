@@ -4,14 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Refresh" content="300"> <!--Se refrescara la pagina cada 300 segundos es decir 5 minutos-->
 <meta name="application-name" content="Reserva de mesas,pedidos de menus personalizados  y pagos via online para restaurantes gourmet">
-<meta name="author" content="Claudia Torres, clao91torrestorres@gmail.com" /> 
+<meta name="author" content="Edwin Estacio, edwindavid.11@hotmail.com" /> 
 <meta name="copyright" content="AlimFaster"> <!--Nombre de la compañia-->
 <meta name="organization" content="AlimFaster S.A." /> <!--Nombre de la Organizacion-->
 <meta name="language" content="es-ES" /> <!--Lenguaje de la pagina web español-->
-<meta name="classification" content="Reservas,OrdenarPedido">
-<meta name="description" content="Ordenar pedidos de menu de comidas gourmet" /> <!--Descripcion de la pagina web-->
-<meta name="generator" content="Bloc de notas,gedit"> <!--Cual es la herramienta que se utiliza para editar, crear la pagina web-->
-<meta name="keywords" content="ordenar pedido de reserva gourmet, ordenar pedidos  online de restaurantes gourmet, personalizacion de ordenes de pedidos gourmet" /> <!--Palabras claves para que los navegadores puedan identificar y rankear nuestra pagina web-->
+<meta name="classification" content="Reservas,Confirmacion">
+<meta name="description" content="Confirmacion de pedidos del menu personalizado de comidas gourmet" /> <!--Descripcion de la pagina web-->
+<meta name="generator" content="Bloc de notas"> <!--Cual es la herramienta que se utiliza para editar, crear la pagina web-->
+<meta name="keywords" content="confirmacion de reserva de pedidos gourmet, confirmacion reservas de pedidos y pagos online de restaurantes gourmet, confirmacion de la personalizacion de pedidos de menus gourmet" /> <!--Palabras claves para que los navegadores puedan identificar y rankear nuestra pagina web-->
 <meta name="robots" content="index,follow"> <!--etiqueta que sirve para que los bucadores puedan recorrer tu pagina web-->
 
 <link href="../css/styleRestaurant.css" rel="stylesheet" type="text/css">
