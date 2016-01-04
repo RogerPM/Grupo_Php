@@ -2323,7 +2323,7 @@ th {
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: #C66363;
+  background-color: #C04747;
 }
 
 .table-striped > tbody > tr:nth-of-type(even) {
