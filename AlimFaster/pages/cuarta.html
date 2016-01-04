@@ -1,107 +1,114 @@
-﻿<!doctype html>
-<html lang="es">
+<!doctype html>
+<html>
 <head>
-<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-<meta http-equiv="Refresh" content="300"> <!--Se refrescara la pagina cada 300 segundos es decir 5 minutos-->
-<meta name="application-name" content="Reserva de mesas,pedidos de menus personalizados  y pagos via online para restaurantes gourmet">
-<meta name="author" content="Edwin Estacio, edwindavid.11@hotmail.com" /> 
-<meta name="copyright" content="AlimFaster"> <!--Nombre de la compañia-->
-<meta name="organization" content="AlimFaster S.A." /> <!--Nombre de la Organizacion-->
-<meta name="language" content="es-ES" /> <!--Lenguaje de la pagina web español-->
-<meta name="classification" content="Reservas,Confirmacion">
-<meta name="description" content="Confirmacion de pedidos del menu personalizado de comidas gourmet" /> <!--Descripcion de la pagina web-->
-<meta name="generator" content="Bloc de notas"> <!--Cual es la herramienta que se utiliza para editar, crear la pagina web-->
-<meta name="keywords" content="confirmacion de reserva de pedidos gourmet, confirmacion reservas de pedidos y pagos online de restaurantes gourmet, confirmacion de la personalizacion de pedidos de menus gourmet" /> <!--Palabras claves para que los navegadores puedan identificar y rankear nuestra pagina web-->
-<meta name="robots" content="index,follow"> <!--etiqueta que sirve para que los bucadores puedan recorrer tu pagina web-->
-<link href="../css/edwin.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="../css/styleRestaurant.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
-<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="../css/full-slider.css" rel="stylesheet" type="text/css">
-<title>Confirmacion de Pedido - Restaurante</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script>
+$(window).load(function(){
+$("#mapita").click(function(){
+	$(this).next().toggle();
+});
+});
+</script>
+<title>Formulario de Reserva Online - Restaurant</title>
 </head>
-<body>
+<body >
+<!--Esto es para estilos responsive manueales -->
+<!--<div class="prueba">Probando</div>
+<div class="prueba">Probando</div>
+<div class="prueba">Probando</div>
+<div class="prueba alfa omega">Probando</div>
+-->
+<!-- boostrap -->
+<div class="jumbotron">
+<div class="bannerSuperior">
+<h1>Restaurant</h1>
+</div>
+</div>
+<div class="fondoPantalla" width="100%">
+<div class="container">
+    <div class="row">
+        
+        <div class="col-md-8">
+        <div class="table-responsive">    
+			<form action="">
+				<h2>DATOS DE RESERVACION</h2>
+				<div>
+				<label class="col-xs-3 " for="fecha">Fecha</label>
+				<input id="fecha" type="date" />
+				</div>
+				
+				<div>
+				<label class="col-xs-3" for="hora">Hora</label>
+				<input id="hora" type="time" />
+				</div>
+			  
+				<div>
+				<label class=" col-xs-3" for="npersona">No. de personas</label>
+				<input id="npersona" type="text" />
+				</div>
+			  
+				<div>
+				<label class=" col-xs-3" for="agencia">Agencia</label>
+				<input id="agencia" type="text" />
+				<a href="#" id='mapita' ><img src="../img/pin.png" width='25px'></a>
+				<div style='display:none;'>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15948.284331801431!2d-79.90246695!3d-2.1263467499999997!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sec!4v1451873305946" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+				</div>
+			 
+				<h2>DATOS DEL USUARIO</h2>
+				  <div>
+				  <label class=" col-xs-3" for="nombre">Nombre</label>
+				  <input id="nombre" type="text" />
+				  </div>
+				  
+				  <div>
+				  <label class=" col-xs-3" for="apellido">Apellido</label>
+				  <input id="apellido" type="text" />
+				  </div>
 
-	<nav class="navbar navbar-inverse">
-	  <div class="container-fluid">
-		<div class="navbar-header">
-		  <a class="navbar-brand" href="#">AlimFaster</a>
-		</div>
-		<div>
-		  <ul class="nav navbar-nav">
-			<li class="active"><a href="#">Home</a></li>
-			<li><a href="#">Page 1</a></li>
-			<li><a href="#">Page 2</a></li>
-			<li><a href="#">Page 3</a></li>
-		  </ul>
-		</div>
-	  </div>
-	</nav>
-	
-	<div class="container-fluid">
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th>Eliminar</th>
-					<th>Cantida</th>
-					<th>Descripción</th>
-					<th>Precio Unitario</th>
-					<th>Precio Total</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>X</td>
-					<td>3</td>
-					<td>Sopa de Camaron</td>
-					<td>$5,00</td>
-					<td>$15,00</td>
-				</tr>
-				<tr>
-					<td>X</td>
-					<td>2</td>
-					<td>Sopa de Lenteja</td>
-					<td>$3,00</td>
-					<td>$6,00</td>
-				</tr>
-				<tr>
-					<td>X</td>
-					<td>2</td>
-					<td>Postre de flan de caramelo</td>
-					<td>$5,00</td>
-					<td>$10,00</td>
-				</tr>
-				<tr>
-					<td>X</td>
-					<td>4</td>
-					<td>Costillas con salsa de tomillo y orégano</td>
-					<td>$5,00</td>
-					<td>$20,00</td>
-				</tr>
-				<tr>
-					<td>X</td>
-					<td>2</td>
-					<td>Porciones patatas fritas</td>
-					<td>$3,00</td>
-					<td>$6,00</td>
-				</tr>
-				<tr>
-					<td>X</td>
-					<td>1</td>
-					<td>Jarra de limonada</td>
-					<td>$2,50</td>
-					<td>$2,50</td>
-				</tr>
-				<tr>
-					<td> </td>
-					<td> </td>
-					<td>TOTAL</td>
-					<td> </td>
-					<td>$59,50 </td>		
-				</tr>
-			</tbody>
-		</table>
-	</div>
+				<div>
+				<label class=" col-xs-3" for="cedula">Cedula o Ruc</label>
+				<input id="cedula" type="number" />
+				</div>
+					
+				<div>	
+				<label class=" col-xs-3" for="telefono">Telefono</label>
+				<input id="telefono" maxlength="10" type="number" />
+				</div>
 
+				<div>				
+				<label class=" col-xs-3" for="nombre">Mail</label>
+				<input id="nombre" type="text" />
+				</div>
+				
+				
+				<div>
+				<label class=" col-xs-3" for="nombre">Cuenta PayPal</label>
+				<input id="nombre" type="text" />
+				<a href="#" >Obteniendo</a>
+				</div>
+				
+				<div>
+				<input type="submit" value="RESERVAR"/>
+				</div>
+			</form>	
+		</div>
+        </div>
+    </div>
+</div>
+
+
+ 		
+		
+		
+</div>
+
+<div class="footer">
+Contáctenos: desarrollo@gmail.com.<br/> Ecuador 2015
+</div>
 </body>
-
-</html>
+</html
