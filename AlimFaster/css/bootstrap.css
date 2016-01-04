@@ -1290,7 +1290,7 @@ h6,
   font-size: 12px;
 }
 p {
-  margin: 0 0 10px;
+  margin: 0 0 0px;
 }
 .lead {
   margin-bottom: 20px;
@@ -2264,6 +2264,7 @@ th {
   text-align: left;
 }
 .table {
+	margin-top: 20px;
   width: 100%;
   max-width: 100%;
   margin-bottom: 20px;
@@ -2277,11 +2278,11 @@ th {
   padding: 30px;
   line-height: 1.42857143;
   vertical-align: top;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #752933;
 }
 .table > thead > tr > th {
   vertical-align: bottom;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid #752933;
 }
 .table > caption + thead > tr:first-child > th,
 .table > colgroup + thead > tr:first-child > th,
@@ -2292,7 +2293,7 @@ th {
   border-top: 0;
 }
 .table > tbody + tbody {
-  border-top: 2px solid #ddd;
+  border-top: 2px solid #752933;
 }
 .table .table {
   background-color: #fff;
@@ -2306,7 +2307,7 @@ th {
   padding: 5px;
 }
 .table-bordered {
-  border: 1px solid #ddd;
+  border: 1px solid #752933;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
@@ -2314,7 +2315,7 @@ th {
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
-  border: 1px solid #ddd;
+  border: 1px solid #752933;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
@@ -2449,10 +2450,11 @@ table th[class*="col-"] {
 @media screen and (max-width: 767px) {
   .table-responsive {
     width: 100%;
+	margin-top: 15px;
     margin-bottom: 15px;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    border: 1px solid #ddd;
+    border: 1px solid #752933;
   }
   .table-responsive > .table {
     margin-bottom: 0;
