@@ -120,6 +120,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
   background-color: #8E1C1C;
   
 }
+.objetoConfirmarPedido{
+	margin-top: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 15px;
+    padding-bottom: 15px;
+	  border-radius: 8px;
+  margin-left:20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffbf00;
+  background-color: #8E1C1C;
+}
+.divEspacioEnBlanco{
+	 margin: 5px; 
+	 width: 30px; 
+	 height: 20px;
+}
 
 .objetoFormReservar:hover {
     background-color: #8E1C1C; 
@@ -211,6 +229,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
   background-color: #4665FB;
   
 }
+
+
+
 
 .objetoFormRegistrar:hover {
     background-color: #4665FB; 
