@@ -51,8 +51,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
 
 }
 
-.estiloTexto{
-	
+.botonCompra{
+	margin-top: 10px;
+	border-color:#752933;
+	border-radius: 20px;
+	background-color: #FFFCB0;
 }
 
 .label{
@@ -113,17 +116,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
 }
 
 .objFormCaja{
-	float:center;
 	width:70px;
-	  margin-left:0px;
-	  padding-top: 3px;
+	text-align:center;
+	 padding-top: 3px;
   padding-bottom: 2px;
 }
 
 .objLabel{
-	  margin-left:0px;
-	  padding-top: 8px;
-  padding-bottom: 3px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-weight: bold;
+	margin-left:0 auto;
+	font-size: 16px;
+	padding-top: 8px;
+    padding-bottom: 3px;
 }
 
 .objFormCaja2{
@@ -159,7 +164,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
 	  margin-top: 3px;
 	  padding-top: 4px;
   padding-bottom: 4px;
-  background-color: #DEE4EC;
+  background-color: #FFFCB0;
 }
 
 .objetoFormRegistrar{
