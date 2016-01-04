@@ -1097,6 +1097,9 @@ textarea {
   line-height: inherit;
 }
 a {
+	font-weight:bold;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size:16px;
   color: #337ab7;
   text-decoration: none;
 }
@@ -1271,6 +1274,8 @@ h1,
 }
 h2,
 .h2 {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #752933;
   font-size: 30px;
 }
 h3,
@@ -1650,9 +1655,13 @@ pre code {
 }
 .col-xs-4 {
   width: 33.33333333%;
+   font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size:16px;
 }
 .col-xs-3 {
   width: 25%;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size:14px;
 }
 .col-xs-2 {
   width: 16.66666667%;
