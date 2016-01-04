@@ -40,7 +40,7 @@
 						<th>Precio Total</th>
 					</tr>
 				</thead>
-				<tbody class="fuente">
+				<tbody>
 					<tr>
 						<td>X</td>
 						<td>3</td>
