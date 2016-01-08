@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -40,7 +40,7 @@ $("#mapita").click(function(){
 <div class="jumbotron">
 <div class="banImgText">
 				 <div class="col-md-8">
-				<img src="../img/logotipo.png" title="Restaurante1"  height="100px" width="240px">
+				<img src="../img/logotipo.png" title="Restaurante1"  height="100" width="240" alt="px">
 				</div>
 				<div class="col-md-4">
 				<h1>Restaurant</h1>
@@ -52,30 +52,30 @@ $("#mapita").click(function(){
 <div class="jumbotron">
 <div class="botones">
 
-				<a href="../index.html"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40px" width="40px"></button></a>
+				<a href="../index.html"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40" alt="px"></button></a>
 				
-				<a href="tercera.html"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40px" width="40px"></button></a>
+				<a href="tercera.html"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40" width="40" alt="px"></button></a>
 </div>
 </div>
 
 </div>
 </div>
-<div class="fondoPantalla" width="100%">
+<div class="fondoPantalla" style ="width = 100%">
 <div class="container">
     <div class="row">
         
         <div class="col-md-8">
         <div class="table-responsive">    
-			<form action="">
+			<form >
 				<h2>DATOS DE RESERVACION</h2>
 				<div class="divForm">
 				<label class="col-xs-3 " for="fecha">Fecha</label>
-				<input id="fecha" type="date" />
+				<input id="fecha" type="date" name="bday" />
 				</div>
 				
 				<div class="divForm">
 				<label class="col-xs-3" for="hora">Hora</label>
-				<input id="hora" type="time" />
+				<input id="hora" type="time" name="usr_time" />
 				</div>
 			  
 				<div class="divForm">
@@ -86,7 +86,7 @@ $("#mapita").click(function(){
 				<div class="divForm">
 				<label class=" col-xs-3" for="agencia">Agencia</label>
 				<input id="agencia" type="text" />
-				<a href="#" id='mapita' ><img src="../img/pin.png" width='25px'></a>
+				<a href="#" id='mapita' ><img src="../img/pin.png" width='25' alt="px"></a>
 				<div style='display:none;'>
 				<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15948.284331801431!2d-79.90246695!3d-2.1263467499999997!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sec!4v1451873305946" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 				</div>
@@ -110,24 +110,24 @@ $("#mapita").click(function(){
 					
 				<div class="divForm">	
 				<label class=" col-xs-3" for="telefono">Telefono</label>
-				<input id="telefono" maxlength="10" type="number" />
+				<input id="telefono" maxlength="10" type="tel" />
 				</div>
 
 				<div class="divForm">				
 				<label class=" col-xs-3" for="nombre">Mail</label>
-				<input id="nombre" type="text" />
+				<input id="mail" type="text" />
 				</div>
 				
 				
 				<div class="divForm">
 				<label class=" col-xs-3" for="nombre">Cuenta PayPal</label>
-				<input id="nombre" type="text" />
+				<input id="cuenta" type="text" />
 				<a href="#" >Obteniendo</a>
 				</div>
 				
 				<div class="divFormBoton">
 					<a href="../index.html">
-						<input class="objetoFormReservarForm" type="submit" value="RESERVAR"/>
+						<input class="objetoFormReservarForm" type="button" value="RESERVAR"/>
 					</a>
 				</div>
 			</form>	
@@ -146,4 +146,4 @@ $("#mapita").click(function(){
 Contáctenos: desarrollo@gmail.com.<br/> Ecuador 2015
 </div>
 </body>
-</html
+</html>
