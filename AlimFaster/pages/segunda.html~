@@ -80,7 +80,7 @@ $(window).load(function(){
 				<h1>Restaurant</h1>
 				</div>
 </div>
-			</div>
+				</div>
 				
 <!-- Botones  -->
 <div class="jumbotron">
@@ -504,7 +504,8 @@ $(window).load(function(){
 				<button type="button" class="botonCompra"><img src="../img/compra.png" height="30px" width="30px"></button>
 				</div>
 				</div>
-            </td>         
+            </td>
+          
           </tr>
     </tbody>
   </table>
@@ -613,9 +614,15 @@ $(window).load(function(){
 					<input class="objetoOrdenarPedido" type="submit" value="Ordenar Pedido"/>
 				</a>
 			</div>
-		</div>	       
+		</div>	
+        
     </div>
-</div>		
+</div>
+
+
+ 		
+		
+		
 </div>
 
 <div class="footer">
