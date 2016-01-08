@@ -32,7 +32,6 @@ font-size:14px;}
 	.prueba{ background-color:YELLOW; display:block;}
 }
 
-<<<<<<< HEAD
 .CaberaSuperiorTablaStriped{
 	color: #ffffff;
 	background-color: #752933;
@@ -44,8 +43,6 @@ font-size:14px;}
 	font-family:"Comic Sans MS", cursive, sans-serif; 
 }
 
-=======
->>>>>>> 624e06b... Modificacion y Estilizacion de pantalla
 .bannerSuperior{
 	background-color:#752933;
 	padding-top:30px;
@@ -73,12 +70,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
 }
 
 .label{
-<<<<<<< HEAD
 	font-family: "Comic Sans MS", cursive, sans-serif;	
-=======
-	font-family: "Comic Sans MS", cursive, sans-serif;
-	
->>>>>>> 624e06b... Modificacion y Estilizacion de pantalla
 }
 
 /*Formulario Login*/
@@ -392,7 +384,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
     margin-top:0;
 }
 
-<<<<<<< HEAD
 /******** botones***********/
 .banImgText{
 background-color: #752933;	
@@ -433,8 +424,6 @@ background-color: #752933;
 }
 
 
-=======
->>>>>>> 624e06b... Modificacion y Estilizacion de pantalla
 /****************/
 
 .footer{
