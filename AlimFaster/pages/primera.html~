@@ -60,7 +60,7 @@
       <tr>
             <td>
 				<a href="segunda.html>
-		<button type="button"class="bordeBoton"><img src="../img/logoR1.jpg" title="Restaurante2"  height="150" width="150" alt="px">
+		<button type="button" class="bordeBoton"><img src="../img/logoR1.jpg" title="Restaurante2"  height="150" width="150" alt="px">
 
 <div vocab="http://schema.org/" typeof="Restaurant">
       <span property="name" content="Cocolon"></span>
@@ -83,7 +83,7 @@
             </td>
             <td>
 				<a href="segunda.html">
-                <button type="button"class="bordeBoton"><img src="../img/logoR2.jpg" title="Restaurante2"  height="150" width="150" alt="px">
+                <button type="button" class="bordeBoton"><img src="../img/logoR2.jpg" title="Restaurante2"  height="150" width="150" alt="px">
 
 
 		</button>
@@ -91,7 +91,7 @@
             </td>
             <td>
 				<a href="segunda.html">
-                 <button type="button"class="bordeBoton"><img src="../img/logoR3.jpg" title="Restaurante3"  height="150" width="150" alt="px">
+                 <button type="button" class="bordeBoton"><img src="../img/logoR3.jpg" title="Restaurante3"  height="150" width="150" alt="px">
 
 <div vocab="http://schema.org/" typeof="Restaurant">
       <span property="name" content="Puerto Moro"></span>
@@ -119,7 +119,7 @@
             </td>
             <td>
 				<a href="segunda.html">
-                <button type="button"class="bordeBoton"><img src="../img/logoR4.jpg" title="Restaurante4"  height="150" width="150" alt="px">
+                <button type="button" class="bordeBoton"><img src="../img/logoR4.jpg" title="Restaurante4"  height="150" width="150" alt="px">
 
 <div vocab="http://schema.org/" typeof="Restaurant">
       <span property="name" content="Parrillada Punta del Este"></span>
@@ -149,7 +149,7 @@
 		   <tr>
             <td>
 				<a href="segunda.html">
-                <button type="button"class="bordeBoton"><img src="../img/logoR5.jpg" title="Restaurante5"  height="150" width="150" alt="px">
+                <button type="button" class="bordeBoton"><img src="../img/logoR5.jpg" title="Restaurante5"  height="150" width="150" alt="px">
 
 <div vocab="http://schema.org/" typeof="Restaurant">
       <span property="name" content="Parrillada del Ñato"></span>
@@ -177,7 +177,7 @@
             </td>
             <td>
 				<a href="segunda.html">
-                <button type="button"class="bordeBoton"><img src="../img/logoR6.png" title="Restaurante6"  height="150" width="150" alt="px">
+                <button type="button" class="bordeBoton"><img src="../img/logoR6.png" title="Restaurante6"  height="150" width="150" alt="px">
 
 <div vocab="http://schema.org/" typeof="Restaurant">
       <span property="name" content="Chili's"></span>
@@ -203,7 +203,7 @@
             </td>
             <td>
 				<a href="segunda.html">
-                 <button type="button"class="bordeBoton"><img src="../img/logoR7.png" title="Restaurante7"  height="150" width="150" alt="px">
+                 <button type="button" class="bordeBoton"><img src="../img/logoR7.png" title="Restaurante7"  height="150" width="150" alt="px">
 
 <div vocab="http://schema.org/" typeof="Restaurant">
       <span property="name" content="Wingers"></span>
@@ -231,7 +231,7 @@
             </td>
             <td>
 				<a href="segunda.html">
-                <button type="button"class="bordeBoton"><img src="../img/logoR8.png" title="Restaurante8"  height="150" width="150" alt="px">
+                <button type="button" class="bordeBoton"><img src="../img/logoR8.png" title="Restaurante8"  height="150" width="150" alt="px">
 
 <div vocab="http://schema.org/" typeof="Restaurant">
       <span property="name" content="Sports Planet"></span>
