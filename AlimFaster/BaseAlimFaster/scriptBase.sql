@@ -198,4 +198,28 @@ CREATE TABLE cabecera_reservacion(
     EXTENSION int NULL,
     CONSTRAINT PK_detalle_reservacion PRIMARY KEY (secuencia_reservacion));
 
- 
+ --AÑADIR CLAVES FORANEAS
+ALTER TABLE restaurante
+  ADD CONSTRAINT fk_restaurante_sucursal FOREIGN KEY (codigo_sucursal)
+  REFERENCES sucursal (codigo_sucursal);
+
+
+ALTER TABLE restaurante
+  ADD CONSTRAINT fk_restaurante_reservacion FOREIGN KEY (codigo_reservacion)
+  REFERENCES cabecera_reservacion (codigo_reservacion);
+
+  ALTER TABLE cliente
+  ADD CONSTRAINT fk_cliente_factura FOREIGN KEY (numero_factura)
+  REFERENCES cabecera_factura (numero_factura);
+
+  ALTER TABLE cabecera_reservacion
+  ADD CONSTRAINT fk_reservacion_detalle FOREIGN KEY (secuencia_reservacion)
+  REFERENCES detalle_reservacion (secuencia_reservacion);
+
+  ALTER TABLE cabecera_reservacion
+  ADD CONSTRAINT fk_reservacion_factura FOREIGN KEY (numero_factura)
+  REFERENCES cabecera_factura (numero_factura);
+
+  ALTER TABLE detalle_reservacion
+  ADD CONSTRAINT fk_detReservacion_mesa FOREIGN KEY (numero_mesa)
+  REFERENCES mesa (numero_mesa);
