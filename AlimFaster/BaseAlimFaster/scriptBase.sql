@@ -171,6 +171,7 @@ CREATE TABLE restaurante(
     autorizacion_fecha date NULL,
     telefax int NULL,
     EXTENSION int NULL,
+    nombre_logo varchar(50) NULL,
     CONSTRAINT PK_restaurante PRIMARY KEY (codigo_restaurante));
 
 
