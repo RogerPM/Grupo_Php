@@ -81,6 +81,8 @@ ALTER TABLE tipo_producto
   ADD CONSTRAINT fk_codigo_producto FOREIGN KEY (codigo_producto)
   REFERENCES producto (codigo_producto);
 
+
+
 --Roger 
 
 create table usuario
