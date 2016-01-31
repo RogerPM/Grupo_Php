@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,9 +12,9 @@
     <meta http-equiv="Refresh" content="300"> <!--Se refrescara la pagina cada 300 segundos es decir 5 minutos-->
     <meta name="application-name" content="Reserva de mesas,pedidos de menus personalizados  y pagos via online para restaurantes gourmet">
     <meta name="author" content="Claudia Torres, clao91torrestorres@gmail.com" /> 
-    <meta name="copyright" content="AlimFaster"> <!--Nombre de la compaÃ±ia-->
+    <meta name="copyright" content="AlimFaster"> <!--Nombre de la compañia-->
     <meta name="organization" content="AlimFaster S.A." /> <!--Nombre de la Organizacion-->
-    <meta name="language" content="es-ES" /> <!--Lenguaje de la pagina web espaÃ±ol-->
+    <meta name="language" content="es-ES" /> <!--Lenguaje de la pagina web español-->
     <meta name="classification" content="Reservas">
     <meta name="description" content="Reservas de servicio de pedidos a restaurantes de comidas gourmet" /> <!--Descripcion de la pagina web-->
     <meta name="generator" content="Bloc de notas"> <!--Cual es la herramienta que se utiliza para editar, crear la pagina web-->
@@ -48,7 +51,7 @@
                 <!-- Set the first background image using inline CSS below. -->
                  <img class="opacidadImg" src="img/5.jpg">
                 <div class="carousel-caption">
-                    <a href="pages/primera.html">
+                    <a href="pages/primera.php">
 						<button class="objetoFormReservar">Reservar</button>
 					</a>
                 </div>
@@ -57,7 +60,7 @@
                 <!-- Set the third background image using inline CSS below. -->
                <img class="opacidadImg" src="img/1.jpg">
                 <div class="carousel-caption">
-                    <a href="pages/primera.html">
+                    <a href="pages/primera.php">
 						<button class="objetoFormReservar">Reservar</button>
 					</a>
                 </div>
@@ -66,7 +69,7 @@
                 <!-- Set the third background image using inline CSS below. -->
                <img class="opacidadImg" src="img/2.jpg">
                 <div class="carousel-caption">
-                    <a href="pages/primera.html">
+                    <a href="pages/primera.php">
 						<button class="objetoFormReservar">Reservar</button>
 					</a>
                 </div>
@@ -108,4 +111,3 @@
 </body>
 
 </html>
-
