@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 ﻿<!doctype html>
 <html lang="es">
 <head>
@@ -30,7 +33,7 @@
 <div class="jumbotron">
 <div class="banImgText">
 				 <div class="col-md-8">
-				<img src="../img/logotipo.png" title="Restaurante1"  height="100px" width="240px">
+				<img src="../img/logotipo.png" title="Restaurante1"  height="100" width="240" alt="px">
 				</div>
 				<div class="col-md-4">
 				<h1>Restaurant</h1>
@@ -42,21 +45,17 @@
 <div class="jumbotron">
 <div class="botones">
 
-				 
-				<button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40px" width="40px"></button>
+				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40" alt="px"></button></a>
 				
-				
-				<button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40px" width="40px"></button>
-				
-				
-				<button type="button" class="botonHomeNextBack"><img src="../img/next.png" height="40px" width="40px"></button>
+				<a href="segunda.php"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40" width="40" alt="px"></button></a>
+
 
 </div>
 </div>
 		
 	</div>
 	</div>
-	<div class="fondoPantalla" width="100%">
+	<div class="fondoPantalla" style ="width = 100%">
 		<div class="container">
 			<table class="table table-striped">
 				<thead class="CaberaSuperiorTablaStriped">
@@ -123,10 +122,12 @@
 		</div>
 		<div class="row">
 			<div class="divFormBoton">
+				<a href="cuarta.php">
 					<input class="objetoConfirmarPedido" type="submit" value="Confirmar Pedido"/>
+				</a>
 			</div>
 		</div>
-		<div class="divEspacioEnBlanco"/>
+		<div class="divEspacioEnBlanco"> </div> 
 	</div>
 	<div class="footer">
 	Contáctenos: desarrollo@gmail.com.<br/> Ecuador 2015
