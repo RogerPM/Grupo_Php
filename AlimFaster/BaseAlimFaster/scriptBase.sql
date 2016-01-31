@@ -170,8 +170,8 @@ CREATE TABLE restaurante(
     autorizacion_sri int NULL,
     autorizacion_fecha date NULL,
     telefax int NULL,
-    EXTENSION int NULL,
-    nombre_logo varchar(50) NULL,
+    telefono_movil int NULL,
+    nombre_imagen varchar(50) NULL,
     CONSTRAINT PK_restaurante PRIMARY KEY (codigo_restaurante));
 
 
@@ -181,7 +181,6 @@ CREATE TABLE cliente(
     categoria varchar(50) NULL,
     cuenta_bancaria int NULL,
     cuenta_paypal int NULL,
-    EXTENSION int NULL,
     CONSTRAINT PK_cliente PRIMARY KEY (codigo_cliente));
 
 CREATE TABLE cabecera_reservacion(
@@ -189,14 +188,12 @@ CREATE TABLE cabecera_reservacion(
     secuencia_reservacion int NOT NULL,
     numero_factura int NOT NULL,
     numero_personas int NOT NULL,
-    EXTENSION int NULL,
     CONSTRAINT PK_cabecera_reservacion PRIMARY KEY (codigo_reservacion));
         
 
  CREATE TABLE detalle_reservacion(
     secuencia_reservacion serial NOT NULL,
     numero_mesa int NOT NULL,
-    EXTENSION int NULL,
     CONSTRAINT PK_detalle_reservacion PRIMARY KEY (secuencia_reservacion));
 
  --AÑADIR CLAVES FORANEAS
