@@ -47,7 +47,7 @@ CREATE TABLE tipo_producto(
  );
 
 
---AÑADIR CLAVES FORANEAS
+--AÃ‘ADIR CLAVES FORANEAS
 ALTER TABLE estado
   ADD CONSTRAINT fk_codigo_restaurante FOREIGN KEY (codigo_restaurante)
   REFERENCES restaurante (codigo_restaurante);
@@ -87,7 +87,7 @@ create table usuario
   (
 	codigo integer
 	email varchar(50),
-	contraseña varchar(50),
+	contraseÃ±a varchar(50),
 	registro timestamp
   )
   WITH
@@ -154,4 +154,48 @@ create table usuario
   add constraint permiso_fk foreign key (permiso)
   references permiso (codigo);
 
+--Claudia:   
+-- Restaurante
+--	Cliente
+--	Cabecera reservacion
+--	detalle reservacion 
 
+CREATE TABLE restaurante(
+    codigo_restaurante int NOT NULL,
+    codigo_sucursal int NOT NULL,
+    codigo_reservacion int NOT NULL,
+    razon_social varchar(50) NULL,
+    telefono int NULL,
+    correo_electronico varchar(50) NULL,
+    autorizacion_sri int NULL,
+    autorizacion_fecha date NULL,
+    telefax int NULL,
+    EXTENSION int NULL,
+    CONSTRAINT PK_restaurante PRIMARY KEY (codigo_restaurante));
+
+
+CREATE TABLE cliente(
+    codigo_cliente int NOT NULL,
+    numero_factura int NOT NULL,
+    categoria varchar(50) NULL,
+    cuenta_bancaria int NULL,
+    cuenta_paypal int NULL,
+    EXTENSION int NULL,
+    CONSTRAINT PK_cliente PRIMARY KEY (codigo_cliente));
+
+CREATE TABLE cabecera_reservacion(
+    codigo_reservacion serial NOT NULL,
+    secuencia_reservacion int NOT NULL,
+    numero_factura int NOT NULL,
+    numero_personas int NOT NULL,
+    EXTENSION int NULL,
+    CONSTRAINT PK_cabecera_reservacion PRIMARY KEY (codigo_reservacion));
+        
+
+ CREATE TABLE detalle_reservacion(
+    secuencia_reservacion serial NOT NULL,
+    numero_mesa int NOT NULL,
+    EXTENSION int NULL,
+    CONSTRAINT PK_detalle_reservacion PRIMARY KEY (secuencia_reservacion));
+
+ 
