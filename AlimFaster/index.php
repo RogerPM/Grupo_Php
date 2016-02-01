@@ -130,7 +130,7 @@
     		  <span property="name" content="AlimFaster"></span>
               <span property="author" content="Claudia Torres, clao91torrestorres@gmail.com"></span>	
 	<meta name="classification" content="Reservas Restaurantes">
-     	 </div>
+     	</div>
 
 </body>
 

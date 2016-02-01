@@ -1,4 +1,4 @@
-
+﻿
 --EDWIN: Estado
 --	    Sucursal
 --	    Producto
@@ -88,7 +88,7 @@ create table usuario
 	codigo integer
 	email varchar(50),
 	contraseña varchar(50),
-	registro timestamp
+	registro timestamp default now()
   )
   WITH
   (
@@ -105,7 +105,7 @@ create table usuario
   (
 	codigo integer,
 	descripcion varchar(50),
-	registro timestamp
+	registro timestamp timestamp default now()
   )
   WITH
   (
