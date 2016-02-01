@@ -87,7 +87,7 @@ create table usuario
   (
 	codigo integer
 	email varchar(50),
-	contraseña varchar(50),
+	contrasena varchar(50),
 	registro timestamp default now()
   )
   WITH
