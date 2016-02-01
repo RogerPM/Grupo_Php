@@ -315,17 +315,9 @@ ALTER TABLE restaurante
   REFERENCES mesa (numero_mesa);
 
 --Tablas que faltan(edwin):   
--- Recurso
 --	TarjetaCredito
 --	EntidadFinanciera
 --	Mesa
-
-CREATE TABLE recurso(
-    codigo_recurso serial NOT NULL,
-    nombre varchar(50) NULL,
-    fecha_registro date NULL,
-    CONSTRAINT PK_codigo_recurso PRIMARY KEY (codigo_recurso)
- );
  
 CREATE TABLE tarjeta_credito(
     numero_tarjeta serial NOT NULL,
