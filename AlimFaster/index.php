@@ -52,12 +52,12 @@
                  <img class="opacidadImg" src="img/5.jpg">
                 <div class="carousel-caption">
 		    <div class="divForm">
-			<label class=" col-xs-1" for="usuario">Usuario</label>
-			<input id="usuario" type="text" />
+			<label class="objFormCajaRoger" for="usuario">Usuario</label>
+			<input id="usuario" class="objFormCajaRoger2" "type="text" />
 	    	    </div>
 	    	    <div class="divForm">
-			<label class=" col-xs-1" for="password">Password</label>
-			<input id="password" type="text" />
+			<label class="objFormCajaRoger" for="password">Password</label>
+			<input id="password" class="objFormCajaRoger2" type="text" />
          	    </div>
                     <a href="pages/primera.php">
 						<button class="objetoFormReservar">Reservar</button>
@@ -69,12 +69,12 @@
                <img class="opacidadImg" src="img/1.jpg">
                 <div class="carousel-caption">
 		    <div class="divForm">
-			<label class=" col-xs-1" for="usuario">Usuario</label>
-			<input id="usuario" type="text" />
+			<label class="objFormCajaRoger" for="usuario">Usuario</label>
+			<input id="usuario" class="objFormCajaRoger2"  type="text" />
 		    </div>
 		    <div class="divForm">
-			<label class=" col-xs-1" for="password">Password</label>
-			<input id="password" type="text" />
+			<label class="objFormCajaRoger" for="password">Password</label>
+			<input id="password" class="objFormCajaRoger2"  type="text" />
 		    </div>
                     <a href="pages/primera.php">
 						<button class="objetoFormReservar">Reservar</button>
@@ -86,12 +86,12 @@
                <img class="opacidadImg" src="img/2.jpg">
                 <div class="carousel-caption">
 		    <div class="divForm">
-			<label class=" col-xs-1" for="usuario">Usuario</label>
-			<input id="usuario" type="text" />
+			<label class="objFormCajaRoger" for="usuario">Usuario</label>
+			<input id="usuario" class="objFormCajaRoger2" type="text" />
 		    </div>
 		    <div class="divForm">
-			<label class=" col-xs-1" for="password">Password</label>
-			<input id="password" type="text" />
+			<label class="objFormCajaRoger" for="password">Password</label>
+			<input id="password" class="objFormCajaRoger2" type="text" />
 		    </div>
                     <a href="pages/primera.php">
 						<button class="objetoFormReservar">Reservar</button>
