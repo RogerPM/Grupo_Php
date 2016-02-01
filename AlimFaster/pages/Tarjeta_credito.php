@@ -1,10 +1,10 @@
 <?php
 class Tarjeta_credito
 {
-	private $numero_tarjeta
-	private $tipo
-	private $fecha_expiracion
-	private $entidad_bancaria
+	private $numero_tarjeta;
+	private $tipo;
+	private $fecha_expiracion;
+	private $entidad_bancaria;
 	
 	function __construct($numero_tarjeta,$tipo,$fecha_expiracion,$entidad_bancaria)
 	{
