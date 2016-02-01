@@ -1,3 +1,95 @@
+--Liset 
+-- phpMyAdmin SQL Dump
+-- version 3.3.9
+-- http://www.phpmyadmin.net
+--
+-- Servidor: localhost
+-- Tiempo de generación: 01-02-2016 a las 02:07:08
+-- Versión del servidor: 5.5.8
+-- Versión de PHP: 5.3.5
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Base de datos: `restaurantes`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `establecimiento`
+--
+
+CREATE TABLE IF NOT EXISTS `establecimiento` (
+  `es_id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre_es` varchar(100) NOT NULL,
+  `max_personas` int(11) NOT NULL,
+  `inicio_atencion` time NOT NULL,
+  `fin_atencion` time NOT NULL,
+  PRIMARY KEY (`es_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Volcar la base de datos para la tabla `establecimiento`
+--
+
+INSERT INTO `establecimiento` (`es_id`, `nombre_es`, `max_personas`, `inicio_atencion`, `fin_atencion`) VALUES
+(1, 'Cocolon', 5, '09:00:00', '20:00:00'),
+(2, 'Pique y pase', 4, '10:00:00', '20:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `reservacion`
+--
+
+CREATE TABLE IF NOT EXISTS `reservacion` (
+  `reserva_id` int(11) NOT NULL AUTO_INCREMENT,
+  `establecimiento` varchar(50) NOT NULL,
+  `sucursal` varchar(50) NOT NULL,
+  `fecha_orden` date NOT NULL,
+  `hora_orden` time NOT NULL,
+  `numero_personas` int(11) NOT NULL,
+  PRIMARY KEY (`reserva_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Volcar la base de datos para la tabla `reservacion`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `restaurant_datos`
+--
+
+CREATE TABLE IF NOT EXISTS `restaurant_datos` (
+  `r_id` int(11) NOT NULL AUTO_INCREMENT,
+  `establecimiento` varchar(100) NOT NULL,
+  `ciudad` varchar(100) NOT NULL,
+  `latitud` varchar(100) NOT NULL,
+  `longitud` varchar(100) NOT NULL,
+  `descripcion` varchar(200) NOT NULL,
+  PRIMARY KEY (`r_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Volcar la base de datos para la tabla `restaurant_datos`
+--
+
+INSERT INTO `restaurant_datos` (`r_id`, `establecimiento`, `ciudad`, `latitud`, `longitud`, `descripcion`) VALUES
+(1, 'Cocolon', 'Guayaquil', '-2.164195', '-79.896351', 'Cocolon Francisco Orellana'),
+(2, 'Cocolon', 'Quito', '-1.922246716098091', '10.72265625', 'Cocolon Parque El Ejido'),
+(3, 'Pique y pase', 'Guayaquil', '19.321511226817176', '45.3515625', 'Pique y Pase de La Estatal'),
+(4, 'Pique y pase', 'Quito', '1.417091829441639', '-72.0703125', 'Pique Y pase Urdesa');
+
 ﻿
 --EDWIN: Estado
 --	    Sucursal
