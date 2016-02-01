@@ -313,3 +313,46 @@ ALTER TABLE restaurante
   ALTER TABLE detalle_reservacion
   ADD CONSTRAINT fk_detReservacion_mesa FOREIGN KEY (numero_mesa)
   REFERENCES mesa (numero_mesa);
+
+--Tablas que faltan(edwin):   
+-- Recurso
+--	TarjetaCredito
+--	EntidadFinanciera
+--	Mesa
+
+CREATE TABLE recurso(
+    codigo_recurso serial NOT NULL,
+    nombre varchar(50) NULL,
+    fecha_registro date NULL,
+    CONSTRAINT PK_codigo_recurso PRIMARY KEY (codigo_recurso)
+ );
+ 
+CREATE TABLE tarjeta_credito(
+    numero_tarjeta serial NOT NULL,
+    tipo varchar(50) NULL,
+    fecha_expiracion date NULL,
+    entidad_bancaria varchar(50) NULL,
+    CONSTRAINT PK_numero_tarjeta PRIMARY KEY (numero_tarjeta)
+ );
+ 
+ CREATE TABLE entidad_bancaria(
+    codigo_entidad_bancaria serial NOT NULL,
+    nombre varchar(50) NULL,
+    ruc  int NULL,
+    numero_tarjeta int NULL,
+    CONSTRAINT PK_codigo_entidad_bancaria PRIMARY KEY (codigo_entidad_bancaria)
+ );
+ 
+  CREATE TABLE mesa(
+    numero_mesa serial NOT NULL,
+    descripcion varchar(50) NULL,
+    capacidad_ocupantes int NULL,
+    CONSTRAINT PK_numero_mesa PRIMARY KEY (numero_mesa)
+ );
+ 
+  
+ --AÑADIR CLAVES FORANEAS
+ALTER TABLE entidad_bancaria
+  ADD CONSTRAINT fk_numero_tarjeta FOREIGN KEY (numero_tarjeta)
+  REFERENCES tarjeta_credito (numero_tarjeta);
+ 
