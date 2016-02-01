@@ -24,11 +24,11 @@
     <title>Home reserva Online - Restaurante</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 
     <!-- Custom CSS -->
     <link href="css/full-slider.css" rel="stylesheet">
-	<link href="css/styleRestaurant.css" rel="stylesheet">
+	<link href="css/styleRestaurant.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,30 +51,54 @@
                 <!-- Set the first background image using inline CSS below. -->
                  <img class="opacidadImg" src="img/5.jpg">
                 <div class="carousel-caption">
+		    <div class="divForm">
+			<label class=" col-xs-1" for="usuario">Usuario</label>
+			<input id="usuario" type="text" />
+	    	    </div>
+	    	    <div class="divForm">
+			<label class=" col-xs-1" for="password">Password</label>
+			<input id="password" type="text" />
+         	    </div>
                     <a href="pages/primera.php">
 						<button class="objetoFormReservar">Reservar</button>
-					</a>
+		    </a>
                 </div>
             </div>
             <div class="item">
                 <!-- Set the third background image using inline CSS below. -->
                <img class="opacidadImg" src="img/1.jpg">
                 <div class="carousel-caption">
+		    <div class="divForm">
+			<label class=" col-xs-1" for="usuario">Usuario</label>
+			<input id="usuario" type="text" />
+		    </div>
+		    <div class="divForm">
+			<label class=" col-xs-1" for="password">Password</label>
+			<input id="password" type="text" />
+		    </div>
                     <a href="pages/primera.php">
 						<button class="objetoFormReservar">Reservar</button>
-					</a>
+		    </a>
                 </div>
             </div>
 			 <div class="item">
                 <!-- Set the third background image using inline CSS below. -->
                <img class="opacidadImg" src="img/2.jpg">
                 <div class="carousel-caption">
+		    <div class="divForm">
+			<label class=" col-xs-1" for="usuario">Usuario</label>
+			<input id="usuario" type="text" />
+		    </div>
+		    <div class="divForm">
+			<label class=" col-xs-1" for="password">Password</label>
+			<input id="password" type="text" />
+		    </div>
                     <a href="pages/primera.php">
 						<button class="objetoFormReservar">Reservar</button>
-					</a>
+		    </a>
                 </div>
             </div>
-			</div>
+	</div>
 
         <!-- Controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -106,7 +130,7 @@
     		  <span property="name" content="AlimFaster"></span>
               <span property="author" content="Claudia Torres, clao91torrestorres@gmail.com"></span>	
 	<meta name="classification" content="Reservas Restaurantes">
-     	 	</div>
+     	 </div>
 
 </body>
 
