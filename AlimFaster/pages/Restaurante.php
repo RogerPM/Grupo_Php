@@ -30,7 +30,13 @@ class Restaurante
 	   $this->nombreImagen = $nombre_imagen;
      }
 	 
-	 
+	  function __construct($codigo_restaurante, $codigo_sucursal, $codigo_reservacion, $razon_social, $nombre_imagen) {
+       $this->idRestaurante = $codigo_restaurante;
+	   $this->idSucursal = $codigo_sucursal;
+	   $this->idReservacion = $codigo_reservacion;
+	   $this->razonSocial = $razon_social;
+	   $this->nombreImagen = $nombre_imagen;
+     }
 	 
    public function getCodigo_restaurante(){
 		return $this->codigo_restaurante;
