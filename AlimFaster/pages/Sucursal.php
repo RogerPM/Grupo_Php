@@ -3,6 +3,7 @@ class Sucursal
 {
 	private $codigo_sucursal;
 	private $nombre;
+	
 	private $direccion;
 	private $ciudad;
 	private $capacidad_maxima;
