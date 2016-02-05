@@ -1,6 +1,6 @@
 <?php 
 include_once('Producto.php');
-include_once('Collector.php');
+include_once('Conexion.php');
 
 class ProductoDatos extends Conexion 
 {
