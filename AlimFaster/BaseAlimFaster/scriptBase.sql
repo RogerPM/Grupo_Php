@@ -139,7 +139,7 @@ CREATE TABLE tipo_producto(
  );
 
 
---AÑADIR CLAVES FORANEAS
+--AÑADIR CLAVES FORANEAS (EDWIN)
 ALTER TABLE estado
   ADD CONSTRAINT fk_codigo_restaurante FOREIGN KEY (codigo_restaurante)
   REFERENCES restaurante (codigo_restaurante);
@@ -314,7 +314,7 @@ ALTER TABLE restaurante
   ADD CONSTRAINT fk_detReservacion_mesa FOREIGN KEY (numero_mesa)
   REFERENCES mesa (numero_mesa);
 
---Tablas que faltan(edwin):   
+--Tablas que faltan xavier(EDWIN):   
 --	TarjetaCredito
 --	EntidadFinanciera
 --	Mesa
@@ -343,8 +343,84 @@ CREATE TABLE tarjeta_credito(
  );
  
   
- --AÑADIR CLAVES FORANEAS
+ --AÑADIR CLAVES FORANEAS (xavier/EDWIN)
 ALTER TABLE entidad_bancaria
   ADD CONSTRAINT fk_numero_tarjeta FOREIGN KEY (numero_tarjeta)
   REFERENCES tarjeta_credito (numero_tarjeta);
  
+ 
+--Tablas que faltan lis(edwin)   
+--cabecera de fatura
+--	Persona
+--	Detalle de Factura
+--	Forma de pago
+
+CREATE TABLE cabecera_factura(
+    numero_factura serial NOT NULL,
+    fecha date NULL,
+    hora time NULL,
+    codigo_pago int NULL,
+    secuencia int NULL,  
+    CONSTRAINT PK_numero_factura PRIMARY KEY (numero_factura)
+ );
+
+CREATE TABLE detalle_factura(
+    secuencia serial NOT NULL,
+    codigo_producto int NULL,
+    cantidad numeric(4,2) NULL,
+    subtotal numeric(4,2) NULL,
+    descuento numeric(4,2) NULL,
+    iva numeric(3,2) NULL,
+    servicio varchar(50) NULL,
+    total numeric(4,2) NULL,
+    CONSTRAINT PK_secuencia PRIMARY KEY (secuencia)
+ );
+
+CREATE TABLE persona(
+    codigo_persona serial NOT NULL,
+    cedula_identidad varchar(50) NULL,
+    nombre varchar(50) NULL,
+    apellido varchar(50) NULL,
+    nacionalidad varchar(50) NULL,
+    fecha_nacimiento date NULL,
+    estado_civil varchar(15) NULL,
+    genero varchar(10) NULL,
+    direccion_domicilio varchar(50)NULL,
+    telefono int NULL,
+    correo_electronico varchar(50)NULL,
+    codigo_cliente int NULL,
+    codigo_usuario int NULL,
+    CONSTRAINT PK_codigo_persona PRIMARY KEY (codigo_persona)
+ );
+
+CREATE TABLE forma_pago(
+    codigo_pago serial NOT NULL,
+    tipo varchar(50) NULL,
+    numero_tarjeta varchar(10) NULL,
+    CONSTRAINT PK_codigo_pago PRIMARY KEY (codigo_pago)
+ );
+ 
+ --AÑADIR CLAVES FORANEAS (lis/EDWIN)
+ALTER TABLE cabecera_factura
+  ADD CONSTRAINT fk_secuencia FOREIGN KEY (secuencia)
+  REFERENCES detalle_factura (secuencia); 
+  
+  ALTER TABLE cabecera_factura
+  ADD CONSTRAINT fk_codigo_pago FOREIGN KEY (codigo_pago)
+  REFERENCES forma_pago (codigo_pago); 
+  
+  ALTER TABLE detalle_factura
+  ADD CONSTRAINT fk_codigo_producto FOREIGN KEY (codigo_producto)
+  REFERENCES producto (codigo_producto);
+  
+  ALTER TABLE forma_pago
+  ADD CONSTRAINT fk_codigo_pago FOREIGN KEY (codigo_pago)
+  REFERENCES tarjeta_credito (numero_tarjeta); 
+  
+  ALTER TABLE persona
+  ADD CONSTRAINT fk_codigo_cliente FOREIGN KEY (codigo_cliente)
+  REFERENCES cliente (codigo_cliente);
+  
+  ALTER TABLE persona
+  ADD CONSTRAINT fk_codigo_usuario FOREIGN KEY (codigo_usuario)
+  REFERENCES usuario (codigo);
