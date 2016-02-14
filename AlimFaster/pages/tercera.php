@@ -24,6 +24,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Confirmacion de Pedido - Restaurante</title>
  <SCRIPT language="javascript">
+			function Eliminar (i) {
+				document.getElementsByTagName("table")[0].setAttribute("id","tableid");
+				document.getElementById("tableid").deleteRow(i);
+			}
 
           function deleteRow(tableID) {
 
@@ -122,7 +126,8 @@ $Detalle_facturaDatosObj = new Detalle_facturaDatos();
 						
 					?>
 					<tr>					
-						<TD><INPUT type="checkbox" NAME="chk"/></TD>
+						<!--TD><INPUT type="checkbox" NAME="chk"/></TD-->
+						<td><input type="button" value="x" onclick="Eliminar(this.parentNode.parentNode.rowIndex)"/></td>
 						<td style="display:none"><?php echo $c->getSecuencia(); ?> </td>
 						<td><?php echo $c->getCantidad(); ?> </td>
 						<td>Sopa de Camaron</td>
