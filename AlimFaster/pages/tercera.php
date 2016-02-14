@@ -18,10 +18,10 @@
 <meta name="robots" content="index,follow"> <!--etiqueta que sirve para que los bucadores puedan recorrer tu pagina web-->
 <link href="../css/styleRestaurant.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
-<!--link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"-->
 
 
 <link href="../css/full-slider.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Confirmacion de Pedido - Restaurante</title>
 </head>
 <body>
@@ -57,7 +57,7 @@
 	</div>
 	<div class="fondoPantalla" style ="width = 100%">
 		<div class="container">
-			<table class="table table-striped">
+			<table class="table table-striped-edwin">
 				<thead class="CaberaSuperiorTablaStriped">
 					<tr>
 						<th>Eliminar</th>
@@ -113,9 +113,9 @@
 					<tr>
 						<td> </td>
 						<td> </td>
-						<td>TOTAL</td>
+						<td rowspan="3">TOTAL</td>
 						<td> </td>
-						<td>$59,50 </td>		
+						<td rowspan="2">$59,50 </td>		
 					</tr>
 				</tbody>
 			</table>
