@@ -57,14 +57,15 @@
 	</div>
 	<div class="fondoPantalla" style ="width = 100%">
 		<div class="container">
-			<table class="table table-striped-edwin">
+			<table class="table table-striped-edwin"  BORDER=10>
 				<thead class="CaberaSuperiorTablaStriped">
-					<tr>
+					<tr ALIGN=center>
 						<th>Eliminar</th>
 						<th>Cantida</th>
 						<th>Descripción</th>
 						<th>Precio Unitario</th>
 						<th>Precio Total</th>
+						<th style="display:none">Codigo</th>
 					</tr>
 				</thead>
 				<tbody class="fuente">
@@ -111,11 +112,11 @@
 						<td>$2,50</td>
 					</tr>
 					<tr>
-						<td> </td>
-						<td> </td>
-						<td rowspan="3">TOTAL</td>
-						<td> </td>
-						<td rowspan="2">$59,50 </td>		
+						<!--td> </td-->
+						<!--td> </td-->
+						<td colspan="3">TOTAL</td>
+						<!--td> </td-->
+						<td colspan="2">$59,50 </td>		
 					</tr>
 				</tbody>
 			</table>
