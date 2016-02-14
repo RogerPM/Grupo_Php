@@ -108,15 +108,15 @@ CREATE TABLE estado(
     CONSTRAINT PK_codigo_estado PRIMARY KEY (codigo_estado)
  );
 
-CREATE TABLE sucursal(
-    codigo_sucursal serial NOT NULL,
-    nombre varchar(50) NULL,
-    direccion varchar(50) NULL,
-    ciudad varchar(50) NULL,
-    capacidad_maxima int NULL,
-    codigo_producto int NULL,
-    CONSTRAINT PK_codigo_sucursal PRIMARY KEY (codigo_sucursal)
- );
+--CREATE TABLE sucursal(
+--    codigo_sucursal serial NOT NULL,
+--    nombre varchar(50) NULL,
+--    direccion varchar(50) NULL,
+--    ciudad varchar(50) NULL,
+--    capacidad_maxima int NULL,
+--    codigo_producto int NULL,
+--    CONSTRAINT PK_codigo_sucursal PRIMARY KEY (codigo_sucursal)
+-- );
 
 CREATE TABLE producto(
     codigo_producto serial NOT NULL,
@@ -165,13 +165,13 @@ ALTER TABLE estado
   REFERENCES mesa (numero_mesa);
    
 
-ALTER TABLE sucursal
-  ADD CONSTRAINT fk_codigo_producto FOREIGN KEY (codigo_producto)
-  REFERENCES producto (codigo_producto);
+--ALTER TABLE sucursal
+--  ADD CONSTRAINT fk_codigo_producto FOREIGN KEY (codigo_producto)
+--  REFERENCES producto (codigo_producto);
   
-ALTER TABLE tipo_producto
-  ADD CONSTRAINT fk_codigo_producto FOREIGN KEY (codigo_producto)
-  REFERENCES producto (codigo_producto);
+--ALTER TABLE tipo_producto
+--  ADD CONSTRAINT fk_codigo_producto FOREIGN KEY (codigo_producto)
+--  REFERENCES producto (codigo_producto);
 
 --Roger 
 
@@ -252,19 +252,20 @@ create table usuario
 --	Cabecera reservacion
 --	detalle reservacion 
 
-CREATE TABLE restaurante(
-    codigo_restaurante int NOT NULL,
-    codigo_sucursal int NOT NULL,
-    codigo_reservacion int NOT NULL,
-    razon_social varchar(50) NULL,
-    telefono int NULL,
-    correo_electronico varchar(50) NULL,
-    autorizacion_sri int NULL,
-    autorizacion_fecha date NULL,
-    telefax int NULL,
-    telefono_movil int NULL,
-    nombre_imagen varchar(50) NULL,
-    CONSTRAINT PK_restaurante PRIMARY KEY (codigo_restaurante));
+-- Modificada por lis
+--CREATE TABLE restaurante(
+--    codigo_restaurante int NOT NULL,
+--    codigo_sucursal int NOT NULL,
+--    codigo_reservacion int NOT NULL,
+--    razon_social varchar(50) NULL,
+--    telefono int NULL,
+--    correo_electronico varchar(50) NULL,
+--    autorizacion_sri int NULL,
+--    autorizacion_fecha date NULL,
+--    telefax int NULL,
+--    telefono_movil int NULL,
+--    nombre_imagen varchar(50) NULL,
+--    CONSTRAINT PK_restaurante PRIMARY KEY (codigo_restaurante));
 
 
 CREATE TABLE cliente(
@@ -275,44 +276,48 @@ CREATE TABLE cliente(
     cuenta_paypal int NULL,
     CONSTRAINT PK_cliente PRIMARY KEY (codigo_cliente));
 
-CREATE TABLE cabecera_reservacion(
-    codigo_reservacion serial NOT NULL,
-    secuencia_reservacion int NOT NULL,
-    numero_factura int NOT NULL,
-    numero_personas int NOT NULL,
-    CONSTRAINT PK_cabecera_reservacion PRIMARY KEY (codigo_reservacion));
+-- Modificadas por lis
+--CREATE TABLE cabecera_reservacion(
+--    codigo_reservacion serial NOT NULL,
+--    secuencia_reservacion int NOT NULL,
+--    numero_factura int NOT NULL,
+--    numero_personas int NOT NULL,
+--    CONSTRAINT PK_cabecera_reservacion PRIMARY KEY (codigo_reservacion));
         
 
- CREATE TABLE detalle_reservacion(
-    secuencia_reservacion serial NOT NULL,
-    numero_mesa int NOT NULL,
-    CONSTRAINT PK_detalle_reservacion PRIMARY KEY (secuencia_reservacion));
+-- CREATE TABLE detalle_reservacion(
+--    secuencia_reservacion serial NOT NULL,
+--    numero_mesa int NOT NULL,
+--    CONSTRAINT PK_detalle_reservacion PRIMARY KEY (secuencia_reservacion));
 
  --AÑADIR CLAVES FORANEAS
-ALTER TABLE restaurante
-  ADD CONSTRAINT fk_restaurante_sucursal FOREIGN KEY (codigo_sucursal)
-  REFERENCES sucursal (codigo_sucursal);
+--ALTER TABLE restaurante
+--  ADD CONSTRAINT fk_restaurante_sucursal FOREIGN KEY (codigo_sucursal)
+--  REFERENCES sucursal (codigo_sucursal);
 
 
-ALTER TABLE restaurante
-  ADD CONSTRAINT fk_restaurante_reservacion FOREIGN KEY (codigo_reservacion)
-  REFERENCES cabecera_reservacion (codigo_reservacion);
+--ALTER TABLE restaurante
+--  ADD CONSTRAINT fk_restaurante_reservacion FOREIGN KEY (codigo_reservacion)
+--  REFERENCES cabecera_reservacion (codigo_reservacion);
 
   ALTER TABLE cliente
   ADD CONSTRAINT fk_cliente_factura FOREIGN KEY (numero_factura)
   REFERENCES cabecera_factura (numero_factura);
 
-  ALTER TABLE cabecera_reservacion
-  ADD CONSTRAINT fk_reservacion_detalle FOREIGN KEY (secuencia_reservacion)
-  REFERENCES detalle_reservacion (secuencia_reservacion);
+  --ALTER TABLE cabecera_reservacion
+  --ADD CONSTRAINT fk_reservacion_detalle FOREIGN KEY (secuencia_reservacion)
+  --REFERENCES detalle_reservacion (secuencia_reservacion);
 
-  ALTER TABLE cabecera_reservacion
-  ADD CONSTRAINT fk_reservacion_factura FOREIGN KEY (numero_factura)
-  REFERENCES cabecera_factura (numero_factura);
+  --ALTER TABLE cabecera_reservacion
+  --ADD CONSTRAINT fk_reservacion_factura FOREIGN KEY (numero_factura)
+  --REFERENCES cabecera_factura (numero_factura);
 
-  ALTER TABLE detalle_reservacion
-  ADD CONSTRAINT fk_detReservacion_mesa FOREIGN KEY (numero_mesa)
-  REFERENCES mesa (numero_mesa);
+  --ALTER TABLE detalle_reservacion
+  --ADD CONSTRAINT fk_detReservacion_mesa FOREIGN KEY (numero_mesa)
+  --REFERENCES mesa (numero_mesa);
+
+
+
 
 --Tablas que faltan xavier(EDWIN):   
 --	TarjetaCredito
@@ -424,3 +429,113 @@ ALTER TABLE cabecera_factura
   ALTER TABLE persona
   ADD CONSTRAINT fk_codigo_usuario FOREIGN KEY (codigo_usuario)
   REFERENCES usuario (codigo);
+  
+  
+  --Modificaciones LIS
+  
+  -- Sequence: secuencia
+
+-- DROP SEQUENCE secuencia;
+
+CREATE SEQUENCE secuencia
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 10
+  CACHE 1;
+ALTER TABLE secuencia
+  OWNER TO xghiwvoawqouzq;;
+
+-- Sequence: secuencia_rese
+
+-- DROP SEQUENCE secuencia_rese;
+
+CREATE SEQUENCE secuencia_rese
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 34
+  CACHE 1;
+ALTER TABLE secuencia_rese
+  OWNER TO xghiwvoawqouzq;;
+
+-- Sequence: secuencia_rest
+
+-- DROP SEQUENCE secuencia_rest;
+
+CREATE SEQUENCE secuencia_rest
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 30
+  CACHE 1;
+ALTER TABLE secuencia_rest
+  OWNER TO xghiwvoawqouzq;;
+
+-- Table: reservacion
+
+-- DROP TABLE reservacion;
+
+CREATE TABLE reservacion
+(
+  reserva_id integer NOT NULL DEFAULT nextval('secuencia_rese'::regclass),
+  establecimiento character varying(50) NOT NULL,
+  sucursal character varying(50) NOT NULL,
+  fecha_orden date NOT NULL,
+  hora_orden time without time zone NOT NULL,
+  numero_personas integer NOT NULL,
+  nombre character varying(100) NOT NULL,
+  CONSTRAINT reservacion_pkey PRIMARY KEY (reserva_id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE reservacion
+  OWNER TO xghiwvoawqouzq;;
+
+-- Table: restaurante
+
+-- DROP TABLE restaurante;
+
+CREATE TABLE restaurante
+(
+  codigo_restaurante integer NOT NULL DEFAULT nextval('secuencia'::regclass),
+  max_personas integer NOT NULL,
+  inicio_atencion time without time zone NOT NULL,
+  fin_atencion time without time zone NOT NULL,
+  razon_social character varying(50),
+  telefono integer,
+  correo_electronico character varying(50),
+  autorizacion_sri integer,
+  autorizacion_fecha date,
+  telefax integer,
+  telefono_movil integer,
+  nombre_imagen character varying(50),
+  CONSTRAINT pk_restaurante PRIMARY KEY (codigo_restaurante)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE restaurante
+  OWNER TO xghiwvoawqouzq;;
+-- Table: sucursal
+
+-- DROP TABLE sucursal;
+
+CREATE TABLE sucursal
+(
+  codigo_sucursal serial NOT NULL,
+  nombre character varying(50),
+  direccion character varying(50),
+  ciudad character varying(50),
+  capacidad_maxima integer,
+  codigo_producto integer,
+  latitud character varying(100) NOT NULL,
+  longitud character varying(100) NOT NULL,
+  CONSTRAINT pk_codigo_sucursal PRIMARY KEY (codigo_sucursal)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE sucursal
+  OWNER TO xghiwvoawqouzq;;
