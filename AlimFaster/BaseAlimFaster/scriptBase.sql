@@ -376,7 +376,7 @@ CREATE TABLE cabecera_factura(
 CREATE TABLE detalle_factura(
     secuencia serial NOT NULL,
     codigo_producto int NULL,
-    cantidad numeric(4,2) NULL,
+    cantidad int NULL,
     precio_unitario numeric (4,2) NULL,
     precio_total numeric (4,2)NULL,
     servicio varchar(50) NULL,   
@@ -435,7 +435,8 @@ ALTER TABLE cabecera_factura
   
   ALTER TABLE persona
   ADD CONSTRAINT fk_codigo_usuario FOREIGN KEY (codigo_usuario)
-  REFERENCES usuario (codigo);
+  REFERENCES usuario (codigo_usuario);
+  
   
   
   --Modificaciones LIS
