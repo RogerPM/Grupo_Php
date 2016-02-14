@@ -270,7 +270,7 @@ create table usuario
 
 CREATE TABLE cliente(
     codigo_cliente int NOT NULL,
-    numero_factura int NOT NULL,
+    --numero_factura int NOT NULL,
     categoria varchar(50) NULL,
     cuenta_bancaria int NULL,
     cuenta_paypal int NULL,
@@ -300,9 +300,9 @@ CREATE TABLE cliente(
 --  ADD CONSTRAINT fk_restaurante_reservacion FOREIGN KEY (codigo_reservacion)
 --  REFERENCES cabecera_reservacion (codigo_reservacion);
 
-  ALTER TABLE cliente
-  ADD CONSTRAINT fk_cliente_factura FOREIGN KEY (numero_factura)
-  REFERENCES cabecera_factura (numero_factura);
+  --ALTER TABLE cliente
+  --ADD CONSTRAINT fk_cliente_factura FOREIGN KEY (numero_factura)
+  --REFERENCES cabecera_factura (numero_factura);
 
   --ALTER TABLE cabecera_reservacion
   --ADD CONSTRAINT fk_reservacion_detalle FOREIGN KEY (secuencia_reservacion)
@@ -365,7 +365,11 @@ CREATE TABLE cabecera_factura(
     fecha date NULL,
     hora time NULL,
     codigo_pago int NULL,
-    secuencia int NULL,  
+    codigo_cliente int NOT NULL,
+    subtotal numeric(4,2) NULL,
+    descuento numeric(4,2) NULL,
+    iva numeric(3,2) NULL,
+    total numeric(4,2) NULL, 
     CONSTRAINT PK_numero_factura PRIMARY KEY (numero_factura)
  );
 
@@ -373,11 +377,10 @@ CREATE TABLE detalle_factura(
     secuencia serial NOT NULL,
     codigo_producto int NULL,
     cantidad numeric(4,2) NULL,
-    subtotal numeric(4,2) NULL,
-    descuento numeric(4,2) NULL,
-    iva numeric(3,2) NULL,
-    servicio varchar(50) NULL,
-    total numeric(4,2) NULL,
+    precio_unitario numeric (4,2) NULL,
+    precio_total numeric (4,2)NULL,
+    servicio varchar(50) NULL,   
+    numero_factura int NULL, 
     CONSTRAINT PK_secuencia PRIMARY KEY (secuencia)
  );
 
@@ -407,8 +410,8 @@ CREATE TABLE forma_pago(
  
  --AÑADIR CLAVES FORANEAS (lis/EDWIN)
 ALTER TABLE cabecera_factura
-  ADD CONSTRAINT fk_secuencia FOREIGN KEY (secuencia)
-  REFERENCES detalle_factura (secuencia); 
+  ADD CONSTRAINT fk_codigo_cliente FOREIGN KEY (codigo_cliente)
+  REFERENCES cliente (codigo_cliente); 
   
   ALTER TABLE cabecera_factura
   ADD CONSTRAINT fk_codigo_pago FOREIGN KEY (codigo_pago)
@@ -417,6 +420,10 @@ ALTER TABLE cabecera_factura
   ALTER TABLE detalle_factura
   ADD CONSTRAINT fk_codigo_producto FOREIGN KEY (codigo_producto)
   REFERENCES producto (codigo_producto);
+  
+  ALTER TABLE detalle_factura
+  ADD CONSTRAINT fk_numero_factura FOREIGN KEY (numero_factura)
+  REFERENCES cabecera_factura (numero_factura);
   
   ALTER TABLE forma_pago
   ADD CONSTRAINT fk_codigo_pago FOREIGN KEY (codigo_pago)
