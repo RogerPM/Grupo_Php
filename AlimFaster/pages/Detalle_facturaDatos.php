@@ -1,8 +1,8 @@
- <?php 
+<?php 
 include_once('Detalle_factura.php');
 include_once('Collector.php');
 
-class  Detalle_facturaDatos extends Collector 
+class Detalle_facturaDatos extends Collector 
 {
 	function consultaGeneral(){
 		$rows = self::$db->getRows("SELECT * FROM detalle_factura");

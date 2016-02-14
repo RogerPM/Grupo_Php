@@ -1,7 +1,7 @@
 <?php
 	session_start();
 ?>
-﻿<!doctype html>
+?<!doctype html>
 <html lang="es">
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -23,8 +23,55 @@
 <link href="../css/full-slider.css" rel="stylesheet" type="text/css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Confirmacion de Pedido - Restaurante</title>
+ <SCRIPT language="javascript">
+
+          function deleteRow(tableID) {
+
+               try {
+
+               var table = document.getElementById(tableID);
+
+               var rowCount = table.rows.length;
+
+ 
+
+               for(var i=0; i<rowCount; i++) {
+
+                    var row = table.rows[i];
+
+                    var chkbox = row.cells[0].childNodes[0];
+
+                    if(null != chkbox && true == chkbox.checked) {
+
+                         table.deleteRow(i);
+
+                         rowCount--;
+
+                         i--;
+
+                    }
+
+               }
+
+               }catch(e) {
+
+                    alert(e);
+
+               }
+
+          }
+
+ 
+
+     </SCRIPT>
 </head>
 <body>
+<?php
+include_once("Detalle_facturaDatos.php");
+$id = 1;
+$Detalle_facturaDatosObj = new Detalle_facturaDatos();
+?>
+
 <!-- boostrap -->
 	<div class="jumbotron">
 	<div class="bannerSuperior">
@@ -57,60 +104,33 @@
 	</div>
 	<div class="fondoPantalla" style ="width = 100%">
 		<div class="container">
-			<table class="table table-striped-edwin"  BORDER=10>
+		<!--INPUT type="button" value="Delete Row" onclick="deleteRow('table table-striped-edwin');" /-->
+		<table class="table table-striped-edwin"  BORDER=10>
 				<thead class="CaberaSuperiorTablaStriped">
 					<tr ALIGN=center>
 						<th>Eliminar</th>
+						<th style="display:none">Codigo</th>
 						<th>Cantida</th>
 						<th>Descripción</th>
 						<th>Precio Unitario</th>
 						<th>Precio Total</th>
-						<th style="display:none">Codigo</th>
 					</tr>
 				</thead>
 				<tbody class="fuente">
-					<tr>
-						<td>X</td>
-						<td>3</td>
+					<?php
+					foreach ($Detalle_facturaDatosObj->consultaGeneral() as $c){
+						
+					?>
+					<tr>					
+						<TD><INPUT type="checkbox" NAME="chk"/></TD>
+						<td style="display:none"><?php echo $c->getSecuencia(); ?> </td>
+						<td><?php echo $c->getCantidad(); ?> </td>
 						<td>Sopa de Camaron</td>
-						<td>$5,00</td>
-						<td>$15,00</td>
-					</tr>
-					<tr>
-						<td>X</td>
-						<td>2</td>
-						<td>Sopa de Lenteja</td>
-						<td>$3,00</td>
-						<td>$6,00</td>
-					</tr>
-					<tr>
-						<td>X</td>
-						<td>2</td>
-						<td>Postre de flan de caramelo</td>
-						<td>$5,00</td>
-						<td>$10,00</td>
-					</tr>
-					<tr>
-						<td>X</td>
-						<td>4</td>
-						<td>Costillas con salsa de tomillo y orégano</td>
-						<td>$5,00</td>
-						<td>$20,00</td>
-					</tr>
-					<tr>
-						<td>X</td>
-						<td>2</td>
-						<td>Porciones patatas fritas</td>
-						<td>$3,00</td>
-						<td>$6,00</td>
-					</tr>
-					<tr>
-						<td>X</td>
-						<td>1</td>
-						<td>Jarra de limonada</td>
-						<td>$2,50</td>
-						<td>$2,50</td>
-					</tr>
+						<td><?php echo $c->getPrecio_unitario(); ?></td>
+						<td><?php echo $c->getPrecio_total(); ?></td>
+					</Tr>
+					<?php } ?>
+					
 					<tr>
 						<!--td> </td-->
 						<!--td> </td-->

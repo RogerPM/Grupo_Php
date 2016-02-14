@@ -9,8 +9,7 @@ class Detalle_factura
 	private $precio_total;
 	private $servicio;
 	private $numero_factura;
-
-	 //Constructor principal
+	
      function __construct($secuencia, $codigo_producto,$cantidad,$precio_unitario,$precio_total,$servicio,$numero_factura) {
         $this->secuencia = $secuencia;
         $this->codigo_producto = $codigo_producto;
@@ -18,15 +17,6 @@ class Detalle_factura
 		$this->precio_unitario = $precio_unitario;
 		$this->precio_total = $precio_total;
 		$this->servicio = $servicio;
-		$this->numero_factura = $numero_factura;
-     }
-	 //Constructor secundario
-	 function __construct($secuencia, $codigo_producto,$cantidad,$precio_unitario,$precio_total,$numero_factura) {
-        $this->secuencia = $secuencia;
-        $this->codigo_producto = $codigo_producto;
-	    $this->cantidad = $cantidad;
-		$this->precio_unitario = $precio_unitario;
-		$this->precio_total = $precio_total;
 		$this->numero_factura = $numero_factura;
      }
     
@@ -72,7 +62,6 @@ class Detalle_factura
      function getNumero_factura(){
        return $this->numero_factura;
 	 } 
-	 
 }
 
 ?>

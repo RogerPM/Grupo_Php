@@ -43,48 +43,58 @@
 
           }
 
+ 
+
      </SCRIPT>
+
 </HEAD>
 
 <BODY>
 
 <?php
 include_once("ProductoDatos.php");
+include_once("Detalle_facturaDatos.php");
 $id = 1;
 $ProductoDatosObj = new ProductoDatos();
+$Detalle_facturaDatosObj = new Detalle_facturaDatos();
 ?>
-     
+	 <INPUT type="button" value="Delete Row" onclick="deleteRow('dataTable');" />
      <TABLE id="dataTable" width="350px" border="1">
 		<thead>
-			<TR>
-				<TH> Selección </TH>
-				<TH> Cantidad </TH>
-				<TH> Descripción </TH>
-				<TH> Precio Unitario</TH>
-				<TH> Precion Total </TH>
+			<TR>					
+						<th>Eliminar</th>
+						<th style="display:none">Codigo</th>
+						<th>Cantida</th>
+						<th>Descripción</th>
+						<th>Precio Unitario</th>
+						<th>Precio Total</th>
 		  </TR>
 		</thead>
 
 		<tbody>
-			<INPUT type="button" value="x" onclick="deleteRow('dataTable');"/> 
-		
+			
 			<?php
-			foreach ($ProductoDatosObj->consultaGeneral() as $c){
+			foreach ($Detalle_facturaDatosObj->consultaGeneral() as $c){
 				/*echo "<div>";
 				echo "Codigo: " .$c->getcodigo_producto() . "  Descripcion:  " .$c->getdescripcion() . "  Costo:  " .$c->getCosto() . "  Precio:  " .$c->getPvp() . "  Utilidad:  " .$c->getUtilidad() . "  Contenido_neto:  " .$c->getContenido_neto() . "  Peso_neto:  " .$c->getPeso_neto();
 				echo "</div>";*/
 			?>	
-			  <TR>
+			  <TR>					
 					<TD><INPUT type="checkbox" NAME="chk"/></TD>
-					<td><?php echo $c->getcodigo_producto(); ?> </td>
-					<td><?php echo $c->getdescripcion(); ?></td>
-					<td><?php echo $c->getCosto(); ?></td>
-					<td><?php echo $c->getPvp(); ?></td>
+					<td style="display:none"><?php echo $c->getSecuencia(); ?> </td>
+					<td><?php echo $c->getCantidad(); ?> </td>
+					<td>Sopa de Camaron</td>
+					<td><?php echo $c->getPrecio_unitario(); ?></td>
+					<td><?php echo $c->getPrecio_total(); ?></td>
 			  </TR>
 			<?php } ?>
 			
 		</tbody>
      </TABLE>
+	 
+	 
+	 
+	
 
 </BODY>
 
