@@ -1,6 +1,6 @@
 <?php
 
-class cabecera_factura
+class Cabecera_factura
 {
     private $numero_factura;
     private $fecha;
