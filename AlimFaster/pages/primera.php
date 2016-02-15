@@ -1,24 +1,24 @@
 <?php
 	session_start();
 ?>
-Ôªø<!doctype html>
+<!doctype html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Refresh" content="300"> <!--Se refrescara la pagina cada 300 segundos es decir 5 minutos-->
 <meta name="application-name" content="Reserva de mesas,pedidos de menus personalizados  y pagos via online para restaurantes gourmet">
 <meta name="author" content="Claudia Torres, clao91torrestorres@gmail.com" /> 
-<meta name="copyright" content="AlimFaster"> <!--Nombre de la compa√±ia-->
+<meta name="copyright" content="AlimFaster"> <!--Nombre de la compaÒia-->
 <meta name="organization" content="AlimFaster S.A." /> <!--Nombre de la Organizacion-->
-<meta name="language" content="es-ES" /> <!--Lenguaje de la pagina web espa√±ol-->
-<meta name="classification" content="Reservas Restaurantes">
-<meta name="description" content="Reservaci√≥n de los restaurantes gourmets asociados" /> <!--Descripcion de la pagina web-->
-<meta name="generator" content="Bloc de notas"> <!--Cual es la herramienta que se utiliza para editar, crear la pagina web-->
-<meta name="keywords" content="elecci√≥n de reserva de restaurantes gourmet,  reservas de pedidos y pagos online de restaurantes gourmet, elecci√≥n de restaurantes gourmet" /> <!--Palabras claves para que los navegadores puedan identificar y rankear nuestra pagina web-->
+<meta name="language" content="es-ES" /> <!--Lenguaje de la pagina web espaÒol-->
+<meta name="classification" content="Reservas">
+<meta name="description" content="Reserva de espacio en un restaurante de gourmet asociado" /> <!--Descripcion de la pagina web-->
+<meta name="generator" content="Bloc de notas,gedit"> <!--Cual es la herramienta que se utiliza para editar, crear la pagina web-->
+<meta name="keywords" content="reserva de restaurantes gourmet,  reserva de pedido y pago online de restaurantes gourmet, reserva de un espacio en restaurantes gourmet" /> <!--Palabras claves para que los navegadores puedan identificar y rankear nuestra pagina web-->
 <meta name="robots" content="index,follow"> <!--etiqueta que sirve para que los bucadores puedan recorrer tu pagina web-->
 <link href="../css/styleRestaurant.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
-<title>Elecci√≥n de restaurante Online - Restaurant</title>
+<title>Eleccion de restaurante Online - Restaurant</title>
 </head>
 <body >
 <!--Esto es para estilos responsive manueales -->
@@ -31,7 +31,7 @@
 <div class="jumbotron">
 <div class="bannerSuperior">
 
-<!-- Logo Y Texto Banner  -->
+	<!-- Logo Y Texto Banner  -->
 <div class="jumbotron">
 <div class="banImgText">
 				 <div class="col-md-8">
@@ -46,18 +46,17 @@
 <!-- Botones  -->
 <div class="jumbotron">
 <div class="botones">
- 
-				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40" alt="px"></button></a>
+
+				<a href="administracion_pagina.php"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40" alt="px"></button></a>
 				
 				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40" width="40" alt="px"></button></a>
-
 </div>
 </div>
 
 </div>
 </div>
 <div class="fondoPantalla" style='width: 100%'>
- <div class="table-responsive">     
+<div class="table-responsive">     
 <table class="table">
     <tbody>
       <tr>
@@ -96,6 +95,7 @@
 				<a href="segunda.php">
                  <button type="button" class="bordeBoton"><img src="../img/logoR3.jpg" title="Restaurante3"  height="150" width="150" alt="px">
 
+
 <div vocab="http://schema.org/" typeof="Restaurant">
       <span property="name" content="Puerto Moro"></span>
       <div property="aggregateRating" typeof="AggregateRating">
@@ -103,8 +103,8 @@
         <span property="reviewCount" content="250"></span>
       </div>
       <div property="address" typeof="PostalAddress">
-        <span property="streetAddress" content="Circunvalaci√≥n 320 y Diagonal esquina - C.C. Las Terrazas. - C.C. Mall del Sol - Centro"></span>
-        <span property="addressLocality" content="-Urdesa - V√≠a a Samborond√≥n - Rio centro - C.C. R√≠o Centro Ceibos planta alta. - C.C. Mall del Sol - Cordoba 703 y Junin"></span>
+        <span property="streetAddress" content="CircunvalaciÛn 320 y Diagonal esquina - C.C. Las Terrazas. - C.C. Mall del Sol - Centro"></span>
+        <span property="addressLocality" content="-Urdesa - VÌa a SamborondÛn - Rio centro - C.C. RÌo Centro Ceibos planta alta. - C.C. Mall del Sol - Cordoba 703 y Junin"></span>
         <span property="addressRegion" content="Guayaquil"></span> 
       </div>
       <span property="telephone" content="2884630 - 6007111"></span>
@@ -112,7 +112,7 @@
       <meta property="openingHours" content="Mo-Sa 11:00-14:30">
       <meta property="openingHours" content="Mo-Th 17:00-21:30">
       <meta property="openingHours" content="Fr-Sa 17:00-22:00">
-      <span property="servesCuisine" content="Restaurante de Carnes y Mariscos al Carb√≥n">
+      <span property="servesCuisine" content="Restaurante de Carnes y Mariscos al CarbÛn">
       </span>
       <span property="priceRange" content="$20 - $80"></span>
     </div>
@@ -140,7 +140,7 @@
       <meta property="openingHours" content="Mo-Sa 11:00-14:30">
       <meta property="openingHours" content="Mo-Th 17:00-21:30">
       <meta property="openingHours" content="Fr-Sa 17:00-22:00">
-      <span property="servesCuisine" content="Su especialista en comidas al carb√≥n">
+      <span property="servesCuisine" content="Su especialista en comidas al carbÛn">
       </span>
       <span property="priceRange" content="$20 - $80"></span>
     </div>
@@ -155,13 +155,13 @@
                 <button type="button" class="bordeBoton"><img src="../img/logoR5.jpg" title="Restaurante5"  height="150" width="150" alt="px">
 
 <div vocab="http://schema.org/" typeof="Restaurant">
-      <span property="name" content="Parrillada del √ëato"></span>
+      <span property="name" content="Parrillada del —ato"></span>
       <div property="aggregateRating" typeof="AggregateRating">
         <span property="ratingValue" content="4"></span> 
         <span property="reviewCount" content="250"></span>
       </div>
       <div property="address" typeof="PostalAddress">
-        <span property="streetAddress" content="V√≠ctor Emilio Estrada #1219 y Laureles"></span>
+        <span property="streetAddress" content="VÌctor Emilio Estrada #1219 y Laureles"></span>
         <span property="addressLocality" content="Urdesa central"></span>
         <span property="addressRegion" content="Guayaquil"></span> 
       </div>
@@ -224,7 +224,7 @@
       <meta property="openingHours" content="Mo-Sa 11:00-14:30">
       <meta property="openingHours" content="Mo-Th 17:00-21:30">
       <meta property="openingHours" content="Fr-Sa 17:00-22:00">
-      <span property="servesCuisine" content="Hamburguesas, Diners americanos, Comida r√°pida y Bocadillos">
+      <span property="servesCuisine" content="Hamburguesas, Diners americanos, Comida r·pida y Bocadillos">
       </span>
       <span property="priceRange" content="$20 - $80"></span>
     </div>
@@ -243,7 +243,7 @@
         <span property="reviewCount" content="250"></span>
       </div>
       <div property="address" typeof="PostalAddress">
-        <span property="streetAddress" content="Av. Francisco de Orellana S/N y Carlos Luis Plaza Da√±√≠n"></span>
+        <span property="streetAddress" content="Av. Francisco de Orellana S/N y Carlos Luis Plaza DaÒÌn"></span>
         <span property="addressLocality" content="Edif. C.C. San Marino"></span>
         <span property="addressRegion" content="Guayaquil"></span> 
       </div>
@@ -252,7 +252,7 @@
       <meta property="openingHours" content="Mo-Sa 11:00-14:30">
       <meta property="openingHours" content="Mo-Th 17:00-21:30">
       <meta property="openingHours" content="Fr-Sa 17:00-22:00">
-      <span property="servesCuisine" content="Hamburguesas, Comida r√°pida y Bocadillos">
+      <span property="servesCuisine" content="Hamburguesas, Comida r·pida y Bocadillos">
       </span>
       <span property="priceRange" content="$20 - $80"></span>
     </div>
@@ -268,7 +268,7 @@
 
 
 <div class="footer">
-Cont√°ctenos: desarrollo@gmail.com.<br/> Ecuador 2015
+Contactenos: desarrollo@gmail.com.<br/> Ecuador 2015
 </div>
 </body>
 </html>
