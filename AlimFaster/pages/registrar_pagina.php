@@ -71,7 +71,7 @@ $("#mapita").click(function(){
         <div class="col-md-8">
         <div class="table-responsive">    
 			<form action="">
-				
+				<br/>
 				<h2>DATOS DEL USUARIO</h2>
 				  <div class="divForm">
 				  <label class=" col-xs-3" for="nombre">Nombre</label>
@@ -108,17 +108,6 @@ $("#mapita").click(function(){
 				<input id="telefono" maxlength="10" type="text" />
 				</div>
 
-				<div class="divForm">				
-				<label class=" col-xs-3" for="fecha">Fecha de Nacimiento</label>
-				<input id="fecha" type="date"/>
-				</div>
-				
-				<div class="divForm">
-				<label class=" col-xs-3" for="cuenta">Cuenta PayPal</label>
-				<input id="cuenta" type="text" />
-				<a href="#" >Obteniendo</a>
-				</div>
-
 				<div class="divForm">
 				<label class=" col-xs-3" for="direccion">Direccion</label>
 				<input id="direccion" type="text" />
@@ -128,6 +117,7 @@ $("#mapita").click(function(){
 					<a href="primera.php">
 						<input class="objetoFormReservarForm" type="button" value="Guardar"/>
 					</a>
+					<br/><br/>
 				</div>
 			</form>	
 		</div>
@@ -142,7 +132,9 @@ $("#mapita").click(function(){
 </div>
 
 <div class="footer">
+<br/>
 Contactenos: desarrollo@gmail.com.<br/> Ecuador 2015
+<br/><br/>
 </div>
 </body>
 </html>
