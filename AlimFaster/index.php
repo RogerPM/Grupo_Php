@@ -62,6 +62,9 @@
                     <a href="pages/primera.php">
 						<button class="objetoFormReservar">Reservar</button>
 		    </a>
+		    <a href="pages/registrar.php">
+						<button class="objetoFormReservar">Registrar</button>
+		    </a>
                 </div>
             </div>
             <div class="item">
