@@ -18,7 +18,7 @@ $host = "ec2-54-225-199-245.compute-1.amazonaws.com";
 
 $cadenaConexion = "host=$host port=$port dbname=$dbname user=$user password=$password";
 
-$conexion = pg_connect($cadenaConexion) or die("Error en la Conexi�n: ".pg_last_error());
+$conexion = pg_connect($cadenaConexion) or die("Error en la Conexión: ".pg_last_error());
 //echo "<h3>Conexion Exitosa PHP - PostgreSQL</h3><hr><br>";
 
 
