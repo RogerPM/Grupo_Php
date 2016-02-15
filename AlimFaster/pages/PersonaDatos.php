@@ -2,29 +2,22 @@
 include_once('Persona.php');
 include_once('Collector.php');
 
-class Cabecera_facturaDatos extends Collector 
+class PersonaDatos extends Collector 
 {
-	function consultaGeneral(){
-		$rows = self::$db->getRows("SELECT * FROM cabecera_factura");
+	function insertarPersona(){
+		$rows = self::$db->getRows("insert into persona VALUES ('$_POST[cedula_identidad]','$_POST[nombre]','$_POST[apellido]','$_POST[estado_civil],'$_POST[genero]','$_POST[direccion_domicilio],'$_POST[telefono])";
 		$arrayDemo = array();
-		foreach ($rows as $c){
-			$aux = new Cabecera_factura($c{'numero_factura'},$c{'fecha'},$c{'hora'},$c{'codigo_pago'},$c{'codigo_cliente'},$c{'subtotal'},$c{'descuento'},$c{'iva'},$c{'total'});
 			array_push($arrayDemo, $aux);
-		}
 	return $arrayDemo;
 	}
 	
-	function consultaEspecific($id){
-		$rows = self::$db->getRows("SELECT * FROM cabecera_factura WHERE numero_factura= ?", array("{$id}"));
+	function InsertarUsuario($id){
+		$rows = self::$db->getRows("insert into usuario  VALUES ('$_POST[nombre_usuario]','$_POST[email]', '$_POST[contrasena]','$_POST[dop]')";
 		$arrayDemo = array();
-		foreach ($rows as $c){
-			$aux = new Cabecera_factura($c{'numero_factura'},$c{'fecha'},$c{'hora'},$c{'codigo_pago'},$c{'codigo_cliente'},$c{'subtotal'},$c{'descuento'},$c{'iva'},$c{'total'});
 			array_push($arrayDemo, $aux);
-		}
+		
 	return $arrayDemo;
 	}
-
-
 }
 
 ?>
