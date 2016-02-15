@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 	session_start();
 ?>
 ﻿<!doctype html>
@@ -88,6 +88,7 @@ $(window).load(function(){
 <!-- Botones  -->
 <div class="jumbotron">
 <div class="botones">
+				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/llave.png" height="40" width="40p" alt="px"></button></a>
 
 				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40p" alt="px"></button></a>
 				
