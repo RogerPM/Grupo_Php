@@ -27,7 +27,7 @@ $("#mapita").click(function(){
 });
 });
 </script>
-<title>Formulario de Registro</title>
+<title>Formulario de Permiso</title>
 </head>
 <body >
 <!--Esto es para estilos responsive manueales -->
@@ -72,60 +72,29 @@ $("#mapita").click(function(){
         <div class="table-responsive">    
 			<form action="">
 				
-				<h2>DATOS DEL USUARIO</h2>
-				  <div class="divForm">
-				  <label class=" col-xs-3" for="nombre">Nombre</label>
-				  <input id="nombre" type="text" />
-				  </div>
+				<h2>Asignar Permisos al Perfil</h2>
+				<div class="divForm">
+				<label class=" col-xs-3" for="perfil">Perfil</label>
+				<input id="perfil" type="text" />
+				</div>
 				  
-				  <div class="divForm">
-				  <label class=" col-xs-3" for="apellido">Apellido</label>
-				  <input id="apellido" type="text" />
-				  </div>
-
 				<div class="divForm">
-				<label class=" col-xs-3" for="cedula">Cedula o Ruc</label>
-				<input id="cedula" maxlength="13" type="text" />
-				</div>
-
-				<div class="divForm">				
-				<label class=" col-xs-3" for="correo">Mail</label>
-				<input id="correo" type="text" />
-				</div>
-
-				<div class="divForm">
-				<label class=" col-xs-3" for="genero">Genero</label>
-				<input id="genero" type="text" />
-				</div>
-
-				<div class="divForm">
-				<label class=" col-xs-3" for="civil">Estado Civil</label>
-				<input id="civil" type="text" />
-				</div>
-					
-				<div class="divForm">	
-				<label class=" col-xs-3" for="telefono">Telefono</label>
-				<input id="telefono" maxlength="10" type="text" />
-				</div>
-
-				<div class="divForm">				
-				<label class=" col-xs-3" for="fecha">Fecha de Nacimiento</label>
-				<input id="fecha" type="date"/>
+				<label class=" col-xs-3" for="pantalla">Pantalla</label>
+				<input id="pantalla" type="text" />
 				</div>
 				
 				<div class="divForm">
-				<label class=" col-xs-3" for="cuenta">Cuenta PayPal</label>
-				<input id="cuenta" type="text" />
-				<a href="#" >Obteniendo</a>
+				<label class=" col-xs-3" for="visualizar">Visualizar</label>
+				<input id="visualizar" type="boolean" />
 				</div>
-
+				
 				<div class="divForm">
-				<label class=" col-xs-3" for="direccion">Direccion</label>
-				<input id="direccion" type="text" />
+				<label class=" col-xs-3" for="modificar">Modificar</label>
+				<input id="modificar" type="boolean" />
 				</div>
 				
 				<div class="divFormBoton">
-					<a href="perfil.php">
+					<a href="segunda.php">
 						<input class="objetoFormReservarForm" type="button" value="Guardar"/>
 					</a>
 				</div>
@@ -135,9 +104,6 @@ $("#mapita").click(function(){
     </div>
 </div>
 
-
- 		
-		
 		
 </div>
 

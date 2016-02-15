@@ -56,7 +56,7 @@ $("#mapita").click(function(){
 <div class="jumbotron">
 <div class="botones">
 
-				<a href="segunda.php"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40" alt="px"></button></a>
+				<a href="permiso.php"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40" alt="px"></button></a>
 				
 				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40" width="40" alt="px"></button></a>
 </div>
@@ -72,60 +72,21 @@ $("#mapita").click(function(){
         <div class="table-responsive">    
 			<form action="">
 				
-				<h2>DATOS DEL USUARIO</h2>
-				  <div class="divForm">
-				  <label class=" col-xs-3" for="nombre">Nombre</label>
-				  <input id="nombre" type="text" />
-				  </div>
+				<h2>Asignar Perfil al Usuario</h2>
+				<div class="divForm">
+				<label class=" col-xs-3" for="usuario">Usuario</label>
+				<input id="usuario" type="text" />
+				</div>
 				  
-				  <div class="divForm">
-				  <label class=" col-xs-3" for="apellido">Apellido</label>
-				  <input id="apellido" type="text" />
-				  </div>
-
 				<div class="divForm">
-				<label class=" col-xs-3" for="cedula">Cedula o Ruc</label>
-				<input id="cedula" maxlength="13" type="text" />
-				</div>
-
-				<div class="divForm">				
-				<label class=" col-xs-3" for="correo">Mail</label>
-				<input id="correo" type="text" />
-				</div>
-
-				<div class="divForm">
-				<label class=" col-xs-3" for="genero">Genero</label>
-				<input id="genero" type="text" />
-				</div>
-
-				<div class="divForm">
-				<label class=" col-xs-3" for="civil">Estado Civil</label>
-				<input id="civil" type="text" />
-				</div>
-					
-				<div class="divForm">	
-				<label class=" col-xs-3" for="telefono">Telefono</label>
-				<input id="telefono" maxlength="10" type="text" />
-				</div>
-
-				<div class="divForm">				
-				<label class=" col-xs-3" for="fecha">Fecha de Nacimiento</label>
-				<input id="fecha" type="date"/>
+				<label class=" col-xs-3" for="perfil">Perfil</label>
+				<input id="perfil" type="text" />
 				</div>
 				
-				<div class="divForm">
-				<label class=" col-xs-3" for="cuenta">Cuenta PayPal</label>
-				<input id="cuenta" type="text" />
-				<a href="#" >Obteniendo</a>
-				</div>
-
-				<div class="divForm">
-				<label class=" col-xs-3" for="direccion">Direccion</label>
-				<input id="direccion" type="text" />
-				</div>
+				
 				
 				<div class="divFormBoton">
-					<a href="perfil.php">
+					<a href="segunda.php">
 						<input class="objetoFormReservarForm" type="button" value="Guardar"/>
 					</a>
 				</div>
