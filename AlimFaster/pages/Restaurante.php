@@ -4,8 +4,9 @@ class Restaurante
 {
 
     private $codigo_restaurante;
-    private $codigo_sucursal;
-	private $codigo_reservacion;
+    private $max_personas;
+	private $inicio_atencion;
+	private $fin_atencion;
     private $razon_social;
 	private $telefono;
     private $correo_electronico;
@@ -15,11 +16,12 @@ class Restaurante
     private $telefono_movil;
 	private $nombre_imagen;
 	
-    
-     function __construct($codigo_restaurante, $codigo_sucursal, $codigo_reservacion, $razon_social, $telefono, $correo_electronico, $autorizacion_sri, $autorizacion_fecha,$telefax,$telefono_movil,$nombre_imagen) {
+	
+     function __construct($codigo_restaurante, $max_personas, $inicio_atencion,$fin_atencion, $razon_social, $telefono, $correo_electronico, $autorizacion_sri, $autorizacion_fecha,$telefax,$telefono_movil,$nombre_imagen) {
        $this->idRestaurante = $codigo_restaurante;
-	   $this->idSucursal = $codigo_sucursal;
-	   $this->idReservacion = $codigo_reservacion;
+	   $this->maxPersonas = $max_personas;
+	   $this->inicioAtencion = $inicio_atencion;
+	    $this->finAtencion = $fin_atencion;
 	   $this->razonSocial = $razon_social;
 	   $this->telefono = $telefono;
 	   $this->correoElectronico = $correo_electronico;
@@ -30,13 +32,7 @@ class Restaurante
 	   $this->nombreImagen = $nombre_imagen;
      }
 	 
-	  function __construct($codigo_restaurante, $codigo_sucursal, $codigo_reservacion, $razon_social, $nombre_imagen) {
-       $this->idRestaurante = $codigo_restaurante;
-	   $this->idSucursal = $codigo_sucursal;
-	   $this->idReservacion = $codigo_reservacion;
-	   $this->razonSocial = $razon_social;
-	   $this->nombreImagen = $nombre_imagen;
-     }
+	
 	 
    public function getCodigo_restaurante(){
 		return $this->codigo_restaurante;
@@ -46,22 +42,30 @@ class Restaurante
 		$this->codigo_restaurante = $codigo_restaurante;
 	}
 
-	public function getCodigo_sucursal(){
-		return $this->codigo_sucursal;
+	public function getmax_personas(){
+		return $this->max_personas;
 	}
 
-	public function setCodigo_sucursal($codigo_sucursal){
-		$this->codigo_sucursal = $codigo_sucursal;
+	public function setmax_personas($max_personas){
+		$this->max_personas = $max_personas;
 	}
 
-	public function getCodigo_reservacion(){
-		return $this->codigo_reservacion;
+	public function getinicio_atencion(){
+		return $this->inicio_atencion;
 	}
 
-	public function setCodigo_reservacion($codigo_reservacion){
-		$this->codigo_reservacion = $codigo_reservacion;
+	public function setinicio_atencion($inicio_atencion){
+		$this->inicio_atencion = $inicio_atencion;
 	}
 
+	public function getfin_atencion(){
+		return $this->fin_atencion;
+	}
+
+	public function setfin_atencion($fin_atencion){
+		$this->fin_atencion = $fin_atencion;
+	}
+	
 	public function getRazon_social(){
 		return $this->razon_social;
 	}
