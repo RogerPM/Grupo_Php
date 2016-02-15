@@ -30,12 +30,14 @@ $("#mapita").click(function(){
 <title>Formulario de Registro</title>
 </head>
 <body >
-<!--Esto es para estilos responsive manueales -->
-<!--<div class="prueba">Probando</div>
-<div class="prueba">Probando</div>
-<div class="prueba">Probando</div>
-<div class="prueba alfa omega">Probando</div>
--->
+<?php
+include_once("PersonaDatos.php");
+include_once("UsuarioDatos.php");
+$id = 1;
+$PersonaDatosObj = new Detalle_facturaDatos();
+$UsuarioDatosObj = new ProductoDatos();
+?>
+
 <!-- boostrap -->
 <div class="jumbotron">
 <div class="bannerSuperior">
@@ -83,6 +85,11 @@ $("#mapita").click(function(){
 				  <input id="apellido" type="text" />
 				  </div>
 
+				<div class="divForm">
+				<label class=" col-xs-3" for="usuario">Usuario</label>
+				<input id="usuario"  type="text" />
+				</div>
+				
 				<div class="divForm">
 				<label class=" col-xs-3" for="cedula">Cedula o Ruc</label>
 				<input id="cedula" maxlength="13" type="text" />

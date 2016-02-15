@@ -65,6 +65,9 @@
 		    <a href="pages/registrar_pagina.php">
 						<button class="objetoFormReservar">Registrar</button>
 		    </a>
+		    <a href="pages/administracion_pagina.php">
+						<button class="objetoFormReservar">Administrar</button>
+		    </a>
                 </div>
             </div>
             <div class="item">
@@ -85,6 +88,9 @@
 		    <a href="pages/registrar_pagina.php">
 						<button class="objetoFormReservar">Registrar</button>
 		    </a>
+		    <a href="pages/administracion_pagina.php">
+						<button class="objetoFormReservar">Administrar</button>
+		    </a>
                 </div>
             </div>
 			 <div class="item">
@@ -104,6 +110,9 @@
 		    </a>
 		    <a href="pages/registrar_pagina.php">
 						<button class="objetoFormReservar">Registrar</button>
+		    </a>
+		    <a href="pages/administracion_pagina.php">
+						<button class="objetoFormReservar">Administrar</button>
 		    </a>
                 </div>
             </div>
