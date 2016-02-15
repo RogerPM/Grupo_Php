@@ -9,7 +9,7 @@ var locations = [
     ];
 
     var map = new google.maps.Map(document.getElementById('mimapa'), {
-      zoom: 15,
+      zoom: 8,
       center: new google.maps.LatLng(-1.7860237,-80.3814269),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
@@ -37,3 +37,11 @@ var locations = [
 }
 //marker.setMap(map);//asi inicializo el marker dentro del mapa ya creado map +o-
 //google.maps.event.addDomListener(window, 'load', initialize);//asi cargo en lugar de body onload
+function firstInitialize(){
+    var map = new google.maps.Map(document.getElementById('mimapa'), {
+      zoom: 8,
+      center: new google.maps.LatLng(-1.7860237,-80.3814269),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+	
+	}
