@@ -11,9 +11,8 @@ class Cabecera_factura
 	private $descuento;
 	private $iva;
 	private $total;
-  
-	 //Constructor principal
-     function __construct($numero_factura, $fecha,$hora,$codigo_pago,$codigo_cliente,$subtotal,$descuento,$iva ,$total) {
+	
+     function __construct($numero_factura, $fecha,$hora,$codigo_pago,$codigo_cliente,$subtotal,$descuento,$iva,$total) {
         $this->numero_factura = $numero_factura;
         $this->fecha = $fecha;
 	    $this->hora = $hora;
@@ -21,17 +20,6 @@ class Cabecera_factura
 		$this->codigo_cliente = $codigo_cliente;
 		$this->subtotal = $subtotal;
 		$this->descuento = $descuento;
-		$this->iva = $iva;
-		$this->total = $total;
-     }
-	 //Constructor secundario
-	 function __construct($numero_factura, $fecha,$hora,$codigo_pago,$codigo_cliente,$subtotal,$iva ,$total) {
-        $this->numero_factura = $numero_factura;
-        $this->fecha = $fecha;
-		$this->hora = $hora;
-		$this->codigo_pago = $codigo_pago;
-		$this->codigo_cliente = $codigo_cliente;
-		$this->subtotal = $subtotal;
 		$this->iva = $iva;
 		$this->total = $total;
      }
@@ -78,7 +66,8 @@ class Cabecera_factura
      function getDescuento(){
        return $this->descuento;
 	 } 
-	  function setIva($iva){
+	 
+	 function setIva($iva){
        $this->iva = $iva;
      } 
      function getIva(){
@@ -90,7 +79,6 @@ class Cabecera_factura
      function getTotal(){
        return $this->total;
 	 } 
-	 
 }
 
 ?>

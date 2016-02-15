@@ -73,9 +73,11 @@
 <?php
 include_once("Detalle_facturaDatos.php");
 include_once("ProductoDatos.php");
+include_once("Cabecera_facturaDatos.php");
 $id = 1;
 $Detalle_facturaDatosObj = new Detalle_facturaDatos();
 $ProductoDatosObj = new ProductoDatos();
+$Cabecera_facturaDatosObj = new Cabecera_facturaDatos();
 ?>
 
 <!-- boostrap -->
@@ -133,7 +135,6 @@ $ProductoDatosObj = new ProductoDatos();
 						<td><a href="eliminarDetalleCabecera.php?id=<?php echo $c->getSecuencia(); ?>">X</a></td>
 						<td style="display:none"><?php echo $c->getSecuencia(); ?> </td>
 						<td><?php echo $c->getCantidad(); ?> </td>
-						<!--td><?php echo $c->getCodigo_producto(); ?> </td-->
 						
 						<?php
 							$idPro =$c->getCodigo_producto();
@@ -149,11 +150,14 @@ $ProductoDatosObj = new ProductoDatos();
 					<?php } ?>
 					
 					<tr>
-						<!--td> </td-->
-						<!--td> </td-->
 						<td colspan="3">TOTAL</td>
-						<!--td> </td-->
-						<td colspan="2">$59,50 </td>		
+						<?php
+							$idPro =1;
+							foreach ($Cabecera_facturaDatosObj->consultaEspecific($idPro) as $x){	
+						?>
+							<!--td colspan="2">$59,50 </td-->
+							<td colspan="2"><?php echo $x->getTotal(); ?> </td>
+						<?php } ?>
 					</tr>
 				</tbody>
 			</table>
