@@ -10,15 +10,15 @@
 //	}
 //mysql_set_charset('utf8');
 
-$user = "postgres";
-$password = "1234";
-$dbname = "BaseAlimFaster";
+$user = "xghiwvoawqouzq";
+$password = "xo0DubsWtiMabLhMm8-GkF-Dof";
+$dbname = "d16lc3dji7qp0a";
 $port = "5432";
-$host = "localhost";
+$host = "ec2-54-225-199-245.compute-1.amazonaws.com";
 
 $cadenaConexion = "host=$host port=$port dbname=$dbname user=$user password=$password";
 
-$conexion = pg_connect($cadenaConexion) or die("Error en la Conexión: ".pg_last_error());
+$conexion = pg_connect($cadenaConexion) or die("Error en la Conexiï¿½n: ".pg_last_error());
 //echo "<h3>Conexion Exitosa PHP - PostgreSQL</h3><hr><br>";
 
 

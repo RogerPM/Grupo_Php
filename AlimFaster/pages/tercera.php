@@ -1,7 +1,7 @@
 <?php
 	session_start();
 ?>
-?<!doctype html>
+<!doctype html>
 <html lang="es">
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -127,7 +127,8 @@ $Detalle_facturaDatosObj = new Detalle_facturaDatos();
 					?>
 					<tr>					
 						<!--TD><INPUT type="checkbox" NAME="chk"/></TD-->
-						<td><input type="button" value="x" onclick="Eliminar(this.parentNode.parentNode.rowIndex)"/></td>
+						<!--td><input type="button" value="x" onclick="Eliminar(this.parentNode.parentNode.rowIndex)"/></td-->
+						<td><a href="eliminarDetalleCabecera.php?id=<?php echo $c->getSecuencia(); ?>">X</a></td>
 						<td style="display:none"><?php echo $c->getSecuencia(); ?> </td>
 						<td><?php echo $c->getCantidad(); ?> </td>
 						<td>Sopa de Camaron</td>
