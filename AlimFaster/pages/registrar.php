@@ -58,7 +58,7 @@ $("#mapita").click(function(){
 
 				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40" alt="px"></button></a>
 				
-				<a href="tercera.php"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40" width="40" alt="px"></button></a>
+				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40" width="40" alt="px"></button></a>
 </div>
 </div>
 
@@ -85,7 +85,22 @@ $("#mapita").click(function(){
 
 				<div class="divForm">
 				<label class=" col-xs-3" for="cedula">Cedula o Ruc</label>
-				<input id="cedula" type="text" />
+				<input id="cedula" maxlength="13" type="text" />
+				</div>
+
+				<div class="divForm">				
+				<label class=" col-xs-3" for="correo">Mail</label>
+				<input id="correo" type="text" />
+				</div>
+
+				<div class="divForm">
+				<label class=" col-xs-3" for="genero">Genero</label>
+				<input id="genero" type="text" />
+				</div>
+
+				<div class="divForm">
+				<label class=" col-xs-3" for="civil">Estado Civil</label>
+				<input id="civil" type="text" />
 				</div>
 					
 				<div class="divForm">	
@@ -94,20 +109,24 @@ $("#mapita").click(function(){
 				</div>
 
 				<div class="divForm">				
-				<label class=" col-xs-3" for="nombre">Mail</label>
-				<input id="nombre" type="text" />
+				<label class=" col-xs-3" for="fecha">Fecha de Nacimiento</label>
+				<input id="fecha" type="date"/>
 				</div>
 				
-				
 				<div class="divForm">
-				<label class=" col-xs-3" for="nombre">Cuenta PayPal</label>
-				<input id="nombre" type="text" />
+				<label class=" col-xs-3" for="cuenta">Cuenta PayPal</label>
+				<input id="cuenta" type="text" />
 				<a href="#" >Obteniendo</a>
+				</div>
+
+				<div class="divForm">
+				<label class=" col-xs-3" for="direccion">Direccion</label>
+				<input id="direccion" type="text" />
 				</div>
 				
 				<div class="divFormBoton">
-					<a href="../index.html">
-						<input class="objetoFormReservarForm" type="button" value="RESERVAR"/>
+					<a href="segunda.php">
+						<input class="objetoFormReservarForm" type="button" value="Guardar"/>
 					</a>
 				</div>
 			</form>	
@@ -123,7 +142,7 @@ $("#mapita").click(function(){
 </div>
 
 <div class="footer">
-Contáctenos: desarrollo@gmail.com.<br/> Ecuador 2015
+Contactenos: desarrollo@gmail.com.<br/> Ecuador 2015
 </div>
 </body>
 </html>
