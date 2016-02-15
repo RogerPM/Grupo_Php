@@ -73,37 +73,49 @@ $("#mapita").click(function(){
 			<form action="">
 				
 				<h2>Asignar Perfil al Usuario</h2>
+				<br/>
 				<div class="divForm">
 				<label class=" col-xs-3" for="usuario">Usuario</label>
 				<input id="usuario" type="text" />
 				</div>
-				  
+
 				<div class="divForm">
 				<label class=" col-xs-3" for="perfil">Perfil</label>
 				<input id="perfil" type="text" />
 				</div>
 				
+				<br/>
+				<br/>
+				
 				
 				
 				<div class="divFormBoton">
-					<a href="segunda.php">
+					<a href="primera.php">
 						<input class="objetoFormReservarForm" type="button" value="Guardar"/>
 					</a>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
 				</div>
 			</form>	
 		</div>
         </div>
     </div>
 </div>
-
-
- 		
-		
 		
 </div>
 
 <div class="footer">
-Contactenos: desarrollo@gmail.com.<br/> Ecuador 2015
+<br/>
+Contactenos: desarrollo@gmail.com.<br/>Ecuador 2015
+<br/><br/>
 </div>
 </body>
 </html>

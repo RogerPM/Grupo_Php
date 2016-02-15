@@ -56,7 +56,7 @@ $("#mapita").click(function(){
 <div class="jumbotron">
 <div class="botones">
 
-				<a href="segunda.php"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40" alt="px"></button></a>
+				<a href="perfil.php"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40" alt="px"></button></a>
 				
 				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40" width="40" alt="px"></button></a>
 </div>
@@ -125,7 +125,7 @@ $("#mapita").click(function(){
 				</div>
 				
 				<div class="divFormBoton">
-					<a href="perfil.php">
+					<a href="primera.php">
 						<input class="objetoFormReservarForm" type="button" value="Guardar"/>
 					</a>
 				</div>
