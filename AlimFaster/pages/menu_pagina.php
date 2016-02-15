@@ -72,7 +72,7 @@ $("#mapita").click(function(){
         <div class="table-responsive">    
 			<form action="">
 				
-				<h2>Asignar Perfil al Usuario</h2>
+				<h2>Crear Menu</h2>
 				<br/>
 				<div class="divForm">
 				<label class=" col-xs-3" for="usuario">Usuario</label>
@@ -80,8 +80,12 @@ $("#mapita").click(function(){
 				</div>
 
 				<div class="divForm">
-				<label class=" col-xs-3" for="perfil">Perfil</label>
-				<input id="perfil" type="text" />
+				<label class=" col-xs-3" for="sucursal">Sucursal</label>
+				<input id="sucursal" list="sucursal_lista"/>
+				<datalist id="sucursal_lista">
+					<option> cocolon
+					<option> aguacate
+				</datalist>
 				</div>
 				
 				<br/>

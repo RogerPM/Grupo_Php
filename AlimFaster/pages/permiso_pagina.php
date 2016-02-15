@@ -56,9 +56,9 @@ $("#mapita").click(function(){
 <div class="jumbotron">
 <div class="botones">
 
-				<a href="segunda.php"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40" alt="px"></button></a>
+				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40" alt="px"></button></a>
 				
-				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40" width="40" alt="px"></button></a>
+				<a href="administracion_pagina.php"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40" width="40" alt="px"></button></a>
 </div>
 </div>
 
@@ -87,12 +87,12 @@ $("#mapita").click(function(){
 				
 				<div class="divForm">
 				<label class=" col-xs-3" for="visualizar">Visualizar</label>
-				<input id="visualizar" type="text"/>
+				<input id="visualizar" type="checkbox"/>
 				</div>
 				
 				<div class="divForm">
 				<label class=" col-xs-3" for="modificar">Modificar</label>
-				<input id="modificar" type="text"/>
+				<input id="modificar" type="checkbox"/>
 				</div>
 				<br/>
 				

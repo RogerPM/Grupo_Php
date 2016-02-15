@@ -85,7 +85,7 @@ $("#mapita").click(function(){
 						<input class="objetoFormReservarForm" type="button" value="Permisos"/>
 					</a>
 					<br/>
-					<a href="producto_pagina.php">
+					<a href="menu_pagina.php">
 						<input class="objetoFormReservarForm" type="button" value="   Menu   "/>
 					</a>
 					<br/>
