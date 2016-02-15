@@ -6,79 +6,114 @@ class Persona
 	private $cedula_identidad;
 	private $nombre;
 	private $apellido;
-	private $fecha_nacimiento;
+	private $nacionalidad;
 	private $estado_civil;
 	private $genero;
 	private $direccion_domicilio;
 	private $telefono;
 	
-     function __construct$codigo_persona, $cedula_identidad , $nombre , $apellido , $fecha_nacimiento , $estado_civil , $genero,$direccion_domicilio ,$telefono) {
-        $this->numero_factura = $numero_factura;
-        $this->fecha = $fecha;
-	    $this->hora = $hora;
-		$this->codigo_pago = $codigo_pago;
-		$this->codigo_cliente = $codigo_cliente;
-		$this->subtotal = $subtotal;
-		$this->descuento = $descuento;
-		$this->iva = $iva;
-		$this->total = $total;
-     }
+	function __construct($codigo_persona, $cedula_identidad, $nombre, $apellido, $nacionalidad, $estado_civil, $genero,$direccion_domicilio,$telefono) 
+	{
+        	$this->codigo_persona = $codigo_persona;
+        	$this->cedula_identidad = $cedula_identidad;
+	   	$this->nombre = $nombre;
+		$this->apellido = $apellido;
+		$this->nacionalidad = $nacionalidad;
+		$this->estado_civil = $estado_civil;
+		$this->genero = $genero;
+		$this->direccion_domicilio = $direccion_domicilio;
+		$this->telefono = $telefono;
+	}
     
-     function setNumero_factura($numero_factura){
-       $this->numero_factura = $numero_factura;
-     } 
-     function getNumero_factura(){
-       return $this->numero_factura;
-     } 
-     function setFecha($fecha){
-       $this->fecha = $fecha;
-     } 
-     function getFecha(){
-       return $this->fecha;
-     } 
-	 function setHora($hora){
-       $this->hora = $hora;
-     } 
-     function getHora(){
-       return $this->hora;
-	 } 
-	 function setCodigo_pago($codigo_pago){
-       $this->codigo_pago = $codigo_pago;
-     } 
-     function getCodigo_pago(){
-       return $this->codigo_pago;
-	 } 
-	 function setCodigo_cliente($codigo_cliente){
-       $this->codigo_cliente = $codigo_cliente;
-     } 
-     function getCodigo_cliente(){
-       return $this->codigo_cliente;
-	 } 
-	 function setSubtotal($subtotal){
-       $this->subtotal = $subtotal;
-     } 
-     function getSubtotal(){
-       return $this->subtotal;
-	 } 
-	 function setDescuento($descuento){
-       $this->descuento = $descuento;
-     } 
-     function getDescuento(){
-       return $this->descuento;
-	 } 
-	 
-	 function setIva($iva){
-       $this->iva = $iva;
-     } 
-     function getIva(){
-       return $this->iva;
-	 } 
-	 function setTotal($total){
-       $this->total = $total;
-     } 
-     function getTotal(){
-       return $this->total;
-	 } 
+	function setCodigo_persona($codigo_persona)
+	{
+		$this->codigo_persona = $codigo_persona;
+	}
+	
+	function getCodigo_persona()
+	{
+		return $this->codigo_persona;
+	} 
+
+	function setCedula_identidad($cedula_identidad)
+	{
+		$this->cedula_identidad = $cedula_identidad;
+	}
+
+	function getCedula_identidad()
+	{
+		return $this->cedula_identidad;
+	}
+
+	function setNombre($nombre)
+	{
+		$this->nombre = $nombre;
+	}
+
+	function getNombre()
+	{
+		return $this->nombre;
+	}
+
+	function setApellido($apellido)
+	{
+		$this->apellido = $apellido;
+	}
+
+	function getApellido()
+	{
+		return $this->apellido;
+	}
+
+	function setNacionalidad($nacionalidad)
+	{
+		$this->nacionalidad = $nacionalidad;
+	}
+
+	function getNacionalidad()
+	{
+		return $this->nacionalidad;
+	}
+
+	function setEstado_civil($estado_civil)
+	{
+		$this->estado_civil = $estado_civil;
+	}
+
+	function getEstado_civil()
+	{
+		return $this->estado_civil;
+	}
+
+	function setGenero($genero)
+	{
+		$this->genero = $genero;
+	}
+
+	function getGenero()
+	{
+		return $this->genero;
+	}
+
+	function setDireccion_domicilio($direccion_domicilio;)
+	{
+		$this->direccion_domicilio = $direccion_domicilio;
+	}
+
+	function getDireccion_domicilio()
+	{
+		return $this->direccion_domicilio;
+	}
+
+	function setTelefono($telefono)
+	{
+		$this->telefono = $telefono;
+	}
+
+	function getTelefono()
+	{
+		return $this->telefono;
+	}
 }
 
 ?>
