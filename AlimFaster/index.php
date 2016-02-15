@@ -62,7 +62,7 @@
                     <a href="pages/primera.php">
 						<button class="objetoFormReservar">Reservar</button>
 		    </a>
-		    <a href="pages/registrar.php">
+		    <a href="pages/registrar_pagina.php">
 						<button class="objetoFormReservar">Registrar</button>
 		    </a>
                 </div>
@@ -82,7 +82,7 @@
                     <a href="pages/primera.php">
 						<button class="objetoFormReservar">Reservar</button>
 		    </a>
-		    <a href="pages/registrar.php">
+		    <a href="pages/registrar_pagina.php">
 						<button class="objetoFormReservar">Registrar</button>
 		    </a>
                 </div>
@@ -102,7 +102,7 @@
                     <a href="pages/primera.php">
 						<button class="objetoFormReservar">Reservar</button>
 		    </a>
-		    <a href="pages/registrar.php">
+		    <a href="pages/registrar_pagina.php">
 						<button class="objetoFormReservar">Registrar</button>
 		    </a>
                 </div>

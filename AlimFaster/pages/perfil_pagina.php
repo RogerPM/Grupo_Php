@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Refresh" content="300"> <!--Se refrescara la pagina cada 300 segundos es decir 5 minutos-->
 <meta name="application-name" content="Reserva de mesas,pedidos de menus personalizados  y pagos via online para restaurantes gourmet">
-<meta name="author" content="Liss Contreras, Lzcontre@espol.edu.ec" /> 
+<meta name="author" content="Roger Peñafiel, rpenafie@espol.edu.ec" /> 
 <meta name="copyright" content="AlimFaster"> <!--Nombre de la compañia-->
 <meta name="organization" content="AlimFaster S.A." /> <!--Nombre de la Organizacion-->
 <meta name="language" content="es-ES" /> <!--Lenguaje de la pagina web español-->
@@ -27,7 +27,7 @@ $("#mapita").click(function(){
 });
 });
 </script>
-<title>Formulario de Permiso</title>
+<title>Formulario de Registro</title>
 </head>
 <body >
 <!--Esto es para estilos responsive manueales -->
@@ -56,7 +56,7 @@ $("#mapita").click(function(){
 <div class="jumbotron">
 <div class="botones">
 
-				<a href="segunda.php"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40" alt="px"></button></a>
+				<a href="permiso.php"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40" alt="px"></button></a>
 				
 				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40" width="40" alt="px"></button></a>
 </div>
@@ -71,35 +71,33 @@ $("#mapita").click(function(){
         <div class="col-md-8">
         <div class="table-responsive">    
 			<form action="">
+				
+				<h2>Asignar Perfil al Usuario</h2>
 				<br/>
-				<br/>
-				<h2>Asignar Permisos al Perfil</h2>
-				<br/>
+				<div class="divForm">
+				<label class=" col-xs-3" for="usuario">Usuario</label>
+				<input id="usuario" type="text" />
+				</div>
+
 				<div class="divForm">
 				<label class=" col-xs-3" for="perfil">Perfil</label>
 				<input id="perfil" type="text" />
 				</div>
-				  
-				<div class="divForm">
-				<label class=" col-xs-3" for="pantalla">Pantalla</label>
-				<input id="pantalla" type="text" />
-				</div>
 				
-				<div class="divForm">
-				<label class=" col-xs-3" for="visualizar">Visualizar</label>
-				<input id="visualizar" type="text"/>
-				</div>
-				
-				<div class="divForm">
-				<label class=" col-xs-3" for="modificar">Modificar</label>
-				<input id="modificar" type="text"/>
-				</div>
 				<br/>
+				<br/>
+				
+				
 				
 				<div class="divFormBoton">
 					<a href="primera.php">
 						<input class="objetoFormReservarForm" type="button" value="Guardar"/>
 					</a>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
 					<br/>
 					<br/>
 					<br/>
@@ -111,15 +109,13 @@ $("#mapita").click(function(){
         </div>
     </div>
 </div>
-
 		
 </div>
 
 <div class="footer">
 <br/>
-Contactenos: desarrollo@gmail.com.<br/> Ecuador 2015
-<br/>
-<br/>
+Contactenos: desarrollo@gmail.com.<br/>Ecuador 2015
+<br/><br/>
 </div>
 </body>
 </html>
