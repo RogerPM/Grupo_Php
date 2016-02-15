@@ -38,6 +38,14 @@ font-size:14px;}
 	text-align: center;
 	font-family: "Comic Sans MS", cursive, sans-serif;
 }
+.table-striped-edwin> tbody > tr:nth-of-type(odd) {
+  background-color: #C04747;
+}
+
+.table-striped-edwin > tbody > tr:nth-of-type(even) {
+  background-color: #E4D28B;
+} 
+
 .fuente{
 	
 	font-family:"Comic Sans MS", cursive, sans-serif; 
@@ -240,8 +248,37 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
   
 }
 
+/*Roger*/
 
+.objFormCajaRoger
+{
+	width:70px;
+	text-align:center;
+	 padding-top: 3px;
+	padding-bottom: 2px;
+	background-color: #224568;
+	color: #BADAFF;
+}
 
+.objFormCajaRoger2
+{
+	text-align:center;
+	padding-top: 3px;
+  	padding-bottom: 2px;
+	background-color: #BADAFF;
+	color: #38800D;
+}
+
+.objFormCajaRoger3
+{
+	text-align:center;
+	padding-top: 3px;
+  	padding-bottom: 2px;
+	background-color: #bcbdc1;
+	color: #FFBF00;
+}
+
+/*Roger Fin*/
 
 .objetoFormRegistrar:hover {
     background-color: #4665FB; 

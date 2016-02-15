@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,9 +12,9 @@
     <meta http-equiv="Refresh" content="300"> <!--Se refrescara la pagina cada 300 segundos es decir 5 minutos-->
     <meta name="application-name" content="Reserva de mesas,pedidos de menus personalizados  y pagos via online para restaurantes gourmet">
     <meta name="author" content="Claudia Torres, clao91torrestorres@gmail.com" /> 
-    <meta name="copyright" content="AlimFaster"> <!--Nombre de la compaÃ±ia-->
+    <meta name="copyright" content="AlimFaster"> <!--Nombre de la compañia-->
     <meta name="organization" content="AlimFaster S.A." /> <!--Nombre de la Organizacion-->
-    <meta name="language" content="es-ES" /> <!--Lenguaje de la pagina web espaÃ±ol-->
+    <meta name="language" content="es-ES" /> <!--Lenguaje de la pagina web español-->
     <meta name="classification" content="Reservas">
     <meta name="description" content="Reservas de servicio de pedidos a restaurantes de comidas gourmet" /> <!--Descripcion de la pagina web-->
     <meta name="generator" content="Bloc de notas"> <!--Cual es la herramienta que se utiliza para editar, crear la pagina web-->
@@ -21,11 +24,11 @@
     <title>Home reserva Online - Restaurante</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 
     <!-- Custom CSS -->
     <link href="css/full-slider.css" rel="stylesheet">
-	<link href="css/styleRestaurant.css" rel="stylesheet">
+	<link href="css/styleRestaurant.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -48,30 +51,72 @@
                 <!-- Set the first background image using inline CSS below. -->
                  <img class="opacidadImg" src="img/5.jpg">
                 <div class="carousel-caption">
-                    <a href="pages/primera.html">
+		    <div class="divForm">
+			<label class="objFormCajaRoger" for="usuario">Usuario</label>
+			<input id="usuario" class="objFormCajaRoger2" "type="text" />
+	    	    </div>
+	    	    <div class="divForm">
+			<label class="objFormCajaRoger" for="password">Password</label>
+			<input id="password" class="objFormCajaRoger2" type="text" />
+         	    </div>
+                    <a href="pages/primera.php">
 						<button class="objetoFormReservar">Reservar</button>
-					</a>
+		    </a>
+		    <a href="pages/registrar_pagina.php">
+						<button class="objetoFormReservar">Registrar</button>
+		    </a>
+		    <a href="pages/administracion_pagina.php">
+						<button class="objetoFormReservar">Administrar</button>
+		    </a>
                 </div>
             </div>
             <div class="item">
                 <!-- Set the third background image using inline CSS below. -->
                <img class="opacidadImg" src="img/1.jpg">
                 <div class="carousel-caption">
-                    <a href="pages/primera.html">
+		    <div class="divForm">
+			<label class="objFormCajaRoger" for="usuario">Usuario</label>
+			<input id="usuario" class="objFormCajaRoger2"  type="text" />
+		    </div>
+		    <div class="divForm">
+			<label class="objFormCajaRoger" for="password">Password</label>
+			<input id="password" class="objFormCajaRoger2"  type="text" />
+		    </div>
+                    <a href="pages/primera.php">
 						<button class="objetoFormReservar">Reservar</button>
-					</a>
+		    </a>
+		    <a href="pages/registrar_pagina.php">
+						<button class="objetoFormReservar">Registrar</button>
+		    </a>
+		    <a href="pages/administracion_pagina.php">
+						<button class="objetoFormReservar">Administrar</button>
+		    </a>
                 </div>
             </div>
 			 <div class="item">
                 <!-- Set the third background image using inline CSS below. -->
                <img class="opacidadImg" src="img/2.jpg">
                 <div class="carousel-caption">
-                    <a href="pages/primera.html">
+		    <div class="divForm">
+			<label class="objFormCajaRoger" for="usuario">Usuario</label>
+			<input id="usuario" class="objFormCajaRoger2" type="text" />
+		    </div>
+		    <div class="divForm">
+			<label class="objFormCajaRoger" for="password">Password</label>
+			<input id="password" class="objFormCajaRoger2" type="text" />
+		    </div>
+                    <a href="pages/primera.php">
 						<button class="objetoFormReservar">Reservar</button>
-					</a>
+		    </a>
+		    <a href="pages/registrar_pagina.php">
+						<button class="objetoFormReservar">Registrar</button>
+		    </a>
+		    <a href="pages/administracion_pagina.php">
+						<button class="objetoFormReservar">Administrar</button>
+		    </a>
                 </div>
             </div>
-			</div>
+	</div>
 
         <!-- Controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -103,9 +148,8 @@
     		  <span property="name" content="AlimFaster"></span>
               <span property="author" content="Claudia Torres, clao91torrestorres@gmail.com"></span>	
 	<meta name="classification" content="Reservas Restaurantes">
-     	 	</div>
+     	</div>
 
 </body>
 
 </html>
-

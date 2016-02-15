@@ -1,3 +1,6 @@
+<?php 
+	session_start();
+?>
 ﻿<!doctype html>
 <html>
 <head>
@@ -80,15 +83,15 @@ $(window).load(function(){
 				<h1>Restaurant</h1>
 				</div>
 </div>
-				</div>
+			</div>
 				
 <!-- Botones  -->
 <div class="jumbotron">
 <div class="botones">
 
-				<a href="../index.html"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40p" alt="px"></button></a>
+				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40p" alt="px"></button></a>
 				
-				<a href="primera.html"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40" width="40" alt="px"></button></a>
+				<a href="primera.php"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40" width="40" alt="px"></button></a>
 
 </div>
 </div>
@@ -504,8 +507,7 @@ $(window).load(function(){
 				<button type="button" class="botonCompra"><img src="../img/compra.png" height="30px" width="30px"></button>
 				</div>
 				</div>
-            </td>
-          
+            </td>         
           </tr>
     </tbody>
   </table>
@@ -610,19 +612,13 @@ $(window).load(function(){
         
         <div class="row">
 			<div class="divFormBoton">
-				<a href="tercera.html">
+				<a href="tercera.php">
 					<input class="objetoOrdenarPedido" type="submit" value="Ordenar Pedido"/>
 				</a>
 			</div>
-		</div>	
-        
+		</div>	       
     </div>
-</div>
-
-
- 		
-		
-		
+</div>		
 </div>
 
 <div class="footer">
