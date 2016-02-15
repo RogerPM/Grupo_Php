@@ -100,7 +100,7 @@
 		  if($cont == $cant) break;
 ?>	
 			<td>
-				<a href="segunda.php">
+				<a href="../segunda.php">
 					<button type="button" class="bordeBoton"><img src="<?php echo '../img/'.$arrayDemo[$cont]; ?>" title="Restaurante2"  height="150" width="150" alt="px">
 
 					<!--<div vocab="http://schema.org/" typeof="Restaurant">

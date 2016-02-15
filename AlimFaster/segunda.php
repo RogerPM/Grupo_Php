@@ -64,6 +64,11 @@ foreach($_SESSION as $clave=>$valor){
 $num++;	
 	}
 ?>
+			<div>
+					<a href="pages/tercera.php"> 
+						<input type="submit" value="Ordenar"/>
+					</a >
+			</div>
 </div>
 </div>
 </body>

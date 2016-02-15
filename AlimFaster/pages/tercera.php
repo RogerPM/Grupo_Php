@@ -164,7 +164,7 @@ $Cabecera_facturaDatosObj = new Cabecera_facturaDatos();
 		</div>
 		<div class="row">
 			<div class="divFormBoton">
-				<a href="cuarta.php">
+				<a href="../cuarta.php"> 
 					<input class="objetoConfirmarPedido" type="submit" value="Confirmar Pedido"/>
 				</a>
 			</div>
