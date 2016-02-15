@@ -72,8 +72,10 @@
 <body>
 <?php
 include_once("Detalle_facturaDatos.php");
+include_once("ProductoDatos.php");
 $id = 1;
 $Detalle_facturaDatosObj = new Detalle_facturaDatos();
+$ProductoDatosObj = new ProductoDatos();
 ?>
 
 <!-- boostrap -->
@@ -131,7 +133,16 @@ $Detalle_facturaDatosObj = new Detalle_facturaDatos();
 						<td><a href="eliminarDetalleCabecera.php?id=<?php echo $c->getSecuencia(); ?>">X</a></td>
 						<td style="display:none"><?php echo $c->getSecuencia(); ?> </td>
 						<td><?php echo $c->getCantidad(); ?> </td>
-						<td>Sopa de Camaron</td>
+						<!--td><?php echo $c->getCodigo_producto(); ?> </td-->
+						
+						<?php
+							$idPro =$c->getCodigo_producto();
+							foreach ($ProductoDatosObj->consultaEspecific($idPro) as $e){	
+						?>
+							<td><?php echo $e->getDescripcion(); ?> </td>
+						<?php } ?>
+						
+						
 						<td><?php echo $c->getPrecio_unitario(); ?></td>
 						<td><?php echo $c->getPrecio_total(); ?></td>
 					</Tr>

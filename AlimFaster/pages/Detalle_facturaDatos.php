@@ -13,6 +13,28 @@ class Detalle_facturaDatos extends Collector
 		}
 	return $arrayDemo;
 	}
+	/*
+	function createDemo($nombre) {    
+		$insertrow = self::$db->insertRow("INSERT INTO clasedb.demo (iddemo, nombre) VALUES (?, ?)", array(null, "{$nombre}"));
+	}  
+
+    function readDemos() {
+		$rows = self::$db->getRows("SELECT * FROM demo ");        
+		$arrayDemo= array();        
+		foreach ($rows as $c){
+		  $aux = new Demo($c{'iddemo'},$c{'nombre'});
+		  array_push($arrayDemo, $aux);
+		}
+		return $arrayDemo;        
+	}
+  
+	function updateDemo($id,$nombre) {    
+		$insertrow = self::$db->updateRow("UPDATE clasedb.demo SET demo.nombre = ?  WHERE demo.iddemo = ? ", array( "{$nombre}",$id));
+	}  
+	*/
+	function delete($id) {    
+		$deleterow = self::$db->deleteRow("DELETE FROM detalle_factura WHERE secuencia= ?", array("{$id}"));
+	} 
 
 }
 
