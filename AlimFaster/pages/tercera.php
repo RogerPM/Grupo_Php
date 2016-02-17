@@ -28,45 +28,25 @@
 				document.getElementsByTagName("table")[0].setAttribute("id","tableid");
 				document.getElementById("tableid").deleteRow(i);
 			}
-
           function deleteRow(tableID) {
-
                try {
-
                var table = document.getElementById(tableID);
-
                var rowCount = table.rows.length;
-
  
-
                for(var i=0; i<rowCount; i++) {
-
                     var row = table.rows[i];
-
                     var chkbox = row.cells[0].childNodes[0];
-
                     if(null != chkbox && true == chkbox.checked) {
-
                          table.deleteRow(i);
-
                          rowCount--;
-
                          i--;
-
                     }
-
                }
-
                }catch(e) {
-
                     alert(e);
-
                }
-
           }
-
  
-
      </SCRIPT>
 </head>
 <body>
@@ -116,12 +96,12 @@ $Cabecera_facturaDatosObj = new Cabecera_facturaDatos();
 		<table class="table table-striped-edwin"  BORDER=10>
 				<thead class="CaberaSuperiorTablaStriped">
 					<tr ALIGN=center>
-						<th>Eliminar</th>
 						<th style="display:none">Codigo</th>
 						<th>Cantida</th>
 						<th>Descripción</th>
 						<th>Precio Unitario</th>
 						<th>Precio Total</th>
+						<th width="3%" colspan="2"></th>
 					</tr>
 				</thead>
 				<tbody class="fuente">
@@ -132,7 +112,6 @@ $Cabecera_facturaDatosObj = new Cabecera_facturaDatos();
 					<tr>					
 						<!--TD><INPUT type="checkbox" NAME="chk"/></TD-->
 						<!--td><input type="button" value="x" onclick="Eliminar(this.parentNode.parentNode.rowIndex)"/></td-->
-						<td><a href="eliminarDetalleCabecera.php?id=<?php echo $c->getSecuencia(); ?>">X</a></td>
 						<td style="display:none"><?php echo $c->getSecuencia(); ?> </td>
 						<td><?php echo $c->getCantidad(); ?> </td>
 						
@@ -146,11 +125,14 @@ $Cabecera_facturaDatosObj = new Cabecera_facturaDatos();
 						
 						<td><?php echo $c->getPrecio_unitario(); ?></td>
 						<td><?php echo $c->getPrecio_total(); ?></td>
+						<td width="3%"align="center"> <a href="DetalleCabeceraFormularioDeEditar.php?id=<?php echo $c->getSecuencia(); ?>">Editar</a> </td>
+						<td width="3%" align="center"><a href="DetalleCabeceraEliminar.php?id=<?php echo $c->getSecuencia(); ?>">Eliminar</a></td>
+						
 					</Tr>
 					<?php } ?>
 					
 					<tr>
-						<td colspan="3">TOTAL</td>
+						<td colspan="4">TOTAL</td>
 						<?php
 							$idPro =1;
 							foreach ($Cabecera_facturaDatosObj->consultaEspecific($idPro) as $x){	

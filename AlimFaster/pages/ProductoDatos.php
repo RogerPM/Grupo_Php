@@ -13,13 +13,13 @@ class ProductoDatos extends Collector
 		}
 	return $arrayDemo;
 	}
-	
+	/*
 	function ConsultaEspecifica($id) {
 		$row = self::$db->getRows("SELECT * FROM producto where codigo_producto= ? ", array("{$id}")); 
 		$ObjDemo = new Producto($row[0]{'codigo_producto'},$row[0]{'descripcion'});
 		return $ObjDemo;
 	  }
-
+	*/
 	function consultaEspecific($id){
 		$rows = self::$db->getRows("SELECT * FROM producto WHERE codigo_producto= ?", array("{$id}"));
 		$arrayDemo = array();
