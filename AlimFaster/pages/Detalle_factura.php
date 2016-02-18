@@ -19,7 +19,7 @@ class Detalle_factura
 		$this->servicio = $servicio;
 		$this->numero_factura = $numero_factura;
      }
-    
+	
      function setSecuencia($secuencia){
        $this->secuencia = $secuencia;
      } 

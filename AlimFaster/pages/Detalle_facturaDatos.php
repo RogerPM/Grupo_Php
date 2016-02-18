@@ -23,9 +23,10 @@ class Detalle_facturaDatos extends Collector
 		}
 	return $arrayDemo;
 	}
+	
 		
-	function insertar($cantidad,$producto,$precioUni,$precioTot,$numCabFactura) {    
-		$insertrow = self::$db->insertRow("INSERT INTO detalle_factura.demo (secuencia, codigo_producto, cantidad, precio_unitario, precio_total, numero_factura) VALUES (?, ?, ?, ?, ?, ?)", array(null, "{$producto}", "{$cantidad}", "{$precioUni}", "{$precioTot}", "{$numCabFactura}"));
+	function insertar($secuencia,$cantidad,$producto,$precioUni,$precioTot,$numCabFactura) {    
+		$insertrow = self::$db->insertRow("INSERT INTO detalle_factura (secuencia, codigo_producto, cantidad, precio_unitario, precio_total, numero_factura) VALUES (?, ?, ?, ?, ?, ?)", array("{$secuencia}", "{$producto}", "{$cantidad}", "{$precioUni}", "{$precioTot}", "{$numCabFactura}"));
 	}  
 
 	function actualizar($idDetalle,$cantidad,$producto,$precioUni,$precioTot) {    

@@ -8,7 +8,7 @@ class dataBase
   protected $datab;
 
   private $host      = DB_HOST;
-  private $username  = DB_USER;
+  private $username  = DB_USER; 
   private $password  = DB_PASS;
   private $dbname    = DB_NAME;
 

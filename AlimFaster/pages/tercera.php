@@ -23,38 +23,13 @@
 <link href="../css/full-slider.css" rel="stylesheet" type="text/css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Confirmacion de Pedido - Restaurante</title>
- <SCRIPT language="javascript">
-			function Eliminar (i) {
-				document.getElementsByTagName("table")[0].setAttribute("id","tableid");
-				document.getElementById("tableid").deleteRow(i);
-			}
-          function deleteRow(tableID) {
-               try {
-               var table = document.getElementById(tableID);
-               var rowCount = table.rows.length;
- 
-               for(var i=0; i<rowCount; i++) {
-                    var row = table.rows[i];
-                    var chkbox = row.cells[0].childNodes[0];
-                    if(null != chkbox && true == chkbox.checked) {
-                         table.deleteRow(i);
-                         rowCount--;
-                         i--;
-                    }
-               }
-               }catch(e) {
-                    alert(e);
-               }
-          }
- 
-     </SCRIPT>
 </head>
 <body>
 <?php
 include_once("Detalle_facturaDatos.php");
 include_once("ProductoDatos.php");
 include_once("Cabecera_facturaDatos.php");
-$id = 1;
+
 $Detalle_facturaDatosObj = new Detalle_facturaDatos();
 $ProductoDatosObj = new ProductoDatos();
 $Cabecera_facturaDatosObj = new Cabecera_facturaDatos();
@@ -83,8 +58,6 @@ $Cabecera_facturaDatosObj = new Cabecera_facturaDatos();
 				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40" alt="px"></button></a>
 				
 				<a href="segunda.php"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40" width="40" alt="px"></button></a>
-
-
 </div>
 </div>
 		
@@ -92,7 +65,6 @@ $Cabecera_facturaDatosObj = new Cabecera_facturaDatos();
 	</div>
 	<div class="fondoPantalla" style ="width = 100%">
 		<div class="container">
-		<!--INPUT type="button" value="Delete Row" onclick="deleteRow('table table-striped-edwin');" /-->
 		<table class="table table-striped-edwin"  BORDER=10>
 				<thead class="CaberaSuperiorTablaStriped">
 					<tr ALIGN=center>
@@ -116,7 +88,9 @@ $Cabecera_facturaDatosObj = new Cabecera_facturaDatos();
 						<td><?php echo $c->getCantidad(); ?> </td>
 						
 						<?php
+							$idDetalle =$c->getSecuencia();
 							$idPro =$c->getCodigo_producto();
+							$numero_factura=$c->getNumero_factura();
 							foreach ($ProductoDatosObj->consultaEspecific($idPro) as $e){	
 						?>
 							<td><?php echo $e->getDescripcion(); ?> </td>
@@ -134,7 +108,7 @@ $Cabecera_facturaDatosObj = new Cabecera_facturaDatos();
 					<tr>
 						<td colspan="4">TOTAL</td>
 						<?php
-							$idPro =1;
+							//$idPro =1;
 							foreach ($Cabecera_facturaDatosObj->consultaEspecific($idPro) as $x){	
 						?>
 							<!--td colspan="2">$59,50 </td-->
@@ -142,9 +116,11 @@ $Cabecera_facturaDatosObj = new Cabecera_facturaDatos();
 						<?php } ?>
 					</tr>
 				</tbody>
-			</table>
+			</table> 
+			<a href="DetalleCabeceraFormularioDeInsertar.php?numFactura=<?php echo $numero_factura; ?>&idDetalleFactura=<?php echo $idDetalle;?> ">Nueva Linea</a>
 		</div>
-		<div class="row">
+
+		<div class="row">  
 			<div class="divFormBoton">
 				<a href="../cuarta.php"> 
 					<input class="objetoConfirmarPedido" type="submit" value="Confirmar Pedido"/>
