@@ -1,24 +1,26 @@
 <?php
 
-class Persona
+class Vista
 {
 	private $codigo_persona;
 	private $cedula_identidad;
 	private $nombre;
 	private $apellido;
 	private $usuario;
+	private $contrasena
 	private $estado_civil;
 	private $genero;
 	private $direccion_domicilio;
 	private $telefono;
 	
-	function __construct($codigo_persona, $cedula_identidad, $nombre, $apellido, $usuario, $estado_civil, $genero,$direccion_domicilio,$telefono) 
+	function __construct($codigo_persona, $cedula_identidad, $nombre, $apellido, $usuario, $contrasena, $estado_civil, $genero,$direccion_domicilio,$telefono) 
 	{
         $this->codigo_persona = $codigo_persona;
         $this->cedula_identidad = $cedula_identidad;
 	   	$this->nombre = $nombre;
 		$this->apellido = $apellido;
 		$this->usuario = $usuario;
+		$this->contrasena = $contrasena
 		$this->estado_civil = $estado_civil;
 		$this->genero = $genero;
 		$this->direccion_domicilio = $direccion_domicilio;
@@ -73,6 +75,16 @@ class Persona
 	function getUsuario()
 	{
 		return $this->usuario;
+	}
+	
+	public function getContrasena()
+	{
+		return $this->contrasena;
+	}
+
+	public function setContrasena($contrasena)
+	{
+		$this->contrasena = $contrasena;
 	}
 
 	function setEstado_civil($estado_civil)

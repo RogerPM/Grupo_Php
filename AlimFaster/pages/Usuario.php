@@ -1,19 +1,17 @@
 <?php
 
-class Restaurante
+class Usuario
 {
 
     private $codigo_usuario;
     private $contrasena;
-    private $email;
     
 	
     
-     function __construct($codigo_restaurante, $contraseña, $email) 
+     function __construct($codigo_restaurante, $contraseña) 
      {
 	   $this->codigo = $codigo_restaurante;
 	   $this->contrasena = $contrasena;
-	   $this->email = $email;
      }
 	 
 	 
@@ -35,14 +33,6 @@ class Restaurante
 	public function setContrasena($contrasena)
 	{
 		$this->contrasena = $contrasena;
-	}
-
-	public function getEmail(){
-		return $this->email;
-	}
-
-	public function setEmail($Email){
-		$this->email = $email;
 	}
 }
 

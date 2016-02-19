@@ -1,5 +1,6 @@
 <?php
-	session_start();
+	include_once("UsuarioDatos.php");
+	$UsuarioObj = new UsuarioDatos();
 ?>
 
 <!doctype html>
@@ -30,19 +31,17 @@ $("#mapita").click(function(){
 <title>Formulario de Registro</title>
 </head>
 <body >
-<?php
-include_once("PersonaDatos.php");
-include_once("UsuarioDatos.php");
-$id = 1;
-$PersonaDatosObj = new Detalle_facturaDatos();
-$UsuarioDatosObj = new ProductoDatos();
-?>
-
+<!--Esto es para estilos responsive manueales -->
+<!--<div class="prueba">Probando</div>
+<div class="prueba">Probando</div>
+<div class="prueba">Probando</div>
+<div class="prueba alfa omega">Probando</div>
+-->
 <!-- boostrap -->
 <div class="jumbotron">
 <div class="bannerSuperior">
 
-	<!-- Logo Y Texto Banner  -->
+<!-- Logo Y Texto Banner  -->
 <div class="jumbotron">
 <div class="banImgText">
 				 <div class="col-md-8">
@@ -57,91 +56,79 @@ $UsuarioDatosObj = new ProductoDatos();
 <!-- Botones  -->
 <div class="jumbotron">
 <div class="botones">
-
+ 
 				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40" alt="px"></button></a>
 				
-				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40" width="40" alt="px"></button></a>
-</div>
-</div>
+				<a href="administracion_pagina.php"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40" width="40" alt="px"></button></a>
 
 </div>
 </div>
-<div class="fondoPantalla" style="width: 100%">
-<div class="container">
-    <div class="row">
-        
-        <div class="col-md-8">
-        <div class="table-responsive">    
-			<form action="">
-				<br/>
-				<h2>DATOS DEL USUARIO</h2>
-				  <div class="divForm">
-				  <label class=" col-xs-3" for="nombre">Nombre</label>
-				  <input id="nombre" type="text" />
-				  </div>
-				  
-				  <div class="divForm">
-				  <label class=" col-xs-3" for="apellido">Apellido</label>
-				  <input id="apellido" type="text" />
-				  </div>
 
-				<div class="divForm">
-				<label class=" col-xs-3" for="usuario">Usuario</label>
-				<input id="usuario"  type="text" />
-				</div>
-				
-				<div class="divForm">
-				<label class=" col-xs-3" for="cedula">Cedula o Ruc</label>
-				<input id="cedula" maxlength="13" type="text" />
-				</div>
+</div>
+</div>
+<div class="fondoPantalla" style='width: 100%'>
+ <div class="table-responsive">     
+<br /> <br /> 
+<table style="margin-left:50px" border=1 cellspacing=1 cellpadding=1>
+<tr>
+	<th>Id</th>
+	<th>Descripci&oacute;n</th>
+	<th>Registro</th>
+	<th>Modificar</th>
+	<th>Eliminar</th>
+	
+</tr>
 
-				<div class="divForm">				
-				<label class=" col-xs-3" for="correo">Mail</label>
-				<input id="correo" type="text" />
-				</div>
-
-				<div class="divForm">
-				<label class=" col-xs-3" for="genero">Genero</label>
-				<input id="genero" type="text" />
-				</div>
-
-				<div class="divForm">
-				<label class=" col-xs-3" for="civil">Estado Civil</label>
-				<input id="civil" type="text" />
-				</div>
-					
-				<div class="divForm">	
-				<label class=" col-xs-3" for="telefono">Telefono</label>
-				<input id="telefono" maxlength="10" type="text" />
-				</div>
-
-				<div class="divForm">
-				<label class=" col-xs-3" for="direccion">Direccion</label>
-				<input id="direccion" type="text" />
-				</div>
-				
-				<div class="divFormBoton">
-					<a href="primera.php">
-						<input class="objetoFormReservarForm" type="button" value="Guardar"/>
-					</a>
-					<br/><br/>
-				</div>
-			</form>	
+<?php foreach ($UsuarioObj->consultaGeneral() as $c){  ?>
+<tr>
+	<td><?php echo $c->getCodigo_perfil(); ?></td>
+	<td><?php echo $c->getDescripcion(); ?></td>
+	<td><?php echo $c->getRegistro(); ?></td>
+	<td>
+			<div align="center">
+				<form action="editarPerfil.php" method="post">
+					<input type="hidden" name="codigoE" value="<?php echo $c->getCodigo_perfil(); ?>" />
+					<input type="hidden" name="descripcionE" value="<?php echo $c->getDescripcion(); ?>" />
+					<input type="hidden" name="registroE" value="<?php echo $c->getRegistro(); ?>" />
+					<button class="botonCompra" type="submit" name="submit_mult" value="Editar" title="Editar">
+						<img src="../img/edit.png" alt="Editar" width="30" height="30" align="middle" class="icon" title="Editar">
+					</button>
+				</form>
+			</div>
+		</td>
+	<td>
+		<div align="center">
+			<form action="eliminaPerfil.php" method="post">
+				<input type="hidden" name="id" value="<?php echo $c->getCodigo_perfil(); ?>" />
+				<button class="botonCompra" type="submit" name="submit_mult" value="Borrar" title="Borrar">
+					<img src="../img/eliminar.png" alt="Borrar" width="30" height="30" align="middle" class="icon" title="Borrar">
+				</button>
+			</form>
 		</div>
-        </div>
-    </div>
+	</td>
+</tr>
+<?php } ?>
+
+</table>
+<br /> <br /> 
+
+<form class="col-md-3" action="crearPerfil.php" method="post">
+    <!--<input type="hidden" name="id" value="<?php echo $linea['id']; ?>" />-->
+    <input class="objetoFormReservarForm" style="margin-left:450px" type="submit" name="submit" value="Registrar Perfil" title="Registrar" />
+    <!--<img src="./imagenes/Borrar.png" alt="Borrar" width="30" height="30" align="middle" class="icon" title="Borrar">-->
+   
+</form>
+<br /> <br /> 
+
+    </tbody>
+  </table>
+  <br /> <br /> 
+  </div>
 </div>
 
-
- 		
-		
-		
-</div>
 
 <div class="footer">
-<br/>
-Contactenos: desarrollo@gmail.com.<br/> Ecuador 2015
-<br/><br/>
+Contáctenos: desarrollo@gmail.com.<br/> Ecuador 2015
 </div>
 </body>
 </html>
