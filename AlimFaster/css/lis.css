@@ -19,5 +19,9 @@ label{ display:inline-block; width:250px; font-weight:bold; text-align:right; fo
 .tabla>div:first-child{background-color:red;}
 .tabla>div:first-child>span,.formi>span{ display:inline-block; width:29%; padding:5px}
 .formi>span:first-child,.tabla>div:first-child>span:first-child{ width:20px;}
+.tablita{border:solid thin #003333; background:#FFFF99; display:inline-block;}
+.tablita>div:first-child{background:black; color: white	;}
+.tablita>div>span{width:150px; display:inline-block;}
+.tablita input[type='text']{ width:100%;}
 
 body>div>form{ display:inline-block; width:190px; height:100px; border:solid thin #666; margin:5px 0; background:white; padding:5px;}
