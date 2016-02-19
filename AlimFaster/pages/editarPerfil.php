@@ -1,30 +1,11 @@
 <?php
-	session_start();
 
-	include_once("RestauranteDatos.php");
-	$RestauranteObj = new RestauranteDatos();
+	$codE = $_POST['codigoE'];
+	$desE = $_POST['descripcionE'];
+	$regE = $_POST['registroE'];
 
-	$arrayDemo = array();
-	$arrayName = array();
-	foreach ($RestauranteObj->consultaGeneral() as $c){ 
-		array_push($arrayDemo, $c->getNombre_imagen());
-		array_push($arrayName, $c->getRazon_social());
-	}
-
-	$cant = count($arrayDemo);
-	$columnas = 3;
-	
-	if($cant<=3)
-		$filas = 1;
-	else if($cant<=6)
-		$filas = 2;
-	else if($cant<=9)
-		$filas = 3;
-	else if($cant<=12)
-		$filas = 4;
-	else if($cant<=15)
-		$filas = 5;
-		
+	//echo "cod:".$codE." per:".$perE." ini:".$iniE." fin:".$finE." raz:".$razE." tel:".$telE;
+	//echo "cor:".$corE." sri:".$sriE." aut:".$autE." fax:".$faxE." mov:".$movE." img:".$imgE;
 ?>
 ﻿<!doctype html>
 <html>
@@ -43,7 +24,7 @@
 <meta name="robots" content="index,follow"> <!--etiqueta que sirve para que los bucadores puedan recorrer tu pagina web-->
 <link href="../css/styleRestaurant.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
-<title>Elección de restaurante Online - Restaurant</title>
+<title>Editar Restaurante Online - Restaurant</title>
 </head>
 <body >
 <!--Esto es para estilos responsive manueales -->
@@ -74,7 +55,6 @@
  
 				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40" alt="px"></button></a>
 				
-				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40" width="40" alt="px"></button></a>
 
 </div>
 </div>
@@ -82,51 +62,17 @@
 </div>
 </div>
 <div class="fondoPantalla" style='width: 100%'>
- <div class="table-responsive">     
-<table class="table">
-    <tbody>
-
-	<?php
-	$cont = 0;
-	for($t=0;$t<$filas;$t++){ ?>	
-		<tr>
-<?php
-		  for($y=0;$y<$columnas;$y++){
-		  if($cont == $cant) break;
-?>	
-			<td>
-				<a href="segunda.php">
-					<button type="button" class="bordeBoton"><img src="<?php echo '../img/'.$arrayDemo[$cont]; ?>" title="<?php echo $arrayName[$cont]; ?>"  height="150" width="150" alt="px">
-
-					<div vocab="http://schema.org/" typeof="Restaurant">
-						  <span property="name" content="Cocolon"></span>
-						  <div property="aggregateRating" typeof="AggregateRating">
-							<span property="ratingValue" content="4"></span> 
-							<span property="reviewCount" content="250"></span>
-						  </div>
-						  <span property="telephone" content="(04) 257-1051"></span>
-						  <meta property="openingHours" content="Mo-Sa 11:00-14:30">
-						  <meta property="openingHours" content="Mo-Th 17:00-21:30">
-						  <meta property="openingHours" content="Fr-Sa 17:00-22:00">
-						  <span property="servesCuisine" content="Tipica ecuatoriana">
-						  </span>
-						  <span property="priceRange" content="$20 - $80"></span>
-					</div>
-
-					</button>
-				</a>
-            </td> 
-<?php
-			$cont = $cont + 1;
-		   } ?>	
-		   </tr>
-<?php	}
-	?>	
- 
-	
-
-    </tbody>
-  </table>
+ <div class="table-responsive"> 
+<h1>Actualizar Perfil</h1> 
+	 <form action="actualizaPerfil.php" method="post" > 
+	 <input type="hidden" name="codigo" value="<?php echo $codE; ?>" />
+		 Descripci&oacute;n:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 <input type="text" name="descripcion" value="<?php echo $desE; ?>" /> <br /> <br />    
+		 Registro:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 <input type="time" name="registro" value="<?php echo $regE; ?>" /> <br /> <br /> 
+		 <input  class="objetoFormReservarForm" type="submit" value="Acualizar" name="submit" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 <a href="consultaPerfil.php"><button class="botonCompra" type="button"><img src="../img/back.png" height="18" width="32"></button></a>
+	 </form>
   </div>
 </div>
 

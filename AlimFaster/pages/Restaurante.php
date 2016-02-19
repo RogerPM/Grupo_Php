@@ -18,18 +18,18 @@ class Restaurante
 	
 	
      function __construct($codigo_restaurante, $max_personas, $inicio_atencion,$fin_atencion, $razon_social, $telefono, $correo_electronico, $autorizacion_sri, $autorizacion_fecha,$telefax,$telefono_movil,$nombre_imagen) {
-       $this->idRestaurante = $codigo_restaurante;
-	   $this->maxPersonas = $max_personas;
-	   $this->inicioAtencion = $inicio_atencion;
-	    $this->finAtencion = $fin_atencion;
-	   $this->razonSocial = $razon_social;
+       $this->codigo_restaurante = $codigo_restaurante;
+	   $this->max_personas = $max_personas;
+	   $this->inicio_atencion = $inicio_atencion;
+	   $this->fin_atencion = $fin_atencion;
+	   $this->razon_social = $razon_social;
 	   $this->telefono = $telefono;
-	   $this->correoElectronico = $correo_electronico;
-	   $this->autorizacionSri = $autorizacion_sri;
-	   $this->autorizacionFecha = $autorizacion_fecha;
+	   $this->correo_electronico = $correo_electronico;
+	   $this->autorizacion_sri = $autorizacion_sri;
+	   $this->autorizacion_fecha = $autorizacion_fecha;
 	   $this->telefax = $telefax;
-       $this->telefonoMovil = $telefono_movil;
-	   $this->nombreImagen = $nombre_imagen;
+       $this->telefono_movil = $telefono_movil;
+	   $this->nombre_imagen = $nombre_imagen;
      }
 	 
 	
@@ -42,27 +42,27 @@ class Restaurante
 		$this->codigo_restaurante = $codigo_restaurante;
 	}
 
-	public function getmax_personas(){
+	public function getMax_personas(){
 		return $this->max_personas;
 	}
 
-	public function setmax_personas($max_personas){
+	public function setMax_personas($max_personas){
 		$this->max_personas = $max_personas;
 	}
 
-	public function getinicio_atencion(){
+	public function getInicio_atencion(){
 		return $this->inicio_atencion;
 	}
 
-	public function setinicio_atencion($inicio_atencion){
+	public function setInicio_atencion($inicio_atencion){
 		$this->inicio_atencion = $inicio_atencion;
 	}
 
-	public function getfin_atencion(){
+	public function getFin_atencion(){
 		return $this->fin_atencion;
 	}
 
-	public function setfin_atencion($fin_atencion){
+	public function setFin_atencion($fin_atencion){
 		$this->fin_atencion = $fin_atencion;
 	}
 	

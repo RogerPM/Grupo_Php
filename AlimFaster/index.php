@@ -51,20 +51,22 @@
                 <!-- Set the first background image using inline CSS below. -->
                  <img class="opacidadImg" src="img/5.jpg">
                 <div class="carousel-caption">
+			<form action ="login.php" method ="post">
 		    <div class="divForm">
 			<label class="objFormCajaRoger" for="usuario">Usuario</label>
 			<input id="usuario" class="objFormCajaRoger2" "type="text" />
-	    	    </div>
-	    	    <div class="divForm">
+	    	</div>
+			<div class="divForm">
 			<label class="objFormCajaRoger" for="password">Password</label>
 			<input id="password" class="objFormCajaRoger2" type="text" />
-         	    </div>
+         	</div>
+			</form>
                     <a href="pages/primera.php">
-						<button class="objetoFormReservar">Reservar</button>
+						<button class="objetoFormReservar">Ingresar</button>
 		    </a>
-		    <a href="pages/registrar_pagina.php">
+		  <!--<a href="pages/consultaRestaurante.php">
 						<button class="objetoFormReservar">Registrar</button>
-		    </a>
+		    </a>-->
 		    <a href="pages/administracion_pagina.php">
 						<button class="objetoFormReservar">Administrar</button>
 		    </a>
@@ -74,20 +76,22 @@
                 <!-- Set the third background image using inline CSS below. -->
                <img class="opacidadImg" src="img/1.jpg">
                 <div class="carousel-caption">
+		   <form action ="login.php" method ="post">
 		    <div class="divForm">
 			<label class="objFormCajaRoger" for="usuario">Usuario</label>
-			<input id="usuario" class="objFormCajaRoger2"  type="text" />
-		    </div>
-		    <div class="divForm">
+			<input id="usuario" class="objFormCajaRoger2" "type="text" />
+	    	</div>
+			<div class="divForm">
 			<label class="objFormCajaRoger" for="password">Password</label>
-			<input id="password" class="objFormCajaRoger2"  type="text" />
-		    </div>
+			<input id="password" class="objFormCajaRoger2" type="text" />
+         	</div>
+			</form>
                     <a href="pages/primera.php">
-						<button class="objetoFormReservar">Reservar</button>
+						<button class="objetoFormReservar">Ingresar</button>
 		    </a>
-		    <a href="pages/registrar_pagina.php">
+		   <!--<a href="pages/consultaRestaurante.php">
 						<button class="objetoFormReservar">Registrar</button>
-		    </a>
+		    </a>-->
 		    <a href="pages/administracion_pagina.php">
 						<button class="objetoFormReservar">Administrar</button>
 		    </a>
@@ -97,21 +101,23 @@
                 <!-- Set the third background image using inline CSS below. -->
                <img class="opacidadImg" src="img/2.jpg">
                 <div class="carousel-caption">
+		   <form action ="login.php" method ="post">
 		    <div class="divForm">
 			<label class="objFormCajaRoger" for="usuario">Usuario</label>
-			<input id="usuario" class="objFormCajaRoger2" type="text" />
-		    </div>
-		    <div class="divForm">
+			<input id="usuario" class="objFormCajaRoger2" "type="text" />
+	    	</div>
+			<div class="divForm">
 			<label class="objFormCajaRoger" for="password">Password</label>
 			<input id="password" class="objFormCajaRoger2" type="text" />
-		    </div>
+         	</div>
+			</form>
                     <a href="pages/primera.php">
-						<button class="objetoFormReservar">Reservar</button>
+						<button class="objetoFormReservar">Ingresar</button>
 		    </a>
-		    <a href="pages/registrar_pagina.php">
+		    <!--<a href="pages/consultaRestaurante.php">
 						<button class="objetoFormReservar">Registrar</button>
-		    </a>
-		    <a href="pages/administracion_pagina.php">
+		    </a>-->
+		  <a href="pages/administracion_pagina.php">
 						<button class="objetoFormReservar">Administrar</button>
 		    </a>
                 </div>

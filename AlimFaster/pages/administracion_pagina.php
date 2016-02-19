@@ -27,7 +27,7 @@ $("#mapita").click(function(){
 });
 });
 </script>
-<title>Formulario de Permiso</title>
+<title>Administracion</title>
 </head>
 <body >
 <!--Esto es para estilos responsive manueales -->
@@ -58,7 +58,7 @@ $("#mapita").click(function(){
 
 				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40" alt="px"></button></a>
 				
-				<a href="primera.php"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40" width="40" alt="px"></button></a>
+				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40" width="40" alt="px"></button></a>
 </div>
 </div>
 
@@ -73,33 +73,34 @@ $("#mapita").click(function(){
 			<form action="">
 				<br/>
 				<br/>
-				<h2>Escoja los Recursos que desea Asignar</h2>
 				<br/>
-				<table border="0">
+						<h2>Escoja los Recursos que desea Asignar</h2>
+				
+				<div class="divFormBoton">
+					<br/>
+					<table border="0">
 					<tr>
-						<td colspan="2" width="10%" align="center"> <div class="divFormBoton"><a href="perfil_pagina.php"><input class="objetoFormReservarForm" type="button" value="   Perfil  "/></a></div> </td>
-						<td colspan="2" width="10%" align="center"> <div class="divFormBoton"><a href="permiso_pagina.php"><input class="objetoFormReservarForm" type="button" value="Permisos"/></div></a> </td>
+						<td colspan="2" width="10%" align="center"> <div class="divFormBoton"><a href="consultaPerfil.php"><input class="objetoFormReservarForm" type="button" value="   Perfil  "/></a></div> </td>
+						<td colspan="2" width="10%" align="center"> <div class="divFormBoton"><a href="consultaSucursal.php"><input class="objetoFormReservarForm" type="button" value="Sucursal"/></div></a> </td>
+						<td colspan="2" width="10%" align="center"> <div class="divFormBoton"><a href="consultaRestaurante.php")><input class="objetoFormReservarForm" type="button" value="Restaurante"/></a></div> </td>
 					</tr>
 					<tr>
-						<td> </td>
+						<td></td>
 					<tr/>
 					<tr>
 						<td colspan="2" width="10%" align="center"> <div class="divFormBoton"><a href="ProductoFormulario.php")><input class="objetoFormReservarForm" type="button" value="Producto"/></a></div> </td>
 						<td colspan="2" width="10%" align="center"> <div class="divFormBoton"><a href="MenuFormulario.php"><input class="objetoFormReservarForm" type="button" value="Menu"/></a></div> </td>
 					<tr>
 				</table>
-				
-				<div class="divFormBoton">
-					<br/>
+				<br/>
+				<br/>
 					<a href="../index.php">
 						<input class="objetoFormReservarForm" type="button" value="Cancelar"/>
 					</a>
 					<br/>
 					<br/>
 					<br/>
-					<br/>
 				</div>
-				
 			</form>	
 		</div>
         </div>
