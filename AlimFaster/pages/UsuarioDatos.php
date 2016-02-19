@@ -70,12 +70,14 @@ class Detalle_facturaDatos extends Collector
 	
 	
 	function actualizar($descripcion,$registro,$codigo) {    
-		$insertrow = self::$db->updateRow("UPDATE peerfil SET  descripcion = ?, registro = ? WHERE codigo_perfil = ? ", array( "{$descripcion}", "{$registro}", "{$codigo}"));
+		$insertrow = self::$db->updateRow("INSERT INTO persona (cedula_identidad, nombre, apellido, usuario, estado_civil, genero, direccion_domicilio, telefono) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", ("UPDATE peerfil SET  descripcion = ?, registro = ? WHERE codigo_perfil = ? ", 
+		array("{$cedula_identidad}",  "{$nombre}", "{$apellido}", "{$usuario}", "{$estado_civil}", "{$genero}", "{$direccion_domicilio}" , "{$telefono}"));
 	}  
 	
 	function delete($id) 
 	{    
 		$deleterow = self::$db->deleteRow("DELETE FROM persona WHERE codigo_persona= ?", array("{$id}"));
+		$deleterow = self::$db->deleteRow("DELETE FROM usclaudia WHERE codigo_usuario= ?", array("{$id}"));
 	}
 	/*
 	function createDemo($nombre) {    
