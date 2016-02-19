@@ -87,6 +87,28 @@ $(window).load(function() {
 		});
 });
 
+
+$("#consul").submit(function(){
+	bandera = 3;
+	ced = $(this).find("#ced").val();
+
+$.ajax({
+			  type:"POST",
+			  url: "php/reservacion.php",
+			  data: "bandera="+bandera+"&ced="+ced,
+			  dataType: "html",
+			  error: function(){
+					alert("Algo salio mal reintente en breve");
+			  	},
+			  success: function(data){                                                      
+					$("#mireserva").html(data);
+			  	}
+			  });
+		return false
+
+});
+
+
 function seleccionMesa(t){
 para = $(t).val();
 $(".mesas>span").removeClass('pushed').removeClass('selected').css('opacity',0.3);
@@ -146,3 +168,42 @@ function posibilidad(f,h,m){
 			  });
 		return false
 	}	
+	
+function borra(t){
+	var numerito = $(t).parent().parent().find('span:first-child>input').val();
+	bandera = 4;
+	$.ajax({
+			  type:"POST",
+			  url: "php/reservacion.php",
+			  data: "bandera="+bandera+"&numerito="+numerito,
+			  dataType: "html",
+			  error: function(){
+					alert("Algo salio mal reintente en breve");
+			  	},
+			  success: function(data){                                                      
+					$("#mostrario").html(data);
+					$(t).parent().parent().fadeOut();
+			  	}
+			  });
+		return false
+	}	
+
+function modifica(t){
+	var numerito = $(t).parent().parent().find('span:first-child>input').val();
+	var nopersonas = $(t).parent().parent().find('input#nop').val();
+	var nombre = $(t).parent().parent().find('input#nom').val();
+	bandera = 5;
+	$.ajax({
+			  type:"POST",
+			  url: "php/reservacion.php",
+			  data: "bandera="+bandera+"&numerito="+numerito+"&nopersonas="+nopersonas+"&nombre="+nombre,
+			  dataType: "html",
+			  error: function(){
+					alert("Algo salio mal reintente en breve");
+			  	},
+			  success: function(data){                                                      
+					$("#mostrario").html(data);
+				}
+			  });
+		return false
+	}
