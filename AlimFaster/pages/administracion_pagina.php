@@ -74,19 +74,22 @@ $("#mapita").click(function(){
 				<br/>
 				<br/>
 				<h2>Escoja los Recursos que desea Asignar</h2>
+				<br/>
+				<table border="0">
+					<tr>
+						<td colspan="2" width="10%" align="center"> <div class="divFormBoton"><a href="perfil_pagina.php"><input class="objetoFormReservarForm" type="button" value="   Perfil  "/></a></div> </td>
+						<td colspan="2" width="10%" align="center"> <div class="divFormBoton"><a href="permiso_pagina.php"><input class="objetoFormReservarForm" type="button" value="Permisos"/></div></a> </td>
+					</tr>
+					<tr>
+						<td> </td>
+					<tr/>
+					<tr>
+						<td colspan="2" width="10%" align="center"> <div class="divFormBoton"><a href="ProductoFormulario.php")><input class="objetoFormReservarForm" type="button" value="Producto"/></a></div> </td>
+						<td colspan="2" width="10%" align="center"> <div class="divFormBoton"><a href="MenuFormulario.php"><input class="objetoFormReservarForm" type="button" value="Menu"/></a></div> </td>
+					<tr>
+				</table>
 				
 				<div class="divFormBoton">
-					<br/>
-					<a href="perfil_pagina.php">
-						<input class="objetoFormReservarForm" type="button" value="   Perfil  "/>
-					</a>
-					<br/>
-					<br/>
-					<a href="permiso_pagina.php">
-						<input class="objetoFormReservarForm" type="button" value="Permisos"/>
-					</a>
-					
-					<br/>
 					<br/>
 					<a href="../index.php">
 						<input class="objetoFormReservarForm" type="button" value="Cancelar"/>
@@ -96,6 +99,7 @@ $("#mapita").click(function(){
 					<br/>
 					<br/>
 				</div>
+				
 			</form>	
 		</div>
         </div>

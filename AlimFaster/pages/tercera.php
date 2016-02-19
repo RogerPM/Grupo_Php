@@ -57,7 +57,7 @@ $Cabecera_facturaDatosObj = new Cabecera_facturaDatos();
 
 				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40" alt="px"></button></a>
 				
-				<a href="segunda.php"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40" width="40" alt="px"></button></a>
+				<a href="primera.php"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40" width="40" alt="px"></button></a>
 </div>
 </div>
 		
@@ -78,8 +78,9 @@ $Cabecera_facturaDatosObj = new Cabecera_facturaDatos();
 				</thead>
 				<tbody class="fuente">
 					<?php
+					$totalpago=0;
 					foreach ($Detalle_facturaDatosObj->consultaGeneral() as $c){
-						
+						$totalpago=$totalpago+$c->getPrecio_total(); 
 					?>
 					<tr>					
 						<!--TD><INPUT type="checkbox" NAME="chk"/></TD-->
@@ -101,25 +102,25 @@ $Cabecera_facturaDatosObj = new Cabecera_facturaDatos();
 						<td><?php echo $c->getPrecio_total(); ?></td>
 						<td width="3%"align="center"> <a href="DetalleCabeceraFormularioDeEditar.php?id=<?php echo $c->getSecuencia(); ?>">Editar</a> </td>
 						<td width="3%" align="center"><a href="DetalleCabeceraEliminar.php?id=<?php echo $c->getSecuencia(); ?>">Eliminar</a></td>
-						
+						 
 					</Tr>
 					<?php } ?>
 					
 					<tr>
-						<td colspan="4">TOTAL</td>
-						<?php
-							//$idPro =1;
-							foreach ($Cabecera_facturaDatosObj->consultaEspecific($idPro) as $x){	
+						<td colspan="3">TOTAL</td>
+						<?php/*
+							$idPro =1;//No borrar seteado por falta de xavier
+							foreach ($Cabecera_facturaDatosObj->consultaEspecific($idPro) as $x){	*/
 						?>
-							<!--td colspan="2">$59,50 </td-->
-							<td colspan="2"><?php echo $x->getTotal(); ?> </td>
-						<?php } ?>
+							<td colspan="3">$<?php echo $totalpago; ?></td>
+							<!--td colspan="2"></*?php echo $x->getTotal(); ?*/> </td--> 
+						<?php/* } */?>
 					</tr>
 				</tbody>
 			</table> 
 			<a href="DetalleCabeceraFormularioDeInsertar.php?numFactura=<?php echo $numero_factura; ?>&idDetalleFactura=<?php echo $idDetalle;?> ">Nueva Linea</a>
 		</div>
-
+  
 		<div class="row">  
 			<div class="divFormBoton">
 				<a href="../cuarta.php"> 
