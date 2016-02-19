@@ -1,7 +1,7 @@
 <?php 
 include_once('Persona.php');
 include_once('Usuario.php')
-include_once('vista.php')
+include_once('Vista.php')
 include_once('Collector.php');
 
 class Detalle_facturaDatos extends Collector 
@@ -24,7 +24,28 @@ class Detalle_facturaDatos extends Collector
 		}
 	return $arrayDemo;
 	}
-		
+	
+	function consultaPersonas()
+	{
+		$rows = self::$db->getRows("SELECT * FROM persona");
+		$arrayDemo = array();
+		foreach ($rows as $c){
+			$aux = new Persona($c{'codigo_persona'},$c{'cedula_identidad'},$c{'nombre'},$c{'apellido'},$c{'genero'},$c{'estado_civil'},$c{'direccion_domicilio'},$c{'telefono'});
+			array_push($arrayDemo, $aux);
+		}
+	return $arrayDemo;
+	}
+	
+	function consultaUsuarios(){
+		$rows = self::$db->getRows("SELECT * FROM usclaudia");
+		$arrayDemo = array();
+		foreach ($rows as $c){
+			$aux = new Usuario($c{'usuario'},$c{'password'});
+			array_push($arrayDemo, $aux);
+		}
+	return $arrayDemo;
+	}
+	
 	function consultaPersona($id)
 	{
 		$rows = self::$db->getRows("SELECT * FROM persona WHERE codigo_persona= ?", array("{$id}"));

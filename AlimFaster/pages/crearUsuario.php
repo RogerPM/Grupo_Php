@@ -73,7 +73,7 @@
 		 Estado_civil:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		 <input type="time" name="estado_civil" value="" /> <br /> <br /> 
 		 <input  class="objetoFormReservarForm" type="submit" value="Registrar" name="submit" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		 <a href="consultaPerfil.php"><button class="botonCompra" type="button"><img src="../img/back.png" height="18" width="32"></button></a>
+		 <a href="registrar_pagina.php"><button class="botonCompra" type="button"><img src="../img/back.png" height="18" width="32"></button></a>
 	 </form>
   </div>
 </div>

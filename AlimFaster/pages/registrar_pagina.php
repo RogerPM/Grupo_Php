@@ -91,7 +91,7 @@ $("#mapita").click(function(){
 	<td><?php echo $c->getEstado_civil(); ?></td>
 	<td>
 			<div align="center">
-				<form action="editarPerfil.php" method="post">
+				<form action="editarUsuario.php" method="post">
 					<input type="hidden" name="codigoE" value="<?php echo $c->getCodigo_persona(); ?>" />
 					<input type="hidden" name="descripcionE" value="<?php echo $c->getCedula_identidad(); ?>" />
 					<input type="hidden" name="registroE" value="<?php echo $c->getNombre(); ?>" />
@@ -107,7 +107,7 @@ $("#mapita").click(function(){
 		</td>
 	<td>
 		<div align="center">
-			<form action="eliminaPerfil.php" method="post">
+			<form action="eliminaUsuario.php" method="post">
 				<input type="hidden" name="id" value="<?php echo $c->getCodigo_persona(); ?>" />
 				<button class="botonCompra" type="submit" name="submit_mult" value="Borrar" title="Borrar">
 					<img src="../img/eliminar.png" alt="Borrar" width="30" height="30" align="middle" class="icon" title="Borrar">
