@@ -30,7 +30,7 @@ class Detalle_facturaDatos extends Collector
 		$rows = self::$db->getRows("SELECT * FROM persona");
 		$arrayDemo = array();
 		foreach ($rows as $c){
-			$aux = new Persona($c{'codigo_persona'},$c{'cedula_identidad'},$c{'nombre'},$c{'apellido'},$c{'genero'},$c{'estado_civil'},$c{'direccion_domicilio'},$c{'telefono'});
+			$aux = new Persona($c{'codigo_persona'},$c{'cedula_identidad'},$c{'nombre'},$c{'apellido'},$c{'estado_civil'}, $c{'genero'},$c{'direccion_domicilio'},$c{'telefono'});
 			array_push($arrayDemo, $aux);
 		}
 	return $arrayDemo;

@@ -1,14 +1,17 @@
 <?php
 
-	include_once('UsuarioDatos.php');
-	$UsuarioDatosObj = new UsuarioDatos();
+	include_once("PerfilDatos.php");
+	$PerfilObj = new PerfilDatos();
 	
 	if (!empty($_POST)) {
-		if (empty($_POST['cedula_identidad']) || $_POST['nombre']) || $_POST['apellido']) || $_POST['estado_civil']) || $_POST['genero']) || $_POST['domicilio']) || $_POST['telefono']) ||$_POST['usuario']) ||empty($_POST['password']) ) {
-			echo "Por favor ingrese los datos ";			
-			echo "<meta http-equiv='Refresh' content='2;crearUsuario.php'>";
-		}
+		if (empty($_POST['codigo']) ||empty($_POST['descripcion']) ||empty($_POST['registro']) ) {
+
+			echo "Existen campos vacios para actualizar";
+			echo "<meta http-equiv='Refresh' content='2;registrar_pagina.php'>";			
 			
+		}
+		
+		else {
 			$ced=$_POST["cedula_identidad"];
 			$nom=$_POST["nombre"];
 			$ape=$_POST["apellido"];
@@ -28,6 +31,9 @@
 			$UsuarioDatosObj->insertarUsuario($us, $passw);
 			
 			echo "El Usuario se ha agregado correctamente.";
+		}
 		
-}
+		
+		
+	}
 ?>
