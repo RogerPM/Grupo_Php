@@ -76,15 +76,15 @@ class Vista
 	{
 		return $this->usuario;
 	}
-	
-	public function getContrasena()
-	{
-		return $this->contrasena;
-	}
 
 	public function setContrasena($contrasena)
 	{
 		$this->contrasena = $contrasena;
+	}
+	
+	public function getContrasena()
+	{
+		return $this->contrasena;
 	}
 
 	function setEstado_civil($estado_civil)

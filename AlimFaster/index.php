@@ -64,9 +64,9 @@
                     <a href="pages/primera.php">
 						<button class="objetoFormReservar">Ingresar</button>
 		    </a>
-		  <!--<a href="pages/consultaRestaurante.php">
+		  <a href="pages/registrar_pagina.php">
 						<button class="objetoFormReservar">Registrar</button>
-		    </a>-->
+		    </a>
 		    <a href="pages/administracion_pagina.php">
 						<button class="objetoFormReservar">Administrar</button>
 		    </a>
@@ -89,9 +89,9 @@
                     <a href="pages/primera.php">
 						<button class="objetoFormReservar">Ingresar</button>
 		    </a>
-		   <!--<a href="pages/consultaRestaurante.php">
+		   <a href="pages/registrar_pagina.php">
 						<button class="objetoFormReservar">Registrar</button>
-		    </a>-->
+		    </a>
 		    <a href="pages/administracion_pagina.php">
 						<button class="objetoFormReservar">Administrar</button>
 		    </a>
@@ -114,9 +114,9 @@
                     <a href="pages/primera.php">
 						<button class="objetoFormReservar">Ingresar</button>
 		    </a>
-		    <!--<a href="pages/consultaRestaurante.php">
+		    <a href="pages/registrar_pagina.php">
 						<button class="objetoFormReservar">Registrar</button>
-		    </a>-->
+		    </a>
 		  <a href="pages/administracion_pagina.php">
 						<button class="objetoFormReservar">Administrar</button>
 		    </a>

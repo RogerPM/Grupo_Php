@@ -72,24 +72,33 @@ $("#mapita").click(function(){
 <table style="margin-left:50px" border=1 cellspacing=1 cellpadding=1>
 <tr>
 	<th>Id</th>
-	<th>Descripci&oacute;n</th>
-	<th>Registro</th>
-	<th>Modificar</th>
-	<th>Eliminar</th>
-	
+	<th>Cedula</th>
+	<th>Nombre</th>
+	<th>Apellido</th>
+	<th>Usuario</th>
+	<th>Contraseña</th>
+	<th>Estado Civil</th>
 </tr>
 
 <?php foreach ($UsuarioObj->consultaGeneral() as $c){  ?>
 <tr>
-	<td><?php echo $c->getCodigo_perfil(); ?></td>
-	<td><?php echo $c->getDescripcion(); ?></td>
-	<td><?php echo $c->getRegistro(); ?></td>
+	<td><?php echo $c->getCodigo_persona(); ?></td>
+	<td><?php echo $c->getCedula_identidad(); ?></td>
+	<td><?php echo $c->getNombre(); ?></td>
+	<td><?php echo $c->getApellido(); ?></td>
+	<td><?php echo $c->getUsuario(); ?></td>
+	<td><?php echo $c->getContrasena(); ?></td>
+	<td><?php echo $c->getEstado_civil(); ?></td>
 	<td>
 			<div align="center">
 				<form action="editarPerfil.php" method="post">
-					<input type="hidden" name="codigoE" value="<?php echo $c->getCodigo_perfil(); ?>" />
-					<input type="hidden" name="descripcionE" value="<?php echo $c->getDescripcion(); ?>" />
-					<input type="hidden" name="registroE" value="<?php echo $c->getRegistro(); ?>" />
+					<input type="hidden" name="codigoE" value="<?php echo $c->getCodigo_persona(); ?>" />
+					<input type="hidden" name="descripcionE" value="<?php echo $c->getCedula_identidad(); ?>" />
+					<input type="hidden" name="registroE" value="<?php echo $c->getNombre(); ?>" />
+					<input type="hidden" name="registroE" value="<?php echo $c->getApellido(); ?>" />
+					<input type="hidden" name="registroE" value="<?php echo $c->getUsuario(); ?>" />
+					<input type="hidden" name="registroE" value="<?php echo $c->getContrasena(); ?>" />
+					<input type="hidden" name="registroE" value="<?php echo $c->getEstado_civil(); ?>" />
 					<button class="botonCompra" type="submit" name="submit_mult" value="Editar" title="Editar">
 						<img src="../img/edit.png" alt="Editar" width="30" height="30" align="middle" class="icon" title="Editar">
 					</button>
@@ -99,7 +108,7 @@ $("#mapita").click(function(){
 	<td>
 		<div align="center">
 			<form action="eliminaPerfil.php" method="post">
-				<input type="hidden" name="id" value="<?php echo $c->getCodigo_perfil(); ?>" />
+				<input type="hidden" name="id" value="<?php echo $c->getCodigo_persona(); ?>" />
 				<button class="botonCompra" type="submit" name="submit_mult" value="Borrar" title="Borrar">
 					<img src="../img/eliminar.png" alt="Borrar" width="30" height="30" align="middle" class="icon" title="Borrar">
 				</button>
@@ -112,9 +121,9 @@ $("#mapita").click(function(){
 </table>
 <br /> <br /> 
 
-<form class="col-md-3" action="crearPerfil.php" method="post">
+<form class="col-md-3" action="crearUsuario.php" method="post">
     <!--<input type="hidden" name="id" value="<?php echo $linea['id']; ?>" />-->
-    <input class="objetoFormReservarForm" style="margin-left:450px" type="submit" name="submit" value="Registrar Perfil" title="Registrar" />
+    <input class="objetoFormReservarForm" style="margin-left:450px" type="submit" name="submit" value="Registrar Usuario" title="Registrar" />
     <!--<img src="./imagenes/Borrar.png" alt="Borrar" width="30" height="30" align="middle" class="icon" title="Borrar">-->
    
 </form>
