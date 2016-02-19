@@ -28,6 +28,7 @@
 			$UsuarioDatosObj->insertarUsuario($us, $passw);
 			
 			echo "El Usuario se ha agregado correctamente.";
+			echo "<meta http-equiv='Refresh' content='2;crearUsuario.php'>";
 		
 }
 ?>
