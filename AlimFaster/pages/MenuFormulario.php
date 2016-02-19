@@ -26,13 +26,8 @@
 </head>
 <body>
 <?php
-include_once("Detalle_facturaDatos.php");
-include_once("ProductoDatos.php");
-include_once("Cabecera_facturaDatos.php");
-
-$Detalle_facturaDatosObj = new Detalle_facturaDatos();
-$ProductoDatosObj = new ProductoDatos();
-$Cabecera_facturaDatosObj = new Cabecera_facturaDatos();
+include_once("MenuDatos.php");
+$MenuDatosObj = new MenuDatos();
 ?>
 
 <!-- boostrap -->
@@ -53,78 +48,43 @@ $Cabecera_facturaDatosObj = new Cabecera_facturaDatos();
 				
 <!-- Botones  -->
 <div class="jumbotron">
-<div class="botones">
-
-				<a href="../index.php"><button type="button" class="botonHomeNextBack"><img src="../img/home.png" height="40" width="40" alt="px"></button></a>
-				
-				<a href="primera.php"><button type="button" class="botonHomeNextBack"><img src="../img/back.png" height="40" width="40" alt="px"></button></a>
-</div>
 </div>
 		
 	</div>
 	</div>
 	<div class="fondoPantalla" style ="width = 100%">
 		<div class="container">
-		<table class="table table-striped-edwin"  BORDER=10>
+			<table class="table table-striped-edwin"  BORDER=10>
 				<thead class="CaberaSuperiorTablaStriped">
 					<tr ALIGN=center>
-						<th style="display:none">Codigo</th>
-						<th>Cantida</th>
-						<th>Descripción</th>
-						<th>Precio Unitario</th>
-						<th>Precio Total</th>
+						<th>Nombre</th>
+						<th colspan="2">Texto</th>
 						<th width="3%" colspan="2"></th>
 					</tr>
 				</thead>
 				<tbody class="fuente">
-					<?php
-					$totalpago=0;
-					foreach ($Detalle_facturaDatosObj->consultaGeneral() as $c){
-						$totalpago=$totalpago+$c->getPrecio_total(); 
+					<?php 
+					foreach ($MenuDatosObj->consultaGeneral() as $c){
 					?>
 					<tr>					
-						<!--TD><INPUT type="checkbox" NAME="chk"/></TD-->
-						<!--td><input type="button" value="x" onclick="Eliminar(this.parentNode.parentNode.rowIndex)"/></td-->
-						<td style="display:none"><?php echo $c->getSecuencia(); ?> </td>
-						<td><?php echo $c->getCantidad(); ?> </td>
-						
-						<?php
-							$idDetalle =$c->getSecuencia();
-							$idPro =$c->getCodigo_producto();
-							$numero_factura=$c->getNumero_factura();
-							foreach ($ProductoDatosObj->consultaEspecific($idPro) as $e){	
-						?>
-							<td><?php echo $e->getDescripcion(); ?> </td>
-						<?php } ?>
-						
-						
-						<td><?php echo $c->getPrecio_unitario(); ?></td>
-						<td><?php echo $c->getPrecio_total(); ?></td>
-						<td width="3%"align="center"> <a href="DetalleCabeceraFormularioDeEditar.php?id=<?php echo $c->getSecuencia(); ?>">Editar</a> </td>
-						<td width="3%" align="center"><a href="DetalleCabeceraEliminar.php?id=<?php echo $c->getSecuencia(); ?>">Eliminar</a></td>
-						 
+						<td><?php echo $c->getCodigo_menu(); ?></td>
+						<td><?php echo $c->getDescripcion(); ?></td>
+						<td><?php echo $c->getCosto();?></td>
+						<td width="3%"align="center"> <a href="MenuFormularioEditar.php?codeProd=<?php echo $c->getCodigo_menu();?>">Editar</a> </td>
+						<td width="3%"align="center"> <a href="MenuEliminar.php?codeProd=<?php echo $c->getCodigo_menu();?>">Eliminar</a> </td>
+						<!--td width="3%" align="center"><a href="MenuEliminar.php?codeMenu=<?php /* echo $c->getCodigo_menu(); */?>">Eliminar</a></td--> 
 					</Tr>
-					<?php } ?>
+					<?php $idProducto= $c->getCodigo_menu();}?>
 					
-					<tr>
-						<td colspan="3">TOTAL</td>
-						<?php/*
-							$idPro =1;//No borrar seteado por falta de xavier
-							foreach ($Cabecera_facturaDatosObj->consultaEspecific($idPro) as $x){	*/
-						?>
-							<td colspan="3">$<?php echo $totalpago; ?></td>
-							<!--td colspan="2"></*?php echo $x->getTotal(); ?*/> </td--> 
-						<?php/* } */?>
-					</tr>
 				</tbody>
 			</table> 
-			<a href="DetalleCabeceraFormularioDeInsertar.php?numFactura=<?php echo $numero_factura; ?>&idDetalleFactura=<?php echo $idDetalle;?> ">Nueva Linea</a>
+			<a href="MenuFormularioInsertar.php?codeProd=<?php echo $idProducto; ?>">Nuevo Producto</a>
 		</div>
   
 		<div class="row">  
 			<div class="divFormBoton">
-				<a href="../cuarta.php"> 
-					<input class="objetoConfirmarPedido" type="submit" value="Confirmar Pedido"/>
+				<a href="administracion_pagina.php"> 
+					<input class="objetoConfirmarPedido" type="submit" value="Cancelar"/>
 				</a>
 			</div>
 		</div>

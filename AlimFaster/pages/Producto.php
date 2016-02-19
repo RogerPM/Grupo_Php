@@ -7,17 +7,15 @@ class Producto
 	private $costo;
 	private $pvp;
 	private $utilidad;
-	private $contenido_neto;
-	private $peso_neto;
+	private $idmenu;
     
-     function __construct($codigo_producto, $descripcion,$costo,$pvp,$utilidad,$contenido_neto,$peso_neto) {
+     function __construct($codigo_producto, $descripcion,$costo,$pvp,$utilidad,$idmenu) {
         $this->codigo_producto = $codigo_producto;
         $this->descripcion = $descripcion;
 	    $this->costo = $costo;
 		$this->pvp = $pvp;
 		$this->utilidad = $utilidad;
-		$this->contenido_neto = $contenido_neto;
-		$this->peso_neto = $peso_neto;
+		$this->idmenu = $idmenu;
      }
     
      function setCodigo_producto($codigo_producto){
@@ -50,18 +48,13 @@ class Producto
      function getUtilidad(){
        return $this->utilidad;
 	 } 
-	 function setContenido_neto($contenido_neto){
-       $this->contenido_neto = $contenido_neto;
+	 
+	 function setIdmenu($idmenu){
+       $this->idmenu = $idmenu;
      } 
-     function getContenido_neto(){
-       return $this->contenido_neto;
-	 } 
-	 function setPeso_neto($peso_neto){
-       $this->peso_neto = $peso_neto;
+     function getIdmenu(){
+       return $this->idmenu;
      } 
-     function getPeso_neto(){
-       return $this->peso_neto;
-	 } 
+	 
 }
-
 ?>

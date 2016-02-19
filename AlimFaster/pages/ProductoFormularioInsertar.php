@@ -1,4 +1,4 @@
-<?php
+ <?php
 	session_start();
 ?>
 <!doctype html>
@@ -19,17 +19,10 @@
 <link href="../css/styleRestaurant.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
 
-
-<link href="../css/full-slider.css" rel="stylesheet" type="text/css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Confirmacion de Pedido - Restaurante</title>
+<title>ALimfaster DetFacture</title> 
 </head>
 <body>
-<?php
-include_once("ProductoDatos.php");
-$ProductoDatosObj = new ProductoDatos();
-?>
-
 <!-- boostrap -->
 	<div class="jumbotron">
 	<div class="bannerSuperior">
@@ -44,67 +37,70 @@ $ProductoDatosObj = new ProductoDatos();
 				<h1>Restaurant</h1>
 				</div>
 </div>
-				</div>
-				
+</div>
 <!-- Botones  -->
 <div class="jumbotron">
 </div>
-		
-	</div>
-	</div>
-	<div class="fondoPantalla" style ="width = 100%">
-		<div class="container">
+	
+<?php
+//obtener el valor de ID que viene del metodo GET a traves de HTTP
+$codeProd=$_GET["codeProd"]+1;
+?>
+	
+<div class="fondoPantalla" style ="width = 100%">
+  <div class="container">				
+<h2>Producto Nuevo</h2>
+
+	<form action="ProductoInsertar.php" method="post" >
 		<table class="table table-striped-edwin"  BORDER=10>
-				<thead class="CaberaSuperiorTablaStriped">
-					<tr ALIGN=center>
-						<th>Codigo</th>
-						<th>Descripcion</th>
-						<th>Costo</th>
-						<th>Pvp</th>
-						<th>Utilidad</th>
-						<th>Menu</th>
-						<th width="3%" colspan="2"></th>
-					</tr>
-				</thead>
-				<tbody class="fuente">
-					<?php
-					foreach ($ProductoDatosObj->consultaGeneral() as $c){
-					?>
-					<tr>					
-						<td><?php echo $c->getCodigo_producto(); ?> </td>
-						<td><?php echo $c->getDescripcion(); ?> </td>
-						<td><?php echo $c->getCosto(); ?></td>
-						<td><?php echo $c->getPvp(); ?></td>
-						<td><?php echo $c->getUtilidad(); ?></td>
-						<?php/*
-							foreach ($ProductoDatosObj->consultaEspecific($idPro) as $e){	*/
-						?>
-							<td><?php echo $c->getIdmenu(); ?> </td>
-						<?php/* }*/ ?>
-						
-						<td width="3%"align="center"> <a href="ProductoFormularioEditar.php?codeProd=<?php echo $c->getCodigo_producto(); ?>">Editar</a> </td>
-						<td width="3%" align="center"><a href="ProductoEliminar.php?id=<?php echo $c->getCodigo_producto(); ?>">Eliminar</a></td>
-						 
-					</Tr>
-					<?php $idProducto= $c->getCodigo_producto();}?>
-					
-				</tbody>
-			</table> 
-			<a href="ProductoFormularioInsertar.php?codeProd=<?php echo $idProducto; ?>">Nuevo Producto</a>
+			<thead class="CaberaSuperiorTablaStriped">
+				<tr ALIGN=center>
+					<th>Nombre</th>
+					<th>Texto</th>
+				</tr>
+			</thead>
+			<tbody class="fuente">
+									<tr>
+										<td>Codigo:</td>
+										<td><input type="decimal" class="input" name="codigo_producto" value="<?php echo $codeProd;?>" required></td>								
+									</tr>
+									<tr>
+										<td>Descripcion:</td>
+										<td><input type="decimal" class="input" name="descripcion" value="" required></td>								
+									</tr>
+                    
+									<tr>
+										<td>Costo:</td>
+										<td><input type="text" class="input" name="costo" value="" required></td>								
+									</tr>
+                                    
+									<tr>
+										<td>Pvp:</td>
+										<td><input type="decimal" class="input" name="pvp" value="" required></td>								
+									</tr>
+
+									<tr>
+										<td>Utilidad:</td>
+										<td><input type="decimal" class="input" name="utilidad" value="" required></td>								
+									</tr>
+                                     
+                                    <tr>
+										<td>IdMenu:</td>
+										<td><input type="decimal" class="input" name="idmenu" value="" required></td>								
+									</tr>                                
+			</tbody>
+		</table>
+		<div class="row">
+				<div class="divFormBoton">
+					<input type="submit" value="Guardar" class="objetoConfirmarPedido"/>
+				</div>
 		</div>
-  
-		<div class="row">  
-			<div class="divFormBoton">
-				<a href="administracion_pagina.php"> 
-					<input class="objetoConfirmarPedido" type="submit" value="Cancelar"/>
-				</a>
-			</div>
-		</div>
-		<div class="divEspacioEnBlanco"> </div> 
-	</div>
-	<div class="footer">
-	Contáctenos: desarrollo@gmail.com.<br/> Ecuador 2015
+	</form>	
+	<div class="divEspacioEnBlanco"> </div>
+  </div>
+</div>
+<div class="footer">
+		Contáctenos: desarrollo@gmail.com.<br/> Ecuador 2015
 	</div>
 </body>
-
 </html>
