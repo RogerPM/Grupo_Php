@@ -59,7 +59,7 @@
 <div class="fondoPantalla" style='width: 100%'>
  <div class="table-responsive"> 
 <h1>Insertar Persona</h1> 
-	 <form action="insertaPerfil.php" method="post" > 
+	 <form action="UsuarioGrabar.php" method="post" > 
 		 Nombre:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		 <input type="text" name="nombre" value="" /> <br /> <br />     
 		 Apellido:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
