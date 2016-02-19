@@ -63,15 +63,15 @@
 		 Nombre:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		 <input type="text" name="nombre" value="" /> <br /> <br />     
 		 Apellido:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		 <input type="time" name="apellido" value="" /> <br /> <br /> 
+		 <input type="text" name="apellido" value="" /> <br /> <br /> 
 		 Cedula:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		 <input type="text" name="cedula" value="" /> <br /> <br />     
 		 Usuario:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		 <input type="time" name="usuario" value="" /> <br /> <br /> 
+		 <input type="text" name="usuario" value="" /> <br /> <br /> 
 		 Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		 <input type="text" name="Password" value="" /> <br /> <br />     
+		 <input type="password" name="Password" value="" /> <br /> <br />     
 		 Estado_civil:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		 <input type="time" name="estado_civil" value="" /> <br /> <br /> 
+		 <input type="text" name="estado_civil" value="" /> <br /> <br /> 
 		 <input  class="objetoFormReservarForm" type="submit" value="Registrar" name="submit" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		 <a href="registrar_pagina.php"><button class="botonCompra" type="button"><img src="../img/back.png" height="18" width="32"></button></a>
 	 </form>
