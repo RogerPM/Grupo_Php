@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyABcvzwpua9QIgDkzdG_afvS0IHC40g_Gs"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABcvzwpua9QIgDkzdG_afvS0IHC40g_Gs"></script>
 <script src="js/jquery-1.10.2.min.js"></script>
 <script src="js/initmap.js"></script>
 <title>Consulta y Reservacion en restaurante</title>
@@ -101,6 +101,15 @@ Cargando...</div>
 <div id="mimapa" class="col"></div>
 
 <div id="mostrario"></div>
+
+
+
+<form id="consul">
+<h2>Consulte su cita</h2>
+<input type="text" name="ced" id="ced" placeholder="Numero de cedula "/>
+<input type="submit" value="Ver">
+</form>
+<div id="mireserva"></div>
 </body>
 <script src="js/actions.js"></script>
 </html>
